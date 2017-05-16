@@ -2,14 +2,8 @@ import XCTest
 @testable import ConsulSwift
 
 class ConsulSwiftTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual(ConsulSwift().text, "Hello, World!")
+    func testInitialURLIsLocalhost8500() {
+        let consul = Consul()
+        XCTAssertEqual(consul.url.absoluteString, "http://localhost:8500")
     }
-
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }

@@ -12,7 +12,7 @@ import Quack
 public class Consul: QuackClient {
 
     public init() {
-        super.init(url: <#T##URL#>)
+        super.init(url: URL(string: "http://localhost:8500")!)
     }
     
 }

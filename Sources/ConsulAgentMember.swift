@@ -18,7 +18,7 @@ public class ConsulAgentMember: QuackModel {
     required public init?(json: JSON) {
         guard
             let name = json["Name"].string,
-            let address = json["Address"].string,
+            let address = json["Addr"].string,
             let port = json["Port"].int else { return nil }
         self.name = name
         self.address = address

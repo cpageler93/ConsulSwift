@@ -7,313 +7,279 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_100 /* ConsulAgentMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ConsulAgentMember.swift */; };
-		OBJ_102 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Alamofire.framework */; };
-		OBJ_103 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SwiftyJSON.framework */; };
-		OBJ_104 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Quack.framework */; };
-		OBJ_113 /* Consul+Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Consul+Agent.swift */; };
-		OBJ_114 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Consul.swift */; };
-		OBJ_116 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Alamofire.framework */; };
-		OBJ_117 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SwiftyJSON.framework */; };
-		OBJ_118 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Quack.framework */; };
-		OBJ_127 /* ConsulSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ConsulSwiftTests.swift */; };
-		OBJ_129 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Alamofire.framework */; };
-		OBJ_130 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SwiftyJSON.framework */; };
-		OBJ_131 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Quack.framework */; };
-		OBJ_55 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* AFError.swift */; };
-		OBJ_56 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Alamofire.swift */; };
-		OBJ_57 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* DispatchQueue+Alamofire.swift */; };
-		OBJ_58 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* MultipartFormData.swift */; };
-		OBJ_59 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* NetworkReachabilityManager.swift */; };
-		OBJ_60 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Notifications.swift */; };
-		OBJ_61 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ParameterEncoding.swift */; };
-		OBJ_62 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Request.swift */; };
-		OBJ_63 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Response.swift */; };
-		OBJ_64 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ResponseSerialization.swift */; };
-		OBJ_65 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Result.swift */; };
-		OBJ_66 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ServerTrustPolicy.swift */; };
-		OBJ_67 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* SessionDelegate.swift */; };
-		OBJ_68 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* SessionManager.swift */; };
-		OBJ_69 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* TaskDelegate.swift */; };
-		OBJ_70 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Timeline.swift */; };
-		OBJ_71 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Validation.swift */; };
-		OBJ_78 /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* LclJSONSerialization.swift */; };
-		OBJ_79 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* SwiftyJSON.swift */; };
-		OBJ_86 /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Alamofire+Synchronous.swift */; };
-		OBJ_87 /* Quack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Quack.swift */; };
-		OBJ_88 /* QuackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* QuackClient.swift */; };
-		OBJ_89 /* QuackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* QuackModel.swift */; };
-		OBJ_91 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Alamofire.framework */; };
-		OBJ_92 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SwiftyJSON.framework */; };
+		59EF1BA91ECC2B3C001DDEA3 /* ConsulAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF1BA81ECC2B3C001DDEA3 /* ConsulAgentTests.swift */; };
+		OBJ_101 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Alamofire.framework */; };
+		OBJ_102 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SwiftyJSON.framework */; };
+		OBJ_103 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Quack.framework */; };
+		OBJ_112 /* ConsulSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ConsulSwiftTests.swift */; };
+		OBJ_114 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Alamofire.framework */; };
+		OBJ_115 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SwiftyJSON.framework */; };
+		OBJ_116 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Quack.framework */; };
+		OBJ_117 /* ConsulSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ConsulSwift.framework */; };
+		OBJ_52 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* AFError.swift */; };
+		OBJ_53 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Alamofire.swift */; };
+		OBJ_54 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* DispatchQueue+Alamofire.swift */; };
+		OBJ_55 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* MultipartFormData.swift */; };
+		OBJ_56 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NetworkReachabilityManager.swift */; };
+		OBJ_57 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Notifications.swift */; };
+		OBJ_58 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ParameterEncoding.swift */; };
+		OBJ_59 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Request.swift */; };
+		OBJ_60 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Response.swift */; };
+		OBJ_61 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ResponseSerialization.swift */; };
+		OBJ_62 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Result.swift */; };
+		OBJ_63 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ServerTrustPolicy.swift */; };
+		OBJ_64 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* SessionDelegate.swift */; };
+		OBJ_65 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* SessionManager.swift */; };
+		OBJ_66 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* TaskDelegate.swift */; };
+		OBJ_67 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Timeline.swift */; };
+		OBJ_68 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Validation.swift */; };
+		OBJ_75 /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* LclJSONSerialization.swift */; };
+		OBJ_76 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* SwiftyJSON.swift */; };
+		OBJ_83 /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Alamofire+Synchronous.swift */; };
+		OBJ_84 /* Quack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Quack.swift */; };
+		OBJ_85 /* QuackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* QuackClient.swift */; };
+		OBJ_86 /* QuackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* QuackModel.swift */; };
+		OBJ_88 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Alamofire.framework */; };
+		OBJ_89 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SwiftyJSON.framework */; };
+		OBJ_97 /* Consul+Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Consul+Agent.swift */; };
+		OBJ_98 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Consul.swift */; };
+		OBJ_99 /* ConsulAgentMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConsulAgentMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5902104A1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1B9F1ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_50;
+			remoteGlobalIDString = OBJ_47;
 			remoteInfo = Alamofire;
 		};
-		5902104B1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA01ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_73;
+			remoteGlobalIDString = OBJ_70;
 			remoteInfo = SwiftyJSON;
 		};
-		5902104C1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA11ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_50;
+			remoteGlobalIDString = OBJ_47;
 			remoteInfo = Alamofire;
 		};
-		5902104D1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA21ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_73;
+			remoteGlobalIDString = OBJ_70;
 			remoteInfo = SwiftyJSON;
 		};
-		5902104E1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA31ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_81;
+			remoteGlobalIDString = OBJ_78;
 			remoteInfo = Quack;
 		};
-		5902104F1ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA41ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_50;
+			remoteGlobalIDString = OBJ_47;
 			remoteInfo = Alamofire;
 		};
-		590210501ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA51ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_73;
+			remoteGlobalIDString = OBJ_70;
 			remoteInfo = SwiftyJSON;
 		};
-		590210511ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA61ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_81;
+			remoteGlobalIDString = OBJ_78;
 			remoteInfo = Quack;
 		};
-		590210521ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
+		59EF1BA71ECC2ADE001DDEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_50;
-			remoteInfo = Alamofire;
-		};
-		590210531ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_73;
-			remoteInfo = SwiftyJSON;
-		};
-		590210541ECB8DCA00C929D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_81;
-			remoteInfo = Quack;
+			remoteGlobalIDString = OBJ_92;
+			remoteInfo = ConsulSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		OBJ_11 /* Consul+Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Agent.swift"; sourceTree = "<group>"; };
-		OBJ_12 /* Consul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consul.swift; sourceTree = "<group>"; };
-		OBJ_15 /* ConsulSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulSwiftTests.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
-		OBJ_19 /* Quack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quack.swift; sourceTree = "<group>"; };
-		OBJ_20 /* QuackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackClient.swift; sourceTree = "<group>"; };
-		OBJ_21 /* QuackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackModel.swift; sourceTree = "<group>"; };
-		OBJ_23 /* LclJSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LclJSONSerialization.swift; sourceTree = "<group>"; };
-		OBJ_24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		OBJ_26 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		OBJ_27 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		OBJ_28 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		OBJ_30 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		OBJ_31 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		OBJ_32 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		OBJ_33 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_34 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_35 /* ResponseSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_37 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		OBJ_38 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
-		OBJ_39 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		OBJ_40 /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		OBJ_41 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_45 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_46 /* Quack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_47 /* Models.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_48 /* Endpoints.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Endpoints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_49 /* ConsulSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConsulSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EF1BA81ECC2B3C001DDEA3 /* ConsulAgentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsulAgentTests.swift; sourceTree = "<group>"; };
+		OBJ_10 /* ConsulAgentMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentMember.swift; sourceTree = "<group>"; };
+		OBJ_13 /* ConsulSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulSwiftTests.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
+		OBJ_17 /* Quack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quack.swift; sourceTree = "<group>"; };
+		OBJ_18 /* QuackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackClient.swift; sourceTree = "<group>"; };
+		OBJ_19 /* QuackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackModel.swift; sourceTree = "<group>"; };
+		OBJ_21 /* LclJSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LclJSONSerialization.swift; sourceTree = "<group>"; };
+		OBJ_22 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		OBJ_24 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		OBJ_26 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		OBJ_28 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		OBJ_30 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		OBJ_31 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		OBJ_33 /* ResponseSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		OBJ_34 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		OBJ_36 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		OBJ_37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		OBJ_38 /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_43 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_44 /* Quack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_45 /* ConsulSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsulSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_46 /* ConsulSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConsulSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* ConsulAgentMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentMember.swift; sourceTree = "<group>"; };
+		OBJ_8 /* Consul+Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Agent.swift"; sourceTree = "<group>"; };
+		OBJ_9 /* Consul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consul.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_101 /* Frameworks */ = {
+		OBJ_100 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_102 /* Alamofire.framework in Frameworks */,
-				OBJ_103 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_104 /* Quack.framework in Frameworks */,
+				OBJ_101 /* Alamofire.framework in Frameworks */,
+				OBJ_102 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_103 /* Quack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_115 /* Frameworks */ = {
+		OBJ_113 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_116 /* Alamofire.framework in Frameworks */,
-				OBJ_117 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_118 /* Quack.framework in Frameworks */,
+				OBJ_114 /* Alamofire.framework in Frameworks */,
+				OBJ_115 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_116 /* Quack.framework in Frameworks */,
+				OBJ_117 /* ConsulSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_128 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_129 /* Alamofire.framework in Frameworks */,
-				OBJ_130 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_131 /* Quack.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_72 /* Frameworks */ = {
+		OBJ_69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_80 /* Frameworks */ = {
+		OBJ_77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_90 /* Frameworks */ = {
+		OBJ_87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_91 /* Alamofire.framework in Frameworks */,
-				OBJ_92 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_88 /* Alamofire.framework in Frameworks */,
+				OBJ_89 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* Endpoints */ = {
+		OBJ_11 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* Consul+Agent.swift */,
-				OBJ_12 /* Consul.swift */,
-			);
-			name = Endpoints;
-			path = Sources/Endpoints;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_13 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_14 /* ConsulSwiftTests */,
+				OBJ_12 /* ConsulSwiftTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* ConsulSwiftTests */ = {
+		OBJ_12 /* ConsulSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* ConsulSwiftTests.swift */,
+				OBJ_13 /* ConsulSwiftTests.swift */,
+				59EF1BA81ECC2B3C001DDEA3 /* ConsulAgentTests.swift */,
 			);
 			name = ConsulSwiftTests;
 			path = Tests/ConsulSwiftTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_16 /* Dependencies */ = {
+		OBJ_14 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* Quack 1.0.0 */,
-				OBJ_22 /* SwiftyJSON 16.0.0 */,
-				OBJ_25 /* Alamofire 4.4.0 */,
+				OBJ_15 /* Quack 1.0.0 */,
+				OBJ_20 /* SwiftyJSON 16.0.0 */,
+				OBJ_23 /* Alamofire 4.4.0 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_17 /* Quack 1.0.0 */ = {
+		OBJ_15 /* Quack 1.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* Alamofire+Synchronous.swift */,
-				OBJ_19 /* Quack.swift */,
-				OBJ_20 /* QuackClient.swift */,
-				OBJ_21 /* QuackModel.swift */,
+				OBJ_16 /* Alamofire+Synchronous.swift */,
+				OBJ_17 /* Quack.swift */,
+				OBJ_18 /* QuackClient.swift */,
+				OBJ_19 /* QuackModel.swift */,
 			);
 			name = "Quack 1.0.0";
 			path = ".build/checkouts/Quack.git--5271367057703676553/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* SwiftyJSON 16.0.0 */ = {
+		OBJ_20 /* SwiftyJSON 16.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* LclJSONSerialization.swift */,
-				OBJ_24 /* SwiftyJSON.swift */,
+				OBJ_21 /* LclJSONSerialization.swift */,
+				OBJ_22 /* SwiftyJSON.swift */,
 			);
 			name = "SwiftyJSON 16.0.0";
 			path = ".build/checkouts/SwiftyJSON.git--6955445084174387031/Source";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_25 /* Alamofire 4.4.0 */ = {
+		OBJ_23 /* Alamofire 4.4.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* AFError.swift */,
-				OBJ_27 /* Alamofire.swift */,
-				OBJ_28 /* DispatchQueue+Alamofire.swift */,
-				OBJ_29 /* MultipartFormData.swift */,
-				OBJ_30 /* NetworkReachabilityManager.swift */,
-				OBJ_31 /* Notifications.swift */,
-				OBJ_32 /* ParameterEncoding.swift */,
-				OBJ_33 /* Request.swift */,
-				OBJ_34 /* Response.swift */,
-				OBJ_35 /* ResponseSerialization.swift */,
-				OBJ_36 /* Result.swift */,
-				OBJ_37 /* ServerTrustPolicy.swift */,
-				OBJ_38 /* SessionDelegate.swift */,
-				OBJ_39 /* SessionManager.swift */,
-				OBJ_40 /* TaskDelegate.swift */,
-				OBJ_41 /* Timeline.swift */,
-				OBJ_42 /* Validation.swift */,
+				OBJ_24 /* AFError.swift */,
+				OBJ_25 /* Alamofire.swift */,
+				OBJ_26 /* DispatchQueue+Alamofire.swift */,
+				OBJ_27 /* MultipartFormData.swift */,
+				OBJ_28 /* NetworkReachabilityManager.swift */,
+				OBJ_29 /* Notifications.swift */,
+				OBJ_30 /* ParameterEncoding.swift */,
+				OBJ_31 /* Request.swift */,
+				OBJ_32 /* Response.swift */,
+				OBJ_33 /* ResponseSerialization.swift */,
+				OBJ_34 /* Result.swift */,
+				OBJ_35 /* ServerTrustPolicy.swift */,
+				OBJ_36 /* SessionDelegate.swift */,
+				OBJ_37 /* SessionManager.swift */,
+				OBJ_38 /* TaskDelegate.swift */,
+				OBJ_39 /* Timeline.swift */,
+				OBJ_40 /* Validation.swift */,
 			);
 			name = "Alamofire 4.4.0";
 			path = ".build/checkouts/Alamofire.git-6801331143877184500/Source";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_43 /* Products */ = {
+		OBJ_41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_44 /* Alamofire.framework */,
-				OBJ_45 /* SwiftyJSON.framework */,
-				OBJ_46 /* Quack.framework */,
-				OBJ_47 /* Models.framework */,
-				OBJ_48 /* Endpoints.framework */,
-				OBJ_49 /* ConsulSwiftTests.xctest */,
+				OBJ_42 /* Alamofire.framework */,
+				OBJ_43 /* SwiftyJSON.framework */,
+				OBJ_44 /* Quack.framework */,
+				OBJ_45 /* ConsulSwift.framework */,
+				OBJ_46 /* ConsulSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -323,9 +289,9 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_13 /* Tests */,
-				OBJ_16 /* Dependencies */,
-				OBJ_43 /* Products */,
+				OBJ_11 /* Tests */,
+				OBJ_14 /* Dependencies */,
+				OBJ_41 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -333,68 +299,42 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Models */,
-				OBJ_10 /* Endpoints */,
+				OBJ_8 /* Consul+Agent.swift */,
+				OBJ_9 /* Consul.swift */,
+				OBJ_10 /* ConsulAgentMember.swift */,
 			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* ConsulAgentMember.swift */,
-			);
-			name = Models;
-			path = Sources/Models;
+			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_108 /* Endpoints */ = {
+		OBJ_107 /* ConsulSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_109 /* Build configuration list for PBXNativeTarget "Endpoints" */;
+			buildConfigurationList = OBJ_108 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */;
 			buildPhases = (
-				OBJ_112 /* Sources */,
-				OBJ_115 /* Frameworks */,
+				OBJ_111 /* Sources */,
+				OBJ_113 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_118 /* PBXTargetDependency */,
 				OBJ_119 /* PBXTargetDependency */,
 				OBJ_120 /* PBXTargetDependency */,
 				OBJ_121 /* PBXTargetDependency */,
 			);
-			name = Endpoints;
-			productName = Endpoints;
-			productReference = OBJ_48 /* Endpoints.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		OBJ_122 /* ConsulSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_123 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */;
-			buildPhases = (
-				OBJ_126 /* Sources */,
-				OBJ_128 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_132 /* PBXTargetDependency */,
-				OBJ_133 /* PBXTargetDependency */,
-				OBJ_134 /* PBXTargetDependency */,
-			);
 			name = ConsulSwiftTests;
 			productName = ConsulSwiftTests;
-			productReference = OBJ_49 /* ConsulSwiftTests.xctest */;
+			productReference = OBJ_46 /* ConsulSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		OBJ_50 /* Alamofire */ = {
+		OBJ_47 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				OBJ_54 /* Sources */,
-				OBJ_72 /* Frameworks */,
+				OBJ_51 /* Sources */,
+				OBJ_69 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,15 +342,15 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = OBJ_44 /* Alamofire.framework */;
+			productReference = OBJ_42 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_73 /* SwiftyJSON */ = {
+		OBJ_70 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = OBJ_71 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				OBJ_77 /* Sources */,
-				OBJ_80 /* Frameworks */,
+				OBJ_74 /* Sources */,
+				OBJ_77 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,44 +358,44 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = OBJ_45 /* SwiftyJSON.framework */;
+			productReference = OBJ_43 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_81 /* Quack */ = {
+		OBJ_78 /* Quack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_82 /* Build configuration list for PBXNativeTarget "Quack" */;
+			buildConfigurationList = OBJ_79 /* Build configuration list for PBXNativeTarget "Quack" */;
 			buildPhases = (
-				OBJ_85 /* Sources */,
-				OBJ_90 /* Frameworks */,
+				OBJ_82 /* Sources */,
+				OBJ_87 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_93 /* PBXTargetDependency */,
-				OBJ_94 /* PBXTargetDependency */,
+				OBJ_90 /* PBXTargetDependency */,
+				OBJ_91 /* PBXTargetDependency */,
 			);
 			name = Quack;
 			productName = Quack;
-			productReference = OBJ_46 /* Quack.framework */;
+			productReference = OBJ_44 /* Quack.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_95 /* Models */ = {
+		OBJ_92 /* ConsulSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_96 /* Build configuration list for PBXNativeTarget "Models" */;
+			buildConfigurationList = OBJ_93 /* Build configuration list for PBXNativeTarget "ConsulSwift" */;
 			buildPhases = (
-				OBJ_99 /* Sources */,
-				OBJ_101 /* Frameworks */,
+				OBJ_96 /* Sources */,
+				OBJ_100 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_104 /* PBXTargetDependency */,
 				OBJ_105 /* PBXTargetDependency */,
 				OBJ_106 /* PBXTargetDependency */,
-				OBJ_107 /* PBXTargetDependency */,
 			);
-			name = Models;
-			productName = Models;
-			productReference = OBJ_47 /* Models.framework */;
+			name = ConsulSwift;
+			productName = ConsulSwift;
+			productReference = OBJ_45 /* ConsulSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -474,194 +414,135 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_43 /* Products */;
+			productRefGroup = OBJ_41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_50 /* Alamofire */,
-				OBJ_73 /* SwiftyJSON */,
-				OBJ_81 /* Quack */,
-				OBJ_95 /* Models */,
-				OBJ_108 /* Endpoints */,
-				OBJ_122 /* ConsulSwiftTests */,
+				OBJ_47 /* Alamofire */,
+				OBJ_70 /* SwiftyJSON */,
+				OBJ_78 /* Quack */,
+				OBJ_92 /* ConsulSwift */,
+				OBJ_107 /* ConsulSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_112 /* Sources */ = {
+		OBJ_111 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_113 /* Consul+Agent.swift in Sources */,
-				OBJ_114 /* Consul.swift in Sources */,
+				OBJ_112 /* ConsulSwiftTests.swift in Sources */,
+				59EF1BA91ECC2B3C001DDEA3 /* ConsulAgentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_126 /* Sources */ = {
+		OBJ_51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_127 /* ConsulSwiftTests.swift in Sources */,
+				OBJ_52 /* AFError.swift in Sources */,
+				OBJ_53 /* Alamofire.swift in Sources */,
+				OBJ_54 /* DispatchQueue+Alamofire.swift in Sources */,
+				OBJ_55 /* MultipartFormData.swift in Sources */,
+				OBJ_56 /* NetworkReachabilityManager.swift in Sources */,
+				OBJ_57 /* Notifications.swift in Sources */,
+				OBJ_58 /* ParameterEncoding.swift in Sources */,
+				OBJ_59 /* Request.swift in Sources */,
+				OBJ_60 /* Response.swift in Sources */,
+				OBJ_61 /* ResponseSerialization.swift in Sources */,
+				OBJ_62 /* Result.swift in Sources */,
+				OBJ_63 /* ServerTrustPolicy.swift in Sources */,
+				OBJ_64 /* SessionDelegate.swift in Sources */,
+				OBJ_65 /* SessionManager.swift in Sources */,
+				OBJ_66 /* TaskDelegate.swift in Sources */,
+				OBJ_67 /* Timeline.swift in Sources */,
+				OBJ_68 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_54 /* Sources */ = {
+		OBJ_74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_55 /* AFError.swift in Sources */,
-				OBJ_56 /* Alamofire.swift in Sources */,
-				OBJ_57 /* DispatchQueue+Alamofire.swift in Sources */,
-				OBJ_58 /* MultipartFormData.swift in Sources */,
-				OBJ_59 /* NetworkReachabilityManager.swift in Sources */,
-				OBJ_60 /* Notifications.swift in Sources */,
-				OBJ_61 /* ParameterEncoding.swift in Sources */,
-				OBJ_62 /* Request.swift in Sources */,
-				OBJ_63 /* Response.swift in Sources */,
-				OBJ_64 /* ResponseSerialization.swift in Sources */,
-				OBJ_65 /* Result.swift in Sources */,
-				OBJ_66 /* ServerTrustPolicy.swift in Sources */,
-				OBJ_67 /* SessionDelegate.swift in Sources */,
-				OBJ_68 /* SessionManager.swift in Sources */,
-				OBJ_69 /* TaskDelegate.swift in Sources */,
-				OBJ_70 /* Timeline.swift in Sources */,
-				OBJ_71 /* Validation.swift in Sources */,
+				OBJ_75 /* LclJSONSerialization.swift in Sources */,
+				OBJ_76 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_77 /* Sources */ = {
+		OBJ_82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_78 /* LclJSONSerialization.swift in Sources */,
-				OBJ_79 /* SwiftyJSON.swift in Sources */,
+				OBJ_83 /* Alamofire+Synchronous.swift in Sources */,
+				OBJ_84 /* Quack.swift in Sources */,
+				OBJ_85 /* QuackClient.swift in Sources */,
+				OBJ_86 /* QuackModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_85 /* Sources */ = {
+		OBJ_96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_86 /* Alamofire+Synchronous.swift in Sources */,
-				OBJ_87 /* Quack.swift in Sources */,
-				OBJ_88 /* QuackClient.swift in Sources */,
-				OBJ_89 /* QuackModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_99 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_100 /* ConsulAgentMember.swift in Sources */,
+				OBJ_97 /* Consul+Agent.swift in Sources */,
+				OBJ_98 /* Consul.swift in Sources */,
+				OBJ_99 /* ConsulAgentMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		OBJ_104 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_47 /* Alamofire */;
+			targetProxy = 59EF1BA11ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
+		};
 		OBJ_105 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_50 /* Alamofire */;
-			targetProxy = 5902104C1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_70 /* SwiftyJSON */;
+			targetProxy = 59EF1BA21ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_106 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_73 /* SwiftyJSON */;
-			targetProxy = 5902104D1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_78 /* Quack */;
+			targetProxy = 59EF1BA31ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_107 /* PBXTargetDependency */ = {
+		OBJ_118 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_81 /* Quack */;
-			targetProxy = 5902104E1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_47 /* Alamofire */;
+			targetProxy = 59EF1BA41ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_119 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_50 /* Alamofire */;
-			targetProxy = 5902104F1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_70 /* SwiftyJSON */;
+			targetProxy = 59EF1BA51ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_120 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_73 /* SwiftyJSON */;
-			targetProxy = 590210501ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_78 /* Quack */;
+			targetProxy = 59EF1BA61ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_121 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_81 /* Quack */;
-			targetProxy = 590210511ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_92 /* ConsulSwift */;
+			targetProxy = 59EF1BA71ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_132 /* PBXTargetDependency */ = {
+		OBJ_90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_50 /* Alamofire */;
-			targetProxy = 590210521ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_47 /* Alamofire */;
+			targetProxy = 59EF1B9F1ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_133 /* PBXTargetDependency */ = {
+		OBJ_91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_73 /* SwiftyJSON */;
-			targetProxy = 590210531ECB8DCA00C929D0 /* PBXContainerItemProxy */;
-		};
-		OBJ_134 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_81 /* Quack */;
-			targetProxy = 590210541ECB8DCA00C929D0 /* PBXContainerItemProxy */;
-		};
-		OBJ_93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_50 /* Alamofire */;
-			targetProxy = 5902104A1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
-		};
-		OBJ_94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_73 /* SwiftyJSON */;
-			targetProxy = 5902104B1ECB8DCA00C929D0 /* PBXContainerItemProxy */;
+			target = OBJ_70 /* SwiftyJSON */;
+			targetProxy = 59EF1BA01ECC2ADE001DDEA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_110 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Endpoints_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Endpoints;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Endpoints;
-			};
-			name = Debug;
-		};
-		OBJ_111 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Endpoints_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Endpoints;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Endpoints;
-			};
-			name = Release;
-		};
-		OBJ_124 /* Debug */ = {
+		OBJ_109 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -678,7 +559,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_125 /* Release */ = {
+		OBJ_110 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -739,7 +620,7 @@
 			};
 			name = Release;
 		};
-		OBJ_52 /* Debug */ = {
+		OBJ_49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -760,7 +641,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_53 /* Release */ = {
+		OBJ_50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -781,7 +662,7 @@
 			};
 			name = Release;
 		};
-		OBJ_75 /* Debug */ = {
+		OBJ_72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -802,7 +683,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_76 /* Release */ = {
+		OBJ_73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -823,7 +704,7 @@
 			};
 			name = Release;
 		};
-		OBJ_83 /* Debug */ = {
+		OBJ_80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -844,7 +725,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_84 /* Release */ = {
+		OBJ_81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -865,7 +746,7 @@
 			};
 			name = Release;
 		};
-		OBJ_97 /* Debug */ = {
+		OBJ_94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -874,19 +755,19 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Models_Info.plist;
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Models;
+				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGET_NAME = Models;
+				TARGET_NAME = ConsulSwift;
 			};
 			name = Debug;
 		};
-		OBJ_98 /* Release */ = {
+		OBJ_95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -895,35 +776,26 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Models_Info.plist;
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Models;
+				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGET_NAME = Models;
+				TARGET_NAME = ConsulSwift;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_109 /* Build configuration list for PBXNativeTarget "Endpoints" */ = {
+		OBJ_108 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_110 /* Debug */,
-				OBJ_111 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_123 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_124 /* Debug */,
-				OBJ_125 /* Release */,
+				OBJ_109 /* Debug */,
+				OBJ_110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -937,38 +809,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_51 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+		OBJ_48 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_52 /* Debug */,
-				OBJ_53 /* Release */,
+				OBJ_49 /* Debug */,
+				OBJ_50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_74 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		OBJ_71 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_75 /* Debug */,
-				OBJ_76 /* Release */,
+				OBJ_72 /* Debug */,
+				OBJ_73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_82 /* Build configuration list for PBXNativeTarget "Quack" */ = {
+		OBJ_79 /* Build configuration list for PBXNativeTarget "Quack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_83 /* Debug */,
-				OBJ_84 /* Release */,
+				OBJ_80 /* Debug */,
+				OBJ_81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_96 /* Build configuration list for PBXNativeTarget "Models" */ = {
+		OBJ_93 /* Build configuration list for PBXNativeTarget "ConsulSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_97 /* Debug */,
-				OBJ_98 /* Release */,
+				OBJ_94 /* Debug */,
+				OBJ_95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

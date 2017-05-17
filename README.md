@@ -29,7 +29,6 @@ let consul = Consul()
 
 // get agent members
 consul.agentMembers { members in
-    
     // check members result
     switch members {
     case .Success(let members):

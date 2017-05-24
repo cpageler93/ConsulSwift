@@ -41,13 +41,20 @@ consul.agentMembers { members in
 
 ## Features
 
-|  Group        |  Endpoint                    |  Route                           | Implemented  |
-|---------------|------------------------------|----------------------------------|--------------|
-|  Agent        |  List Members                |  GET /v1/agent/members           | ✅           |
-|               |  Read Configuration          |  GET /v1/agent/self              | ✅           |
-|               |  Reload Agent                |  PUT /v1/agent/reload            | ❌           |
-|               |  Enable Maintenance Mode     |  PUT /v1/agent/maintenance       | ❌           |
-|               |                              |                                  | ❌           |
-|               |                              |                                  | ❌           |
-|               |                              |                                  | ❌           |
-|               |                              |                                  | ❌           |
+|  Group             |  Endpoint                    |  Route                           | Implemented  |
+|--------------------|------------------------------|----------------------------------|--------------|
+|  Agent - Base      |  List Members                |  GET /v1/agent/members           | ✅           |
+|                    |  Read Configuration          |  GET /v1/agent/self              | ✅           |
+|                    |  Reload Agent                |  PUT /v1/agent/reload            | ❌           |
+|                    |  Enable Maintenance Mode     |  PUT /v1/agent/maintenance       | ❌           |
+|                    |  Join Agent                  |  GET /v1/agent/join/:id          | ❌           |
+|                    |  Gracefull Leave + Shutdown  |  PUT /v1/agent/leave             | ❌           |
+|                    |  Force Leave + Shutdown      |  PUT /v1/agent/force-leave       | ❌           |
+|--------------------|------------------------------|----------------------------------|--------------|
+|  Agent - Checs     |  List Checks                 |  GET /v1/agent/checks            | ❌           |
+|                    |                              |                                  | ❌           |
+|                    |                              |                                  | ❌           |
+|                    |                              |                                  | ❌           |
+|                    |                              |                                  | ❌           |
+|                    |                              |                                  | ❌           |
+

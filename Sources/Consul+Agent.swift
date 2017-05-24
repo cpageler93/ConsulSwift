@@ -11,6 +11,8 @@ import Quack
 
 extension Consul {
     
+    // MARK: - Members
+    
     public func agentMembers() -> QuackResult<[ConsulAgentMember]> {
         return respondWithArray(path: "/v1/agent/members",
                                 model: ConsulAgentMember.self)
@@ -20,6 +22,19 @@ extension Consul {
         respondWithArrayAsync(path: "/v1/agent/members",
                               model: ConsulAgentMember.self,
                               completion: completion)
+    }
+    
+    // MARK: - Configuration
+    
+    public func agentReadConfiguration() -> QuackResult<ConsulAgentConfiguration> {
+        return respond(path: "/v1/agent/self",
+                       model: ConsulAgentConfiguration.self)
+    }
+    
+    public func agentReadConfiguration(completion: @escaping (QuackResult<ConsulAgentConfiguration>) -> (Void)) {
+        return respondAsync(path: "/v1/agent/self",
+                            model: ConsulAgentConfiguration.self,
+                            completion: completion)
     }
     
 }

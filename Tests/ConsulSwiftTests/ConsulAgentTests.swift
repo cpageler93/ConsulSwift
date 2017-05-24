@@ -21,30 +21,59 @@ class ConsulAgentTests: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: - Members
+    
     func testAgentMembers() {
         let consul = Consul()
         let members = consul.agentMembers()
         switch members {
-        case .Success(let members):
+        case .success(let members):
             XCTAssertEqual(members.count, 1)
-        case .Failure(let error):
+        case .failure(let error):
             XCTAssertNil(error)
         }
     }
     
     func testAgentMembersAsync() {
         let consul = Consul()
-        let agentMembersExpectation = self.expectation(description: "agentMembers")
+        let expectation = self.expectation(description: "agentMembers")
         consul.agentMembers { members in
             switch members {
-            case .Success(let members):
+            case .success(let members):
                 XCTAssertEqual(members.count, 1)
-            case .Failure(let error):
+            case .failure(let error):
                 XCTAssertNil(error)
             }
-            agentMembersExpectation.fulfill()
+            expectation.fulfill()
         }
-        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    // MARK: - Configuration
+    
+    func testAgentReadConfiguration() {
+        let consul = Consul()
+        let config = consul.agentReadConfiguration()
+        switch config {
+        case .success(let config):
+            XCTAssertNotNil(config)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentReadConfigurationAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentReadConfiguration")
+        consul.agentReadConfiguration { config in
+            switch config {
+            case .success(let config):
+                XCTAssertNotNil(config)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
         self.waitForExpectations(timeout: 15, handler: nil)
     }
 }

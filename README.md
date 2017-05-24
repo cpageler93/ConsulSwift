@@ -14,9 +14,9 @@ let members = consul.agentMembers()
 
 // check members result
 switch members {
-case .Success(let members):
+case .success(let members):
     // do whatever you like with members which is kind of [ConsulAgentMember]
-case .Failure(let error):
+case .failure(let error):
     // handle error
 }
 ```
@@ -31,9 +31,9 @@ let consul = Consul()
 consul.agentMembers { members in
     // check members result
     switch members {
-    case .Success(let members):
+    case .success(let members):
         // do whatever you like with members which is kind of [ConsulAgentMember]
-    case .Failure(let error):
+    case .failure(let error):
         // handle error
     }
 }

@@ -38,3 +38,16 @@ consul.agentMembers { members in
     }
 }
 ```
+
+## Features
+
+|  Group        |  Endpoint                    |  Route                           | Implemented  |
+|---------------|------------------------------|----------------------------------|--------------|
+|  Agent        |  List Members                |  GET /v1/agent/members           | ✅           |
+|               |  Read Configuration          |  GET /v1/agent/self              | ✅           |
+|               |  Reload Agent                |  PUT /v1/agent/reload            | ❌           |
+|               |  Enable Maintenance Mode     |  PUT /v1/agent/maintenance       | ❌           |
+|               |                              |                                  | ❌           |
+|               |                              |                                  | ❌           |
+|               |                              |                                  | ❌           |
+|               |                              |                                  | ❌           |

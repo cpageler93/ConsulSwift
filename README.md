@@ -57,8 +57,8 @@ consul.agentMembers { members in
 |                    |  Reload Agent                   |  PUT /v1/agent/reload                    | ✅           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/maintenance               | ✅           |
 |                    |  Join Agent                     |  GET /v1/agent/join/:id                  | ❌           |
-|                    |  Gracefull Leave + Shutdown     |  PUT /v1/agent/leave                     | ❌           |
-|                    |  Force Leave + Shutdown         |  PUT /v1/agent/force-leave               | ❌           |
+|                    |  Gracefull Leave + Shutdown     |  PUT /v1/agent/leave                     | ✅           |
+|                    |  Force Leave + Shutdown         |  PUT /v1/agent/force-leave               | ✅           |
 |                    |                                 |                                          |              |
 |  Agent - Checs     |  List Checks                    |  GET /v1/agent/checks                    | ❌           |
 |                    |  Register Check                 |  PUT /v1/agent/check/register            | ❌           |

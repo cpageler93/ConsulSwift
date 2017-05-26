@@ -158,4 +158,34 @@ class ConsulAgentTests: XCTestCase {
         }
         self.waitForExpectations(timeout: 15, handler: nil)
     }
+    
+    // MARK: - leave
+
+    // this test will shutdown consul and possible other tests will fail
+//    func testAgentLeave() {
+//        let consul = Consul()
+//        let leave = consul.agentLeave()
+//        switch leave {
+//        case .success:
+//            print("leave success")
+//        case .failure(let error):
+//            XCTAssertNil(error)
+//        }
+//    }
+    
+    func testAgentLeaveAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentLeave")
+        consul.agentLeave() { leave in
+            switch leave {
+            case .success:
+                print("leave success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
 }

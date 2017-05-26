@@ -74,4 +74,25 @@ extension Consul {
                          completion: completion)
     }
     
+    // MARK: - Leave / Shutdown
+    
+    public func agentLeave(force: Bool = false) -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: agentLeavePath(force: force))
+    }
+    
+    public func agentLeave(force: Bool = false, completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: agentLeavePath(force: force),
+                         completion: completion)
+    }
+    
+    private func agentLeavePath(force: Bool) -> String {
+        if force {
+            return "/v1/agent/force-leave"
+        } else {
+            return "/v1/agent/leave"
+        }
+    }
+    
 }

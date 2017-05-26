@@ -76,4 +76,32 @@ class ConsulAgentTests: XCTestCase {
         }
         self.waitForExpectations(timeout: 15, handler: nil)
     }
+    
+    // MARK: - Reload
+    
+    func testAgentReload() {
+        let consul = Consul()
+        let reload = consul.agentReload()
+        switch reload {
+        case .success:
+            print("reload success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentReloadAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentReload")
+        consul.agentReload { reload in
+            switch reload {
+            case .success:
+                print("reload success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
 }

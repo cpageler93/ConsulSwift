@@ -37,4 +37,15 @@ extension Consul {
                             completion: completion)
     }
     
+    // MARK: - Reload
+    
+    public func agentReload() -> QuackVoid {
+        return respondVoid(path: "/v1/agent/reload")
+    }
+    
+    public func agentReload(completion: @escaping (QuackVoid) -> (Void)) {
+        return respondVoidAsyny(path: "/v1/agent/reload",
+                                completion: completion)
+    }
+    
 }

@@ -1,5 +1,6 @@
 # ConsulSwift
-Consul Client for Swift
+
+[Consul](https://www.consul.io) Client for Swift
 
 ## Examples
 
@@ -45,7 +46,7 @@ consul.agentMembers { members in
 |--------------------|---------------------------------|------------------------------------------|--------------|
 |  Agent - Base      |  List Members                   |  GET /v1/agent/members                   | ✅           |
 |                    |  Read Configuration             |  GET /v1/agent/self                      | ✅           |
-|                    |  Reload Agent                   |  PUT /v1/agent/reload                    | ❌           |
+|                    |  Reload Agent                   |  PUT /v1/agent/reload                    | ✅           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/maintenance               | ❌           |
 |                    |  Join Agent                     |  GET /v1/agent/join/:id                  | ❌           |
 |                    |  Gracefull Leave + Shutdown     |  PUT /v1/agent/leave                     | ❌           |
@@ -85,3 +86,22 @@ consul.agentMembers { members in
 |                    |  Create/Update Key              |  PUT /v1/kv/:key                         | ❌           |
 |                    |  Delete Key                     |  DELETE /v2/kv/:key                      | ❌           |
 |                    |                                 |                                          | ❌           |
+
+## Test
+
+To test ConsulSwift on your local machine you need to start consul first
+
+    # start consul
+    consul agent -dev -dc=fra1
+
+    # test
+    swift test
+
+
+## Need Help?
+
+Please [submit an issue](https://github.com/cpageler93/ConsulSwift/issues) on GitHub or contact me via Mail or Twitter.
+
+## License
+
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.

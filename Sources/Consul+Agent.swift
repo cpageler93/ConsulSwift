@@ -95,4 +95,18 @@ extension Consul {
         }
     }
     
+    // MARK: - Checks
+    
+    public func agentChecks() -> QuackResult<[ConsulAgentCheckOutput]> {
+        return respondWithArray(path: "/v1/agent/checks",
+                                parser: QuackArrayParserByIgnoringDictionaryKeys(),
+                                model: ConsulAgentCheckOutput.self)
+    }
+    
+    public func agentChecks(completion: @escaping (QuackResult<[ConsulAgentCheckOutput]>) -> (Void)) {
+        respondWithArrayAsync(path: "/v1/agent/checks",
+                              parser: QuackArrayParserByIgnoringDictionaryKeys(),
+                              model: ConsulAgentCheckOutput.self,
+                              completion: completion)
+    }
 }

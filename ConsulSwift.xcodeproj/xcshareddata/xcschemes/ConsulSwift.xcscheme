@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_48"
+               BlueprintIdentifier = "OBJ_51"
                BuildableName = "Alamofire.framework"
                BlueprintName = "Alamofire"
                ReferencedContainer = "container:ConsulSwift.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_71"
+               BlueprintIdentifier = "OBJ_74"
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:ConsulSwift.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_79"
+               BlueprintIdentifier = "OBJ_82"
                BuildableName = "Quack.framework"
                BlueprintName = "Quack"
                ReferencedContainer = "container:ConsulSwift.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_93"
+               BlueprintIdentifier = "OBJ_97"
                BuildableName = "ConsulSwift.framework"
                BlueprintName = "ConsulSwift"
                ReferencedContainer = "container:ConsulSwift.xcodeproj">
@@ -74,7 +74,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_108"
+               BlueprintIdentifier = "OBJ_114"
                BuildableName = "ConsulSwiftTests.xctest"
                BlueprintName = "ConsulSwiftTests"
                ReferencedContainer = "container:ConsulSwift.xcodeproj">
@@ -97,7 +97,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_48"
+            BlueprintIdentifier = "OBJ_51"
             BuildableName = "Alamofire.framework"
             BlueprintName = "Alamofire"
             ReferencedContainer = "container:ConsulSwift.xcodeproj">

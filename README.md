@@ -60,7 +60,7 @@ consul.agentMembers { members in
 |                    |  Gracefull Leave + Shutdown     |  PUT /v1/agent/leave                     | ✅           |
 |                    |  Force Leave + Shutdown         |  PUT /v1/agent/force-leave               | ✅           |
 |                    |                                 |                                          |              |
-|  Agent - Checs     |  List Checks                    |  GET /v1/agent/checks                    | ❌           |
+|  Agent - Checs     |  List Checks                    |  GET /v1/agent/checks                    | ✅           |
 |                    |  Register Check                 |  PUT /v1/agent/check/register            | ❌           |
 |                    |  Deregister Check               |  PUT /v1/agent/check/deregister/:id      | ❌           |
 |                    |  TLL Check Pass                 |  GET /v1/agent/check/pass/:id            | ❌           |

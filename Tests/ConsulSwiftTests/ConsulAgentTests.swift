@@ -173,13 +173,41 @@ class ConsulAgentTests: XCTestCase {
 //        }
 //    }
     
-    func testAgentLeaveAsync() {
+//    func testAgentLeaveAsync() {
+//        let consul = Consul()
+//        let expectation = self.expectation(description: "agentLeave")
+//        consul.agentLeave() { leave in
+//            switch leave {
+//            case .success:
+//                print("leave success")
+//            case .failure(let error):
+//                XCTAssertNil(error)
+//            }
+//            expectation.fulfill()
+//        }
+//        self.waitForExpectations(timeout: 15, handler: nil)
+//    }
+    
+    // MARK: - Checks
+    
+    func testAgentChecks() {
         let consul = Consul()
-        let expectation = self.expectation(description: "agentLeave")
-        consul.agentLeave() { leave in
-            switch leave {
-            case .success:
-                print("leave success")
+        let checks = consul.agentChecks()
+        switch checks {
+        case .success(let checks):
+            XCTAssertGreaterThan(checks.count, 0)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentChecksAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentChecks")
+        consul.agentChecks() { checks in
+            switch checks {
+            case .success(let checks):
+                XCTAssertGreaterThan(checks.count, 0)
             case .failure(let error):
                 XCTAssertNil(error)
             }

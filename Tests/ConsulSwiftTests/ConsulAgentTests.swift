@@ -104,4 +104,58 @@ class ConsulAgentTests: XCTestCase {
         }
         self.waitForExpectations(timeout: 15, handler: nil)
     }
+    
+    // MARK: - Maintenance
+    
+    func testAgentMaintenanceEnable() {
+        let consul = Consul()
+        let maintenance = consul.agentMaintenance(enable: true, reason: "UnitTest")
+        switch maintenance {
+        case .success:
+            print("enabled maintenance success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentMaintenanceEnableAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentMaintenanceEnable")
+        consul.agentMaintenance(enable: true, reason: "UnitTest") { maintenance in
+            switch maintenance {
+            case .success:
+                print("enabled maintenance success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func testAgentMaintenanceDisable() {
+        let consul = Consul()
+        let maintenance = consul.agentMaintenance(enable: false, reason: "UnitTest")
+        switch maintenance {
+        case .success:
+            print("disable maintenance success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentMaintenanceDisableAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "agentMaintenanceDisable")
+        consul.agentMaintenance(enable: false, reason: "UnitTest") { maintenance in
+            switch maintenance {
+            case .success:
+                print("disable maintenance success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
 }

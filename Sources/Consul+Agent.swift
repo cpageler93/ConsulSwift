@@ -8,6 +8,7 @@
 
 import Foundation
 import Quack
+import Alamofire
 
 extension Consul {
     
@@ -40,12 +41,37 @@ extension Consul {
     // MARK: - Reload
     
     public func agentReload() -> QuackVoid {
-        return respondVoid(path: "/v1/agent/reload")
+        return respondVoid(method: .put,
+                           path: "/v1/agent/reload")
     }
     
     public func agentReload(completion: @escaping (QuackVoid) -> (Void)) {
-        return respondVoidAsyny(path: "/v1/agent/reload",
+        return respondVoidAsync(method: .put,
+                                path: "/v1/agent/reload",
                                 completion: completion)
+    }
+    
+    // MARK: - Maintenance
+    
+    public func agentMaintenance(enable: Bool, reason: String) -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/maintenance",
+                           params: [
+                            "enable": String(enable),
+                            "reason": reason
+                           ],
+                           encoding: URLEncoding.queryString)
+    }
+    
+    public func agentMaintenance(enable: Bool, reason: String, completion: @escaping (QuackVoid) -> (Void)){
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/maintenance",
+                         params: [
+                            "enable": String(enable),
+                            "reason": reason
+                         ],
+                         encoding: URLEncoding.queryString,
+                         completion: completion)
     }
     
 }

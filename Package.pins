@@ -11,7 +11,7 @@
       "package": "Quack",
       "reason": null,
       "repositoryURL": "https://github.com/cpageler93/Quack.git",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "package": "SwiftyJSON",

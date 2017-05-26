@@ -5,6 +5,6 @@ import PackageDescription
 let package = Package(
     name: "ConsulSwift",
     dependencies: [
-        .Package(url: "https://github.com/cpageler93/Quack.git", majorVersion: 0, minor: 1)
+        .Package(url: "https://github.com/cpageler93/Quack.git", majorVersion: 0, minor: 3)
     ]
 )

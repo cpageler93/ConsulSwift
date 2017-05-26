@@ -2,6 +2,14 @@
 
 [Consul](https://www.consul.io) Client for Swift
 
+ConsulSwift connects to `http://localhost:8500` by default.
+
+You can change the default behaviour by calling an other initializer.
+
+```swift
+let consul = Consul(url: otherBaseURL)
+```
+
 ## Examples
 
 ### Synchronous Example

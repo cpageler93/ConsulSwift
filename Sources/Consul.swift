@@ -15,4 +15,8 @@ public class Consul: QuackClient {
         super.init(url: URL(string: "http://localhost:8500")!)
     }
     
+    public init(url: URL) {
+        super.init(url: url)
+    }
+    
 }

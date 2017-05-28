@@ -109,4 +109,49 @@ extension Consul {
                               model: ConsulAgentCheckOutput.self,
                               completion: completion)
     }
+    
+    public func agentRegisterCheck(_ check: ConsulAgentCheckInput) -> QuackVoid {
+        let params = agentRegisterCheckParams(check)
+        return respondVoid(method: .put,
+                           path: "/v1/agent/check/register",
+                           params: params,
+                           encoding: JSONEncoding.default)
+    }
+    
+    public func agentRegisterCheck(_ check: ConsulAgentCheckInput, completion: @escaping (QuackVoid) -> (Void)) {
+        let params = agentRegisterCheckParams(check)
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/register",
+                         params: params,
+                         encoding: JSONEncoding.default,
+                         completion: completion)
+    }
+    
+    private func agentRegisterCheckParams(_ check: ConsulAgentCheckInput) -> [String: Any] {
+        var params: [String: Any] = [:]
+        
+        params["Name"] = check.name
+        
+        let optionalParams: [String: Any?] = [
+            "Notes": check.notes,
+            "DeregisterCriticalServiceAfter": check.deregisterCriticalServiceAfter,
+            "Script": check.script,
+            "DockerContainerID": check.dockerContainerID,
+            "ServiceID": check.serviceID,
+            "HTTP": check.http,
+            "TCP": check.tcp,
+            "Interval": check.interval,
+            "TTL": check.ttl,
+            "TLSSkipVerify": check.tlsSkipVerify,
+            "Status": check.status?.rawValue
+        ]
+        
+        for (key, value) in optionalParams {
+            if let value = value {
+                params[key] = value
+            }
+        }
+        
+        return params
+    }
 }

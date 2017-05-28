@@ -190,7 +190,7 @@ class ConsulAgentTests: XCTestCase {
     
     // MARK: - Checks
     
-    func testAgentChecks() {
+    func test2AgentChecks() {
         let consul = Consul()
         let checks = consul.agentChecks()
         switch checks {
@@ -201,7 +201,7 @@ class ConsulAgentTests: XCTestCase {
         }
     }
     
-    func testAgentChecksAsync() {
+    func test2AgentChecksAsync() {
         let consul = Consul()
         let expectation = self.expectation(description: "agentChecks")
         consul.agentChecks() { checks in
@@ -214,6 +214,57 @@ class ConsulAgentTests: XCTestCase {
             expectation.fulfill()
         }
         self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test1AgentRegisterCheckMinimal() {
+        let consul = Consul()
+        let check = ConsulAgentCheckInput(name: "TestCheck", ttl: "60s")
+        let result = consul.agentRegisterCheck(check)
+        switch result {
+        case .success:
+            print("register success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test1AgentRegisterCheckAsync() {
+        let consul = Consul()
+        let check = ConsulAgentCheckInput(name: "TestCheckAsync", ttl: "60s")
+        let expectation = self.expectation(description: "agentCheckRegister")
+        consul.agentRegisterCheck(check) { result in
+            switch result {
+            case .success:
+                print("register success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test1AgentRegisterCheckMaximal() {
+        let consul = Consul()
+        let check = ConsulAgentCheckInput(name: "MemTest", ttl: "15s")
+        check.id = "MemTestUnitTests"
+        check.notes = "Hello these are some notes"
+        check.deregisterCriticalServiceAfter = "90m"
+        check.script = "/usr/local/bin/check_mem.py"
+        check.dockerContainerID = "f972c95ebf0e"
+        check.http = "http://example.com"
+        check.tcp = "example.com:22"
+        check.interval = "10s"
+        check.tlsSkipVerify = true
+        check.status = .passing
+        
+        let result = consul.agentRegisterCheck(check)
+        switch result {
+        case .success:
+            print("register success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
     }
     
 }

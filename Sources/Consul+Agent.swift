@@ -154,4 +154,14 @@ extension Consul {
         
         return params
     }
+    
+    public func agentDeregisterCheck(id: String) -> QuackVoid {
+        return respondVoid(method: .put, path: "/v1/agent/check/deregister/\(id)")
+    }
+    
+    public func agentDeregisterCheck(id: String, completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/deregister/\(id)",
+                         completion: completion)
+    }
 }

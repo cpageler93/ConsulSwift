@@ -231,6 +231,8 @@ class ConsulAgentTests: XCTestCase {
     func test1AgentRegisterCheckAsync() {
         let consul = Consul()
         let check = ConsulAgentCheckInput(name: "TestCheckAsync", ttl: "60s")
+        check.id = "TestCheckAsync"
+        
         let expectation = self.expectation(description: "agentCheckRegister")
         consul.agentRegisterCheck(check) { result in
             switch result {
@@ -265,6 +267,33 @@ class ConsulAgentTests: XCTestCase {
         case .failure(let error):
             XCTAssertNil(error)
         }
+    }
+    
+    func test3AgentDeregisterCheck() {
+        let consul = Consul()
+        let deregister = consul.agentDeregisterCheck(id: "TestCheckAsync")
+        switch deregister {
+        case .success:
+            print("deregister succes")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test3AgentDeregisterCheckAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentCheckDeregister")
+        consul.agentDeregisterCheck(id: "MemTestUnitTests") { deregisteer in
+            switch deregisteer {
+            case .success:
+                print("deregister success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
     }
     
 }

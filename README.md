@@ -56,7 +56,7 @@ consul.agentMembers { members in
 |                    |  Read Configuration             |  GET /v1/agent/self                      | ✅           |
 |                    |  Reload Agent                   |  PUT /v1/agent/reload                    | ✅           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/maintenance               | ✅           |
-|                    |  Join Agent                     |  GET /v1/agent/join/:id                  | ❌           |
+|                    |  Join Agent                     |  GET /v1/agent/join/:id                  | ✅           |
 |                    |  Gracefull Leave + Shutdown     |  PUT /v1/agent/leave                     | ✅           |
 |                    |  Force Leave + Shutdown         |  PUT /v1/agent/force-leave               | ✅           |
 |                    |                                 |                                          |              |

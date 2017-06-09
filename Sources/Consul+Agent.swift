@@ -53,7 +53,8 @@ extension Consul {
     
     // MARK: - Maintenance
     
-    public func agentMaintenance(enable: Bool, reason: String) -> QuackVoid {
+    public func agentMaintenance(enable: Bool,
+                                 reason: String) -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/maintenance",
                            params: [
@@ -63,7 +64,9 @@ extension Consul {
                            encoding: URLEncoding.queryString)
     }
     
-    public func agentMaintenance(enable: Bool, reason: String, completion: @escaping (QuackVoid) -> (Void)){
+    public func agentMaintenance(enable: Bool,
+                                 reason: String,
+                                 completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/maintenance",
                          params: [
@@ -71,6 +74,26 @@ extension Consul {
                             "reason": reason
                          ],
                          encoding: URLEncoding.queryString,
+                         completion: completion)
+    }
+    
+    // MARK: - Join
+    
+    // TODO: add tests
+    // missing tests because missing address to join
+    public func agentJoin(address: String,
+                          wan: Bool = false) -> QuackVoid {
+        return respondVoid(path: "/v1/agent/join/\(address)",
+                           params: ["wan": String(wan)])
+    }
+    
+    // TODO: add tests
+    // missing tests because missing address to join
+    public func agentJoin(address: String,
+                          wan: Bool = false, 
+                          completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(path: "/v1/agent/join/\(address)",
+                         params: ["wan": String(wan)],
                          completion: completion)
     }
     

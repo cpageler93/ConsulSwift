@@ -63,10 +63,10 @@ consul.agentMembers { members in
 |  Agent - Checs     |  List Checks                    |  GET /v1/agent/checks                    | ✅           |
 |                    |  Register Check                 |  PUT /v1/agent/check/register            | ✅           |
 |                    |  Deregister Check               |  PUT /v1/agent/check/deregister/:id      | ✅           |
-|                    |  TLL Check Pass                 |  GET /v1/agent/check/pass/:id            | ❌           |
-|                    |  TLL Check Warn                 |  GET /v1/agent/check/warn/:id            | ❌           |
-|                    |  TLL Check Fail                 |  GET /v1/agent/check/fail/:id            | ❌           |
-|                    |  TLL Check Update               |  GET /v1/agent/check/update/:id          | ❌           |
+|                    |  TLL Check Pass                 |  GET /v1/agent/check/pass/:id            | ✅           |
+|                    |  TLL Check Warn                 |  GET /v1/agent/check/warn/:id            | ✅           |
+|                    |  TLL Check Fail                 |  GET /v1/agent/check/fail/:id            | ✅           |
+|                    |  TLL Check Update               |  GET /v1/agent/check/update/:id          | ✅           |
 |                    |                                 |                                          |              |
 |  Agent - Services  |  List Services                  |  GET /v1/agent/services                  | ❌           |
 |                    |  Register Service               |  PUT /v1/agent/service/register          | ❌           |

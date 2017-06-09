@@ -159,9 +159,74 @@ extension Consul {
         return respondVoid(method: .put, path: "/v1/agent/check/deregister/\(id)")
     }
     
-    public func agentDeregisterCheck(id: String, completion: @escaping (QuackVoid) -> (Void)) {
+    public func agentDeregisterCheck(id: String,
+                                     completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/deregister/\(id)",
+                         completion: completion)
+    }
+    
+    public func agentCheckPass(id: String) -> QuackVoid {
+        return respondVoid(path: "/v1/agent/check/pass/\(id)")
+    }
+    
+    public func agentCheckPass(id: String,
+                               completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(path: "/v1/agent/check/pass/\(id)",
+                         completion: completion)
+    }
+    
+    public func agentCheckWarn(id: String,
+                               note: String = "") -> QuackVoid {
+        return respondVoid(path: "/v1/agent/check/warn/\(id)",
+                           params: ["note": note])
+    }
+    
+    public func agentCheckWarn(id: String,
+                               note: String = "",
+                               completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(path: "/v1/agent/check/warn/\(id)",
+                         params: ["note": note],
+                         completion: completion)
+    }
+    
+    public func agentCheckFail(id: String,
+                               note: String = "") -> QuackVoid {
+        return respondVoid(path: "/v1/agent/check/fail/\(id)",
+                           params: ["note": note])
+    }
+    
+    public func agentCheckFail(id: String,
+                               note: String = "",
+                               completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(path: "/v1/agent/check/fail/\(id)",
+                         params: ["note": note],
+                         completion: completion)
+    }
+    
+    public func agentCheckUpdate(id: String,
+                                 status: ConsulAgentCheckStatus,
+                                 output: String = "") -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/check/update/\(id)",
+                           params: [
+                            "Status": status.rawValue,
+                            "Output": output
+                           ],
+                           encoding: JSONEncoding.default)
+    }
+    
+    public func agentCheckUpdate(id: String,
+                                 status: ConsulAgentCheckStatus,
+                                 output: String = "",
+                                 completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/fail/\(id)",
+                         params: [
+                            "Status": status.rawValue,
+                            "Output": output
+                         ],
+                         encoding: JSONEncoding.default,
                          completion: completion)
     }
 }

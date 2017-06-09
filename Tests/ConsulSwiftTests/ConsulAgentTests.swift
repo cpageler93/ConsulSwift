@@ -190,7 +190,7 @@ class ConsulAgentTests: XCTestCase {
     
     // MARK: - Checks
     
-    func test2AgentChecks() {
+    func test3AgentChecks() {
         let consul = Consul()
         let checks = consul.agentChecks()
         switch checks {
@@ -201,7 +201,7 @@ class ConsulAgentTests: XCTestCase {
         }
     }
     
-    func test2AgentChecksAsync() {
+    func test3AgentChecksAsync() {
         let consul = Consul()
         let expectation = self.expectation(description: "agentChecks")
         consul.agentChecks() { checks in
@@ -269,7 +269,7 @@ class ConsulAgentTests: XCTestCase {
         }
     }
     
-    func test3AgentDeregisterCheck() {
+    func test4AgentDeregisterCheck() {
         let consul = Consul()
         let deregister = consul.agentDeregisterCheck(id: "TestCheckAsync")
         switch deregister {
@@ -280,7 +280,7 @@ class ConsulAgentTests: XCTestCase {
         }
     }
     
-    func test3AgentDeregisterCheckAsync() {
+    func test4AgentDeregisterCheckAsync() {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentCheckDeregister")
@@ -288,6 +288,116 @@ class ConsulAgentTests: XCTestCase {
             switch deregisteer {
             case .success:
                 print("deregister success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test2AgentCheckPass() {
+        let consul = Consul()
+        let checkPass = consul.agentCheckPass(id: "MemTest")
+        switch checkPass {
+        case .success:
+            print("check pass success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2AgentCheckPassAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentCheckPass")
+        consul.agentCheckPass(id: "MemTest") { checkPass in
+            switch checkPass {
+            case .success:
+                print("check pass success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test2AgentCheckWarn() {
+        let consul = Consul()
+        let checkPass = consul.agentCheckWarn(id: "MemTest", note: "Hello this is Test")
+        switch checkPass {
+        case .success:
+            print("check warn success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2AgentCheckWarnAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentCheckPass")
+        consul.agentCheckWarn(id: "MemTest", note: "Hello this is Test") { checkPass in
+            switch checkPass {
+            case .success:
+                print("check warn success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test2AgentCheckFail() {
+        let consul = Consul()
+        let checkPass = consul.agentCheckFail(id: "MemTest", note: "Hello this is Test")
+        switch checkPass {
+        case .success:
+            print("check fail success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2AgentCheckFailAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentCheckPass")
+        consul.agentCheckFail(id: "MemTest", note: "Hello this is Test") { checkPass in
+            switch checkPass {
+            case .success:
+                print("check fail success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test2AgentCheckUpdate() {
+        let consul = Consul()
+        let checkPass = consul.agentCheckUpdate(id: "MemTest",
+                                                status: .passing,
+                                                output: "Hello this is Test")
+        switch checkPass {
+        case .success:
+            print("check update success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2AgentCheckUpdateAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentCheckPass")
+        consul.agentCheckUpdate(id: "MemTest", status: .passing, output: "Hello this is Test") { checkPass in
+            switch checkPass {
+            case .success:
+                print("check update success")
             case .failure(let error):
                 XCTAssertNil(error)
             }

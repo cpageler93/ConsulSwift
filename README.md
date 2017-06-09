@@ -1,6 +1,6 @@
 # ConsulSwift
 
-[![Twitter: @cpageler93](https://img.shields.io/badge/contact-@cpageler93-lightgrey.svg?style=flat)](https://twitter.com/cpageler93
+[![Twitter: @cpageler93](https://img.shields.io/badge/contact-@cpageler93-lightgrey.svg?style=flat)](https://twitter.com/cpageler93)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/cpageler93/ConsulSwift/blob/master/LICENSE)
 )
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0b6383a3ae304868a9bc2ba0d58a635e)](https://www.codacy.com/app/cpageler93/ConsulSwift?utm_source=github.com&utm_medium=referral&utm_content=cpageler93/ConsulSwift&utm_campaign=badger)

@@ -204,7 +204,7 @@ class ConsulAgentTests: XCTestCase {
     func test3AgentChecksAsync() {
         let consul = Consul()
         let expectation = self.expectation(description: "agentChecks")
-        consul.agentChecks() { checks in
+        consul.agentChecks { checks in
             switch checks {
             case .success(let checks):
                 XCTAssertGreaterThan(checks.count, 0)

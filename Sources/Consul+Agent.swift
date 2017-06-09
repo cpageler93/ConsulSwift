@@ -97,7 +97,7 @@ extension Consul {
     // MARK: - Maintenance
     
     
-    /// This endpoint places the agent into "maintenance mode". During maintenance mode, 
+    /// This endpoint places the agent into "maintenance mode". During maintenance mode,
     /// the node will be marked as unavailable and will not be present in DNS or API queries.
     /// This API call is idempotent.
     ///
@@ -158,7 +158,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#join-agent
-    /// 
+    ///
     public func agentJoin(address: String,
                           wan: Bool = false) -> QuackVoid {
         return respondVoid(path: "/v1/agent/join/\(address)",
@@ -173,7 +173,7 @@ extension Consul {
     /// - SeeAlso: `Consul.agentJoin(address: String, wan: Bool)`
     /// - Parameter completion: completion block
     public func agentJoin(address: String,
-                          wan: Bool = false, 
+                          wan: Bool = false,
                           completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/join/\(address)",
                          params: ["wan": String(wan)],
@@ -184,17 +184,17 @@ extension Consul {
     
     
     /// ## Graceful
-    /// This endpoint triggers a graceful leave and shutdown of the agent. 
-    /// It is used to ensure other nodes see the agent as "left" instead of "failed". 
+    /// This endpoint triggers a graceful leave and shutdown of the agent.
+    /// It is used to ensure other nodes see the agent as "left" instead of "failed".
     /// Nodes that leave will not attempt to re-join the cluster on restarting with a snapshot.
     ///
-    /// For nodes in server mode, the node is removed from the Raft peer set in a graceful manner. 
+    /// For nodes in server mode, the node is removed from the Raft peer set in a graceful manner.
     /// This is critical, as in certain situations a non-graceful leave can affect cluster availability.
     ///
     /// ## Force
-    /// This endpoint instructs the agent to force a node into the left state. 
-    /// If a node fails unexpectedly, then it will be in a failed state. Once in the failed state, 
-    /// Consul will attempt to reconnect, and the services and checks belonging to that node will not be cleaned up. 
+    /// This endpoint instructs the agent to force a node into the left state.
+    /// If a node fails unexpectedly, then it will be in a failed state. Once in the failed state,
+    /// Consul will attempt to reconnect, and the services and checks belonging to that node will not be cleaned up.
     /// Forcing a node into the left state allows its old entries to be removed.
     ///
     /// - Parameter force: Specifices to leave gracefully or forced
@@ -361,4 +361,5 @@ extension Consul {
                          encoding: JSONEncoding.default,
                          completion: completion)
     }
+
 }

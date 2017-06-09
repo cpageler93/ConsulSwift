@@ -54,7 +54,7 @@ public class ConsulAgentCheckInput {
     var http: String?
     var tcp: String?
     var interval: String? // 10s
-    var ttl: String? //15s
+    var ttl: String? // 15s
     var tlsSkipVerify: Bool = false
     var status: ConsulAgentCheckStatus?
     

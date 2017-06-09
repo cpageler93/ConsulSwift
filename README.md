@@ -1,5 +1,7 @@
 # ConsulSwift
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0b6383a3ae304868a9bc2ba0d58a635e)](https://www.codacy.com/app/cpageler93/ConsulSwift?utm_source=github.com&utm_medium=referral&utm_content=cpageler93/ConsulSwift&utm_campaign=badger)
+
 [Consul](https://www.consul.io) Client for Swift
 
 ConsulSwift connects to `http://localhost:8500` by default.

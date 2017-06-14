@@ -406,12 +406,12 @@ class ConsulAgentTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
-    func testAgentServices() {
+    func test2AgentServices() {
         let consul = Consul()
         let services = consul.agentServices()
         switch services {
         case .success(let services):
-            XCTAssertGreaterThanOrEqual(services.count, 1)
+            XCTAssertGreaterThanOrEqual(services.count, 2)
         case .failure(let error):
             XCTAssertNil(error)
         }
@@ -428,6 +428,38 @@ class ConsulAgentTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNil(error)
             }
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test1AgentRegisterService() {
+        let consul = Consul()
+        let service = ConsulAgentServiceInput(name: "testService")
+        let register = consul.agentRegisterService(service)
+        switch register {
+        case .success:
+            print("regiser service success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test1AgentRegisterServiceAsync() {
+        let consul = Consul()
+        let service = ConsulAgentServiceInput(name: "testServiceAsync")
+        
+        let expectation = self.expectation(description: "agentServiceRegister")
+        
+        consul.agentRegisterService(service) { register in
+            switch register {
+            case .success:
+                print("regiser service success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            
             expectation.fulfill()
         }
         

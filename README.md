@@ -72,8 +72,8 @@ consul.agentMembers { members in
 |                    |  TLL Check Fail                 |  GET /v1/agent/check/fail/:id            | ✅           |
 |                    |  TLL Check Update               |  GET /v1/agent/check/update/:id          | ✅           |
 |                    |                                 |                                          |              |
-|  Agent - Services  |  List Services                  |  GET /v1/agent/services                  | ❌           |
-|                    |  Register Service               |  PUT /v1/agent/service/register          | ❌           |
+|  Agent - Services  |  List Services                  |  GET /v1/agent/services                  | ✅           |
+|                    |  Register Service               |  PUT /v1/agent/service/register          | ✅           |
 |                    |  Deregister Service             |  PUT /v1/agent/service/deregister/:id    | ❌           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/service/maintenance/:id   | ❌           |
 |                    |                                 |                                          | ❌           |

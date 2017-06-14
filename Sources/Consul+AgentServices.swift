@@ -45,4 +45,40 @@ extension Consul {
                                      completion: completion)
     }
     
+    public func agentRegisterService(_ service: ConsulAgentServiceInput) -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/service/register",
+                           params: agentRegisterServiceParams(service),
+                           encoding: JSONEncoding.default)
+    }
+    
+    public func agentRegisterService(_ service: ConsulAgentServiceInput,
+                                     completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/service/register",
+                         params: agentRegisterServiceParams(service),
+                         encoding: JSONEncoding.default,
+                         completion: completion)
+    }
+    
+    private func agentRegisterServiceParams(_ service: ConsulAgentServiceInput) -> [String: Any] {
+        var params: [String: Any] = [:]
+        
+        params["Name"] = service.name
+        params["Tags"] = service.tags
+        
+        let optionalParams: [String: Any?] = [
+            "ID": service.id,
+            "Address": service.address,
+            "Port": service.port,
+        ]
+        
+        for (key, value) in optionalParams {
+            if let value = value {
+                params[key] = value
+            }
+        }
+        
+        return params
+    }
 }

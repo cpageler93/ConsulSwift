@@ -40,3 +40,23 @@ public class ConsulAgentServiceOutput: QuackModel {
         self.port = port
     }
 }
+
+public class ConsulAgentServiceInput {
+    public var id: String?
+    public var name: String
+    public var tags: [String]
+    public var address: String?
+    public var port: Int?
+    
+    public init(name: String,
+                id: String? = nil,
+                tags: [String] = [],
+                address: String? = nil,
+                port: Int? = nil) {
+        self.name = name
+        self.id = id
+        self.tags = tags
+        self.address = address
+        self.port = port
+    }
+}

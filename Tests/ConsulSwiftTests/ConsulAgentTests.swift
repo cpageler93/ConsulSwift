@@ -406,4 +406,32 @@ class ConsulAgentTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
+    func testAgentServices() {
+        let consul = Consul()
+        let services = consul.agentServices()
+        switch services {
+        case .success(let services):
+            XCTAssertGreaterThanOrEqual(services.count, 1)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testAgentServicesAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentServices")
+        consul.agentServices { services in
+            switch services {
+            case .success(let services):
+                XCTAssertGreaterThanOrEqual(services.count, 1)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
 }

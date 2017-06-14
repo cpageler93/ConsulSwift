@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_102 /* Consul+Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Consul+Agent.swift */; };
+		590A219D1EF1D791000EECAE /* Consul+AgentChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */; };
+		590A219F1EF1D7F3000EECAE /* Consul+AgentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */; };
+		590A21A11EF1D86D000EECAE /* ConsulAgentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */; };
+		OBJ_102 /* Consul+AgentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Consul+AgentBase.swift */; };
 		OBJ_103 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Consul.swift */; };
 		OBJ_104 /* ConsulAgentCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConsulAgentCheck.swift */; };
 		OBJ_105 /* ConsulAgentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ConsulAgentConfiguration.swift */; };
@@ -116,6 +119,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentChecks.swift"; sourceTree = "<group>"; };
+		590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentServices.swift"; sourceTree = "<group>"; };
+		590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentService.swift; sourceTree = "<group>"; };
 		599693FF1EEB4524008B6FCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_10 /* ConsulAgentCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentCheck.swift; sourceTree = "<group>"; };
 		OBJ_11 /* ConsulAgentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentConfiguration.swift; sourceTree = "<group>"; };
@@ -152,7 +158,7 @@
 		OBJ_49 /* ConsulSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsulSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_50 /* ConsulSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConsulSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Consul+Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Agent.swift"; sourceTree = "<group>"; };
+		OBJ_8 /* Consul+AgentBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentBase.swift"; sourceTree = "<group>"; };
 		OBJ_9 /* Consul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consul.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,11 +313,14 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Consul+Agent.swift */,
+				OBJ_8 /* Consul+AgentBase.swift */,
+				590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */,
+				590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */,
 				OBJ_9 /* Consul.swift */,
 				OBJ_10 /* ConsulAgentCheck.swift */,
 				OBJ_11 /* ConsulAgentConfiguration.swift */,
 				OBJ_12 /* ConsulAgentMember.swift */,
+				590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -442,11 +451,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_102 /* Consul+Agent.swift in Sources */,
+				OBJ_102 /* Consul+AgentBase.swift in Sources */,
+				590A219F1EF1D7F3000EECAE /* Consul+AgentServices.swift in Sources */,
 				OBJ_103 /* Consul.swift in Sources */,
 				OBJ_104 /* ConsulAgentCheck.swift in Sources */,
 				OBJ_105 /* ConsulAgentConfiguration.swift in Sources */,
+				590A219D1EF1D791000EECAE /* Consul+AgentChecks.swift in Sources */,
 				OBJ_106 /* ConsulAgentMember.swift in Sources */,
+				590A21A11EF1D86D000EECAE /* ConsulAgentService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

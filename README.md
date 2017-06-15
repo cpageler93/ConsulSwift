@@ -78,7 +78,7 @@ consul.agentMembers { members in
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/service/maintenance/:id   | ✅           |
 |                    |                                 |                                          |              |
 |  Catalog           |  List Datacenters               |  GET /v1/catalog/datacenters             | ✅           |
-|                    |  List Nodes in a given DC       |  GET /v1/catalog/nodes                   | ❌           |
+|                    |  List Nodes in a given DC       |  GET /v1/catalog/nodes                   | ✅           |
 |                    |  List Services in a given DC    |  GET /v1/catalog/services                | ❌           |
 |                    |  List Nodes for Service         |  GET /v1/catalog/service/:id             | ❌           |
 |                    |  List Services for Node         |  GET /v1/catalog/node/:id                | ❌           |

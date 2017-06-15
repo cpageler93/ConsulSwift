@@ -44,4 +44,38 @@ extension Consul {
                                      completion: completion)
     }
     
+    
+    /// This endpoint and returns the nodes registered in a given datacenter.
+    ///
+    /// [API Documentation][apidoc]
+    ///
+    /// - Parameter datacenter: Datacenter ID
+    /// - Returns: Result with Catalog Node
+    ///
+    /// [apidoc]: https://www.consul.io/api/catalog.html#list-nodes
+    ///
+    public func catalogNodesIn(datacenter: String) -> QuackResult<[ConsulCatalogNode]> {
+        return respondWithArray(path: "/v1/catalog/nodes",
+                                params: [
+                                    "dc": datacenter
+                                ],
+                                encoding: URLEncoding.queryString,
+                                model: ConsulCatalogNode.self)
+    }
+    
+    /// Async version of `Consul.catalogNodesIn(datacenter: String)`
+    ///
+    /// - SeeAlso: `Consul.catalogNodesIn(datacenter: String)`
+    /// - Parameter completion: completion block
+    public func catalogNodesIn(datacenter: String,
+                               completion: @escaping (QuackResult<[ConsulCatalogNode]>) -> (Void)) {
+        respondWithArrayAsync(path: "/v1/catalog/nodes",
+                              params: [
+                                "dc": datacenter
+                              ],
+                              encoding: URLEncoding.queryString,
+                              model: ConsulCatalogNode.self,
+                              completion: completion)
+    }
+    
 }

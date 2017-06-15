@@ -47,4 +47,30 @@ class ConsulCatalogTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
+    func testCatalogNodesInDatacenter() {
+        let consul = Consul()
+        let nodes = consul.catalogNodesIn(datacenter: "fra1")
+        switch nodes {
+        case .success(let nodes):
+            XCTAssertEqual(nodes.count, 1)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testCatalogNodesInDatacenterAsync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "catalogNodesInDatacenter")
+        consul.catalogNodesIn(datacenter: "fra1") { nodes in
+            switch nodes {
+            case .success(let nodes):
+                XCTAssertEqual(nodes.count, 1)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
 }

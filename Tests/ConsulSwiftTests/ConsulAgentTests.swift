@@ -480,12 +480,57 @@ class ConsulAgentTests: XCTestCase {
     func test2AgentDeregisterServiceAsync() {
         let consul = Consul()
         
-        let expectation = self.expectation(description: "agentServiceRegister")
+        let expectation = self.expectation(description: "agentServiceDeregister")
         
         consul.agentDeregisterService("testServiceAsync") { deregister in
             switch deregister {
             case .success:
                 print("deregister success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test1AgentServiceMaintenance() {
+        let consul = Consul()
+        let maintenance = consul.agentServiceMaintenance("testService",
+                                                         enable: true,
+                                                         reason: "Test")
+        switch maintenance {
+        case .success:
+            print("maintenance success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test1AgentServiceMaintenanceWithWrongServiceID() {
+        let consul = Consul()
+        let maintenance = consul.agentServiceMaintenance("testServiceThisIsNotAValidServiceName",
+                                                         enable: true,
+                                                         reason: "Test")
+        switch maintenance {
+        case .success:
+            XCTFail("this should fail because the id is invalid")
+        case .failure:
+            print("maintenance failure is correct")
+        }
+    }
+    
+    func test1AgentServiceMaintenanceAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentServiceMaintenance")
+        
+        consul.agentServiceMaintenance("testService", enable: true, reason: "Test") { maintenance in
+            switch maintenance {
+            case .success:
+                print("maintenance success")
             case .failure(let error):
                 XCTAssertNil(error)
             }

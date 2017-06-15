@@ -126,4 +126,49 @@ extension Consul {
                          path: "/v1/agent/service/deregister/\(id)",
                          completion: completion)
     }
+    
+    /// This endpoint places a given service into "maintenance mode".
+    /// During maintenance mode, the service will be marked as unavailable and will not be present in DNS or API queries.
+    /// This API call is idempotent. Maintenance mode is persistent and will be automatically restored on agent restart.
+    ///
+    /// [API Documentation][apidoc]
+    ///
+    /// - Parameters:
+    ///   - id: id of the service
+    ///   - enable: enable or disable maintenance
+    ///   - reason: reason
+    /// - Returns: Void Result
+    ///
+    /// [apidoc]: https://www.consul.io/api/agent/service.html#enable-maintenance-mode
+    ///
+    public func agentServiceMaintenance(_ id: String,
+                                        enable: Bool,
+                                        reason: String) -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/service/maintenance/\(id)",
+                           params: [
+                                "enable": String(enable),
+                                "reason": reason
+                           ],
+                           encoding: URLEncoding.queryString)
+    }
+    
+    /// Async version of `Consul.agentServiceMaintenance(_ id: String, enable: Bool, reason: String)`
+    ///
+    /// - SeeAlso: `Consul.agentServiceMaintenance(_ id: String, enable: Bool, reason: String)`
+    /// - Parameter completion: completion block
+    public func agentServiceMaintenance(_ id: String,
+                                        enable: Bool,
+                                        reason: String,
+                                        completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/service/maintenance/\(id)",
+                         params: [
+                            "enable": String(enable),
+                            "reason": reason
+                         ],
+                         encoding: URLEncoding.queryString,
+                         completion: completion)
+    }
+    
 }

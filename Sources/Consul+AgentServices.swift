@@ -45,6 +45,17 @@ extension Consul {
                                      completion: completion)
     }
     
+    /// This endpoint adds a new service, with an optional health check, to the local agent.
+    /// The agent is responsible for managing the status of its local services,
+    /// and for sending updates about its local services to the servers to keep the global catalog in sync.
+    ///
+    /// [API Documentation][apidoc]
+    ///
+    /// - Parameter service: service to register
+    /// - Returns: void Result
+    ///
+    /// [apidoc]: https://www.consul.io/api/agent/service.html#register-service
+    ///
     public func agentRegisterService(_ service: ConsulAgentServiceInput) -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/register",
@@ -52,6 +63,10 @@ extension Consul {
                            encoding: JSONEncoding.default)
     }
     
+    /// Async version of `Consul.agentRegisterService(_ service: ConsulAgentServiceInput)`
+    ///
+    /// - SeeAlso: `Consul.agentRegisterService(_ service: ConsulAgentServiceInput)`
+    /// - Parameter completion: completion block
     public func agentRegisterService(_ service: ConsulAgentServiceInput,
                                      completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
@@ -61,6 +76,10 @@ extension Consul {
                          completion: completion)
     }
     
+    /// helper method which returns parameters for register service
+    ///
+    /// - Parameter service: service input
+    /// - Returns: parameters
     private func agentRegisterServiceParams(_ service: ConsulAgentServiceInput) -> [String: Any] {
         var params: [String: Any] = [:]
         
@@ -80,5 +99,31 @@ extension Consul {
         }
         
         return params
+    }
+    
+    /// This endpoint removes a service from the local agent. If the service does not exist, no action is taken.
+    /// The agent will take care of deregistering the service with the catalog. If there is an associated check, that is also deregistered.
+    ///
+    /// [API Documentation][apidoc]
+    ///
+    /// - Parameter id: service id to deregeister
+    /// - Returns: Void Result
+    ///
+    /// [apidoc]: https://www.consul.io/api/agent/service.html#deregister-service
+    ///
+    public func agentDeregisterService(_ id: String) -> QuackVoid {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/service/deregister/\(id)")
+    }
+    
+    /// Async version of `Consul.agentDeregisterService(_ id: String)`
+    ///
+    /// - SeeAlso: `Consul.agentDeregisterService(_ id: String)`
+    /// - Parameter completion: completion block
+    public func agentDeregisterService(_ id: String,
+                                       completion: @escaping (QuackVoid) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/service/deregister/\(id)",
+                         completion: completion)
     }
 }

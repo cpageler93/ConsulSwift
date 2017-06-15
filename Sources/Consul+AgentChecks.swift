@@ -14,6 +14,7 @@ extension Consul {
     
     // MARK: - Checks
     
+    
     /// This endpoint returns all checks that are registered with the local agent.
     /// These checks were either provided through configuration files or added dynamically using the HTTP API.
     ///

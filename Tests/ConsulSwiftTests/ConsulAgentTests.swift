@@ -406,7 +406,7 @@ class ConsulAgentTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
-    func test2AgentServices() {
+    func test3AgentServices() {
         let consul = Consul()
         let services = consul.agentServices()
         switch services {
@@ -417,14 +417,14 @@ class ConsulAgentTests: XCTestCase {
         }
     }
     
-    func testAgentServicesAsync() {
+    func test3AgentServicesAsync() {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentServices")
         consul.agentServices { services in
             switch services {
             case .success(let services):
-                XCTAssertGreaterThanOrEqual(services.count, 1)
+                XCTAssertGreaterThanOrEqual(services.count, 2)
             case .failure(let error):
                 XCTAssertNil(error)
             }
@@ -456,6 +456,36 @@ class ConsulAgentTests: XCTestCase {
             switch register {
             case .success:
                 print("regiser service success")
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test2AgentDeregisterService() {
+        let consul = Consul()
+        let deregister = consul.agentDeregisterService("testServiceAsync")
+        switch deregister {
+        case .success:
+            print("deregister success")
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2AgentDeregisterServiceAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "agentServiceRegister")
+        
+        consul.agentDeregisterService("testServiceAsync") { deregister in
+            switch deregister {
+            case .success:
+                print("deregister success")
             case .failure(let error):
                 XCTAssertNil(error)
             }

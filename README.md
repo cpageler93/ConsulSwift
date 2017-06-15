@@ -74,7 +74,7 @@ consul.agentMembers { members in
 |                    |                                 |                                          |              |
 |  Agent - Services  |  List Services                  |  GET /v1/agent/services                  | ✅           |
 |                    |  Register Service               |  PUT /v1/agent/service/register          | ✅           |
-|                    |  Deregister Service             |  PUT /v1/agent/service/deregister/:id    | ❌           |
+|                    |  Deregister Service             |  PUT /v1/agent/service/deregister/:id    | ✅           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/service/maintenance/:id   | ❌           |
 |                    |                                 |                                          |              |
 |  Catalog           |  List Datacenters               |  GET /v1/catalog/datacenters             | ❌           |

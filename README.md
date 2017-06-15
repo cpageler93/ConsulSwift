@@ -76,28 +76,28 @@ consul.agentMembers { members in
 |                    |  Register Service               |  PUT /v1/agent/service/register          | ✅           |
 |                    |  Deregister Service             |  PUT /v1/agent/service/deregister/:id    | ❌           |
 |                    |  Enable Maintenance Mode        |  PUT /v1/agent/service/maintenance/:id   | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 |  Catalog           |  List Datacenters               |  GET /v1/catalog/datacenters             | ❌           |
 |                    |  List Nodes in a given DC       |  GET /v1/catalog/nodes                   | ❌           |
 |                    |  List Services in a given DC    |  GET /v1/catalog/services                | ❌           |
 |                    |  List Nodes for Service         |  GET /v1/catalog/service/:id             | ❌           |
 |                    |  List Services for Node         |  GET /v1/catalog/node/:id                | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 |  Coordinates       |  Read WAN Coordinates           |  GET /v1/coordinates/datacenters         | ❌           |
 |                    |  Read LAN Coordinates           |  GET /v1/coordinates/nodes               | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 |  Events            |  Fire Event                     |  PUT /v1/event/fire/:name                | ❌           |
 |                    |  List Events                    |  GET /v1/event/list                      | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 |  Health            |  List Checks for Node           |  GET /v1/health/node/:id                 | ❌           |
 |                    |  List Checks for Service        |  GET /v1/health/checks/:id               | ❌           |
 |                    |  List Nodes for Service         |  GET /v1/health/service/:id              | ❌           |
 |                    |  List Checks in State           |  GET /v1/health/state/:state             | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 |  KV Store          |  Read Key                       |  GET /v1/kv/:key                         | ❌           |
 |                    |  Create/Update Key              |  PUT /v1/kv/:key                         | ❌           |
 |                    |  Delete Key                     |  DELETE /v2/kv/:key                      | ❌           |
-|                    |                                 |                                          | ❌           |
+|                    |                                 |                                          |              |
 
 ## Test
 

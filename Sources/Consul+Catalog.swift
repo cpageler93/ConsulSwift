@@ -9,6 +9,7 @@
 import Foundation
 import Quack
 import Alamofire
+import SwiftyJSON
 
 // https://www.consul.io/api/catalog.html
 extension Consul {
@@ -78,4 +79,44 @@ extension Consul {
                               completion: completion)
     }
     
+    public func catalogServicesIn(datacenter: String) -> QuackResult<[ConsulCatalogService]> {
+        return respondWithArray(path: "/v1/catalog/services",
+                                params: [
+                                    "dc": datacenter
+                                ],
+                                encoding: URLEncoding.queryString,
+                                parser: CatalogServicesParser(),
+                                model: ConsulCatalogService.self)
+    }
+    
+    public func catalogServicesIn(datacenter: String,
+                                  completion: @escaping (QuackResult<[ConsulCatalogService]>) -> (Void)) {
+        respondWithArrayAsync(path: "/v1/catalog/services",
+                              params: [
+                                "dc": datacenter
+                              ],
+                              encoding: URLEncoding.queryString,
+                              parser: CatalogServicesParser(),
+                              model: ConsulCatalogService.self,
+                              completion: completion)
+    }
+    
+}
+
+public class CatalogServicesParser : QuackCustomArrayParser {
+    
+    public func parseArray<Model>(json: JSON, model: Model.Type) -> QuackResult<[Model]> where Model : QuackModel {
+        if let dictionary = json.dictionary {
+            var result: [Model] = []
+            for (key, value) in dictionary {
+                if let model = ConsulCatalogService(name: key, json: value) {
+                    result.append(model as! Model)
+                }
+            }
+            return QuackResult.success(result)
+        }
+        
+        return QuackResult.failure(QuackError.JSONParsingError)
+    }
+
 }

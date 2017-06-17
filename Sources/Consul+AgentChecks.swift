@@ -46,6 +46,9 @@ extension Consul {
                               completion: completion)
     }
     
+    // MARK: Register / Deregister
+    
+    
     /// This endpoint adds a new check to the local agent. Checks may be of script, HTTP, TCP, or TTL type.
     /// The agent is responsible for managing the status of the check and keeping the Catalog in sync.
     ///
@@ -133,6 +136,9 @@ extension Consul {
                          path: "/v1/agent/check/deregister/\(id)",
             completion: completion)
     }
+    
+    // MARK: Check Status
+    
     
     /// This endpoint is used with a TTL type check to set the status of the check to passing and
     /// to reset the TTL clock.

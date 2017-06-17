@@ -45,6 +45,9 @@ extension Consul {
                                      completion: completion)
     }
     
+    // MARK: Register / Deregister
+    
+    
     /// This endpoint adds a new service, with an optional health check, to the local agent.
     /// The agent is responsible for managing the status of its local services,
     /// and for sending updates about its local services to the servers to keep the global catalog in sync.
@@ -126,6 +129,9 @@ extension Consul {
                          path: "/v1/agent/service/deregister/\(id)",
                          completion: completion)
     }
+    
+    // MARK: Maintenance
+    
     
     /// This endpoint places a given service into "maintenance mode".
     /// During maintenance mode, the service will be marked as unavailable and will not be present in DNS or API queries.

@@ -57,3 +57,25 @@ public class ConsulCatalogNodeWithService: ConsulCatalogNode {
         self.servicePort = json["ServicePort"].int
     }
 }
+
+public class ConsulCatalogNodeWithServices: ConsulCatalogNode {
+    
+    var services: [ConsulAgentServiceOutput] = []
+    
+    public required init?(json: JSON) {
+        let nodeJson = json["Node"]
+        guard nodeJson.exists() else { return nil }
+        
+        super.init(json: nodeJson)
+        
+        var services: [ConsulAgentServiceOutput] = []
+        if let jsonServices = json["Services"].dictionary {
+            for (_, jsonService) in jsonServices {
+                if let service = ConsulAgentServiceOutput(json: jsonService) {
+                    services.append(service)
+                }
+            }
+        }
+        self.services = services
+    }
+}

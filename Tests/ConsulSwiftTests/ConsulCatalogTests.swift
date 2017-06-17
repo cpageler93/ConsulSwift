@@ -117,9 +117,7 @@ class ConsulCatalogTests: XCTestCase {
         let consul = Consul()
         let service = ConsulAgentServiceInput(name: "testService1")
         consul.agentRegisterService(service)
-        
         let expectation = self.expectation(description: "catalogServicesInDatacenter")
-        
         consul.catalogNodesWith(service: "testService1") { nodes in
             switch nodes {
             case .success(let nodes):
@@ -133,4 +131,53 @@ class ConsulCatalogTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
+    func testCatalogServicesForNode() {
+        let consul = Consul()
+        let services = consul.agentMembers()
+        
+        switch services {
+        case .success(let services):
+            XCTAssertGreaterThanOrEqual(services.count, 1)
+            if let firstService = services.first, let serviceID = firstService.id() {
+                let servicesForNode = consul.catalogServicesFor(node: serviceID)
+                switch servicesForNode {
+                case .success(let servicesForNode):
+                    XCTAssertNotNil(servicesForNode)
+                    XCTAssertGreaterThanOrEqual(servicesForNode.services.count, 1)
+                case .failure(let error):
+                    XCTAssertNil(error)
+                }
+            }
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testCatalogServicesForNodeAsync() {
+        let consul = Consul()
+        let services = consul.agentMembers()
+        
+        let expectation = self.expectation(description: "catalogServicesInDatacenter")
+        
+        switch services {
+        case .success(let services):
+            XCTAssertGreaterThanOrEqual(services.count, 1)
+            if let firstService = services.first, let serviceID = firstService.id() {
+                consul.catalogServicesFor(node: serviceID, completion: { servicesForNode in
+                    switch servicesForNode {
+                    case .success(let servicesForNode):
+                        XCTAssertNotNil(servicesForNode)
+                        XCTAssertGreaterThanOrEqual(servicesForNode.services.count, 1)
+                    case .failure(let error):
+                        XCTAssertNil(error)
+                    }
+                    expectation.fulfill()
+                })
+            }
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
 }

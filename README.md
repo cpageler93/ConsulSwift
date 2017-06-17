@@ -81,7 +81,7 @@ consul.agentMembers { members in
 |                    |  List Nodes in a given DC       |  GET /v1/catalog/nodes                   | ✅           |
 |                    |  List Services in a given DC    |  GET /v1/catalog/services                | ✅           |
 |                    |  List Nodes for Service         |  GET /v1/catalog/service/:id             | ✅           |
-|                    |  List Services for Node         |  GET /v1/catalog/node/:id                | ❌           |
+|                    |  List Services for Node         |  GET /v1/catalog/node/:id                | ✅           |
 |                    |                                 |                                          |              |
 |  Coordinates       |  Read WAN Coordinates           |  GET /v1/coordinates/datacenters         | ❌           |
 |                    |  Read LAN Coordinates           |  GET /v1/coordinates/nodes               | ❌           |

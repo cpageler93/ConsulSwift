@@ -101,6 +101,17 @@ extension Consul {
                               completion: completion)
     }
     
+    public func catalogNodesWith(service: String) -> QuackResult<[ConsulCatalogNodeWithService]> {
+        return respondWithArray(path: "/v1/catalog/service/\(service)",
+                                model: ConsulCatalogNodeWithService.self)
+    }
+    
+    public func catalogNodesWith(service: String,
+                                 completion: @escaping (QuackResult<[ConsulCatalogNodeWithService]>) -> (Void)) {
+        respondWithArrayAsync(path: "/v1/catalog/service/\(service)",
+                              model: ConsulCatalogNodeWithService.self,
+                              completion: completion)
+    }
 }
 
 public class CatalogServicesParser : QuackCustomArrayParser {

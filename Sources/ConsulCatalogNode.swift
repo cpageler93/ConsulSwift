@@ -42,3 +42,18 @@ public class ConsulCatalogNode: QuackModel {
         self.taggedAddresses = taggedAddresses
     }
 }
+
+public class ConsulCatalogNodeWithService: ConsulCatalogNode {
+    
+    var serviceID: String?
+    var serviceName: String?
+    var servicePort: Int?
+    
+    public required init?(json: JSON) {
+        super.init(json: json)
+        
+        self.serviceID = json["ServiceID"].string
+        self.serviceName = json["ServiceName"].string
+        self.servicePort = json["ServicePort"].int
+    }
+}

@@ -84,7 +84,7 @@ class ConsulCatalogTests: XCTestCase {
         }
     }
     
-    func testCatalogServicesInDatacenterAsyn() {
+    func testCatalogServicesInDatacenterAsync() {
         let consul = Consul()
         let expectation = self.expectation(description: "catalogServicesInDatacenter")
         consul.catalogServicesIn(datacenter: "fra1") { services in
@@ -94,6 +94,40 @@ class ConsulCatalogTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNil(error)
             }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func testCatalogNodesWithService() {
+        let consul = Consul()
+        let service = ConsulAgentServiceInput(name: "testService1")
+        consul.agentRegisterService(service)
+        
+        let nodes = consul.catalogNodesWith(service: "testService1")
+        switch nodes {
+        case .success(let nodes):
+            XCTAssertGreaterThanOrEqual(nodes.count, 1)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testCatalogNodesWithServiceAsync() {
+        let consul = Consul()
+        let service = ConsulAgentServiceInput(name: "testService1")
+        consul.agentRegisterService(service)
+        
+        let expectation = self.expectation(description: "catalogServicesInDatacenter")
+        
+        consul.catalogNodesWith(service: "testService1") { nodes in
+            switch nodes {
+            case .success(let nodes):
+                XCTAssertGreaterThanOrEqual(nodes.count, 1)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            
             expectation.fulfill()
         }
         self.waitForExpectations(timeout: 15, handler: nil)

@@ -7,5 +7,5 @@ class ConsulSwiftTests: XCTestCase {
         let consul = Consul()
         XCTAssertEqual(consul.url.absoluteString, "http://localhost:8500")
     }
-
+    
 }

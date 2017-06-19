@@ -5,13 +5,13 @@
       "package": "Alamofire",
       "reason": null,
       "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-      "version": "4.4.0"
+      "version": "4.5.0"
     },
     {
       "package": "Quack",
       "reason": null,
       "repositoryURL": "https://github.com/cpageler93/Quack.git",
-      "version": "0.4.1"
+      "version": "0.4.2"
     },
     {
       "package": "SwiftyJSON",

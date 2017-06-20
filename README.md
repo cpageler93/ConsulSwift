@@ -94,7 +94,7 @@ consul.agentMembers { members in
 |  Events            |  Fire Event                     |  PUT /v1/event/fire/:name                | ✅           |
 |                    |  List Events                    |  GET /v1/event/list                      | ✅           |
 |                    |                                 |                                          |              |
-|  Health            |  List Checks for Node           |  GET /v1/health/node/:id                 | ❌           |
+|  Health            |  List Checks for Node           |  GET /v1/health/node/:id                 | ✅           |
 |                    |  List Checks for Service        |  GET /v1/health/checks/:id               | ❌           |
 |                    |  List Nodes for Service         |  GET /v1/health/service/:id              | ❌           |
 |                    |  List Checks in State           |  GET /v1/health/state/:state             | ❌           |

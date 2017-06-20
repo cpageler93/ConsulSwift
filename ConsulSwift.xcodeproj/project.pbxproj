@@ -21,6 +21,8 @@
 		59FDEFC91EF7E3E300D46228 /* Consul+KVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */; };
 		59FDEFCB1EF7E5EB00D46228 /* ConsulKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCA1EF7E5EB00D46228 /* ConsulKeyValuePair.swift */; };
 		59FDEFCD1EF7E7A200D46228 /* ConsulKeyValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */; };
+		59FDEFCF1EF99F3A00D46228 /* Consul+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */; };
+		59FDEFD31EF9A0A400D46228 /* ConsulHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */; };
 		OBJ_102 /* Consul+AgentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Consul+AgentBase.swift */; };
 		OBJ_103 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Consul.swift */; };
 		OBJ_104 /* ConsulAgentCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConsulAgentCheck.swift */; };
@@ -145,6 +147,8 @@
 		59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+KVStore.swift"; sourceTree = "<group>"; };
 		59FDEFCA1EF7E5EB00D46228 /* ConsulKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValuePair.swift; sourceTree = "<group>"; };
 		59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValueTests.swift; sourceTree = "<group>"; };
+		59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Health.swift"; sourceTree = "<group>"; };
+		59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulHealthTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* ConsulAgentCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentCheck.swift; sourceTree = "<group>"; };
 		OBJ_11 /* ConsulAgentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentConfiguration.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ConsulAgentMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentMember.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				59BC3D0A1EF2B4B000AE33EF /* ConsulCatalogTests.swift */,
 				59FDEFC61EF7DE9A00D46228 /* ConsulEventTests.swift */,
 				59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */,
+				59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */,
 				OBJ_16 /* ConsulSwiftTests.swift */,
 			);
 			name = ConsulSwiftTests;
@@ -344,6 +349,7 @@
 				59BC3D061EF2B3CA00AE33EF /* Consul+Catalog.swift */,
 				59FDEFC21EF7CFD400D46228 /* Consul+Events.swift */,
 				59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */,
+				59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */,
 				OBJ_9 /* Consul.swift */,
 				OBJ_10 /* ConsulAgentCheck.swift */,
 				OBJ_11 /* ConsulAgentConfiguration.swift */,
@@ -492,6 +498,7 @@
 				59FDEFC31EF7CFD400D46228 /* Consul+Events.swift in Sources */,
 				59BC3D0D1EF2C29F00AE33EF /* ConsulCatalogNode.swift in Sources */,
 				59BC3D0F1EF2CAB500AE33EF /* ConsulCatalogService.swift in Sources */,
+				59FDEFCF1EF99F3A00D46228 /* Consul+Health.swift in Sources */,
 				OBJ_104 /* ConsulAgentCheck.swift in Sources */,
 				59FDEFCB1EF7E5EB00D46228 /* ConsulKeyValuePair.swift in Sources */,
 				OBJ_105 /* ConsulAgentConfiguration.swift in Sources */,
@@ -508,6 +515,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_119 /* ConsulAgentTests.swift in Sources */,
+				59FDEFD31EF9A0A400D46228 /* ConsulHealthTests.swift in Sources */,
 				59BC3D0B1EF2B4B000AE33EF /* ConsulCatalogTests.swift in Sources */,
 				59FDEFC71EF7DE9A00D46228 /* ConsulEventTests.swift in Sources */,
 				OBJ_120 /* ConsulSwiftTests.swift in Sources */,

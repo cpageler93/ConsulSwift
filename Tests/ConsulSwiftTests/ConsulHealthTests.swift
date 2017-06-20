@@ -1,0 +1,73 @@
+//
+//  ConsulHealthTests.swift
+//  ConsulSwiftTests
+//
+//  Created by Christoph Pageler on 20.06.17.
+//
+
+import XCTest
+@testable import ConsulSwift
+
+class ConsulHealthTests: XCTestCase {
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func test2HealthChecksForNode() {
+        let consul = Consul()
+        let agentMembers = consul.agentMembers()
+        switch agentMembers {
+        case .success(let agentMembers):
+            if let firstNode = agentMembers.first {
+                let healthChecks = consul.healthChecksFor(node: firstNode.name)
+                switch healthChecks {
+                case .success(let healthChecks):
+                    XCTAssertGreaterThanOrEqual(healthChecks.count, 1)
+                case .failure(let error):
+                    XCTAssertNil(error)
+                }
+            } else {
+                XCTFail()
+            }
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func test2HealthChecksForNodeAsync() {
+        let consul = Consul()
+        let agentMembers = consul.agentMembers()
+        
+        let expectation = self.expectation(description: "healthCkecksForNode")
+        
+        switch agentMembers {
+        case .success(let agentMembers):
+            if let firstNode = agentMembers.first {
+                consul.healthChecksFor(node: firstNode.name, completion: { healthChecks in
+                    switch healthChecks {
+                    case .success(let healthChecks):
+                        XCTAssertGreaterThanOrEqual(healthChecks.count, 1)
+                    case .failure(let error):
+                        XCTAssertNil(error)
+                    }
+                    
+                    expectation.fulfill()
+                })
+            } else {
+                XCTFail()
+            }
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+        
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+}

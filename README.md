@@ -97,7 +97,7 @@ consul.agentMembers { members in
 |  Health            |  List Checks for Node           |  GET /v1/health/node/:id                 | ✅           |
 |                    |  List Checks for Service        |  GET /v1/health/checks/:id               | ❌           |
 |                    |  List Nodes for Service         |  GET /v1/health/service/:id              | ✅           |
-|                    |  List Checks in State           |  GET /v1/health/state/:state             | ❌           |
+|                    |  List Checks in State           |  GET /v1/health/state/:state             | ✅           |
 |                    |                                 |                                          |              |
 |  KV Store          |  Read Key                       |  GET /v1/kv/:key                         | ✅           |
 |                    |  Create/Update Key              |  PUT /v1/kv/:key                         | ✅           |

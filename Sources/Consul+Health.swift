@@ -105,5 +105,38 @@ extension Consul {
                                      model: ConsulCatalogNodeWithServiceAndChecks.self,
                                      completion: completion)
     }
+    
+    
+    /// This endpoint returns the checks in the state provided on the path.
+    ///
+    /// [API Documentation][apidoc]
+    ///
+    /// - Parameters:
+    ///   - state: Specifies the state to query. Supported states are any, passing, warning, or critical.
+    ///   - datacenter: Specifies the datacenter to query. This will default to the datacenter of the agent being queried.
+    ///   - near: Specifies a node name to sort the node list in ascending order based on the estimated round trip time from that node. Passing ?near=_agent will use the agent's node for the sort.
+    /// - Returns: Result with checks
+    ///
+    ///  [apidoc]: https://www.consul.io/api/health.html#list-checks-in-state
+    ///
+    public func healthListChecksInState(_ state: ConsulAgentCheckStatus,
+                                        datacenter: String? = nil,
+                                        near: String? = "_agent") -> QuackResult<[ConsulAgentCheckOutput]> {
+        return respondWithArray(path: "/v1/health/state/\(state.rawValue)",
+                                model: ConsulAgentCheckOutput.self)
+    }
+    
+    /// Async version of `Consul.healthListChecksInState(_ state: ConsulAgentCheckStatus, ...)`
+    ///
+    /// - SeeAlso: `Consul.healthListChecksInState(_ state: ConsulAgentCheckStatus, ...)`
+    /// - Parameter completion: completion block
+    public func healthListChecksInState(_ state: ConsulAgentCheckStatus,
+                                        datacenter: String? = nil,
+                                        near: String? = "_agent",
+                                        completion: @escaping (QuackResult<[ConsulAgentCheckOutput]>) -> (Void)) {
+        return respondWithArrayAsync(path: "/v1/health/state/\(state.rawValue)",
+                                     model: ConsulAgentCheckOutput.self,
+                                     completion: completion)
+    }
 
 }

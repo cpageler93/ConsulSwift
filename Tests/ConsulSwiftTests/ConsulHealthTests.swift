@@ -112,4 +112,29 @@ class ConsulHealthTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
+    func testHealthListChecksInState() {
+        let consul = Consul()
+        let checks = consul.healthListChecksInState(.passing)
+        switch checks {
+        case .success(let checks):
+            XCTAssertGreaterThanOrEqual(checks.count, 1)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testHealthListChecksInStateAync() {
+        let consul = Consul()
+        let expectation = self.expectation(description: "healthChecksInState")
+        consul.healthListChecksInState(.passing) { checks in
+            switch checks {
+            case .success(let checks):
+                XCTAssertGreaterThanOrEqual(checks.count, 1)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
 }

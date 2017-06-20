@@ -70,4 +70,46 @@ class ConsulHealthTests: XCTestCase {
         self.waitForExpectations(timeout: 15, handler: nil)
     }
     
+    func test2HealthNodesForService() {
+        let consul = Consul()
+        
+        let service = ConsulAgentServiceInput(name: "myTestService")
+        service.tags = ["superImportant"]
+        consul.agentRegisterService(service)
+        
+        let healthNodes = consul.healthNodesFor(service: "myTestService",
+                                                tag: "superImportant")
+        switch healthNodes {
+        case .success(let healthNodes):
+            XCTAssertGreaterThanOrEqual(healthNodes.count, 1)
+        case .failure(let error):
+            XCTAssertNil(error)
+        }
+        
+        consul.agentDeregisterService("myTestService")
+    }
+    
+    func test2HealthNodesForServiceAsync() {
+        let consul = Consul()
+        
+        let expectation = self.expectation(description: "healthCkecksForNode")
+        
+        let service = ConsulAgentServiceInput(name: "myTestService")
+        service.tags = ["superImportant"]
+        consul.agentRegisterService(service)
+        
+        consul.healthNodesFor(service: "myTestService", tag: "superImportant") { healthNodes in
+            switch healthNodes {
+            case .success(let healthNodes):
+                XCTAssertGreaterThanOrEqual(healthNodes.count, 1)
+            case .failure(let error):
+                XCTAssertNil(error)
+            }
+            
+            consul.agentDeregisterService("myTestService")
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 15, handler: nil)
+    }
+    
 }

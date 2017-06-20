@@ -50,23 +50,21 @@ public class ConsulCatalogNodeWithService: ConsulCatalogNode {
     var servicePort: Int?
     
     public required init?(json: JSON) {
-        super.init(json: json)
-        
         self.serviceID = json["ServiceID"].string
         self.serviceName = json["ServiceName"].string
         self.servicePort = json["ServicePort"].int
+        
+        super.init(json: json)
     }
 }
 
 public class ConsulCatalogNodeWithServices: ConsulCatalogNode {
     
-    var services: [ConsulAgentServiceOutput] = []
+    var services: [ConsulAgentServiceOutput]
     
     public required init?(json: JSON) {
         let nodeJson = json["Node"]
         guard nodeJson.exists() else { return nil }
-        
-        super.init(json: nodeJson)
         
         var services: [ConsulAgentServiceOutput] = []
         if let jsonServices = json["Services"].dictionary {
@@ -77,5 +75,32 @@ public class ConsulCatalogNodeWithServices: ConsulCatalogNode {
             }
         }
         self.services = services
+        
+        super.init(json: nodeJson)
     }
+}
+
+
+public class ConsulCatalogNodeWithServiceAndChecks: ConsulCatalogNode {
+    
+    var service: ConsulAgentServiceOutput
+    var checks: [ConsulAgentCheckOutput] = []
+    
+    public required init?(json: JSON) {
+        guard let service = ConsulAgentServiceOutput(json: json["Service"]) else { return nil }
+        self.service = service
+        
+        var checks: [ConsulAgentCheckOutput] = []
+        if let jsonChecks = json["Checks"].array {
+            for jsonCheck in jsonChecks {
+                if let check = ConsulAgentCheckOutput(json: jsonCheck) {
+                    checks.append(check)
+                }
+            }
+        }
+        self.checks = checks
+        
+        super.init(json: json["Node"])
+    }
+    
 }

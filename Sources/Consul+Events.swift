@@ -30,6 +30,7 @@ extension Consul {
     ///
     ///  [apidoc]: https://www.consul.io/api/event.html#fire-event
     /// 
+    @discardableResult
     public func eventFire(name: String,
                           datacenter: String? = nil,
                           node: String? = nil,

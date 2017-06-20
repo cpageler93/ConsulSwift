@@ -100,6 +100,7 @@ extension Consul {
     ///
     ///  [apidoc]: https://www.consul.io/api/kv.html#create-update-key
     ///
+    @discardableResult
     public func writeKey(_ key: String,
                          value: String,
                          datacenter: String? = nil
@@ -151,6 +152,7 @@ extension Consul {
     ///
     ///  [apidoc]: https://www.consul.io/api/kv.html#delete-key
     ///
+    @discardableResult
     public func deleteKey(_ key: String) -> QuackResult<Bool> {
         return respond(method: .delete,
                        path: "/v1/kv/\(key)",

@@ -149,6 +149,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-pass
+    @discardableResult
     public func agentCheckPass(id: String) -> QuackVoid {
         return respondVoid(path: "/v1/agent/check/pass/\(id)")
     }
@@ -174,6 +175,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-warn
+    @discardableResult
     public func agentCheckWarn(id: String,
                                note: String = "") -> QuackVoid {
         return respondVoid(path: "/v1/agent/check/warn/\(id)",
@@ -203,6 +205,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-fail
+    @discardableResult
     public func agentCheckFail(id: String,
                                note: String = "") -> QuackVoid {
         return respondVoid(path: "/v1/agent/check/fail/\(id)",
@@ -232,6 +235,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-update
+    @discardableResult
     public func agentCheckUpdate(id: String,
                                  status: ConsulAgentCheckStatus,
                                  output: String = "") -> QuackVoid {

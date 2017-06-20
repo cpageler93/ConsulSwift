@@ -77,6 +77,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#reload-agent
+    @discardableResult
     public func agentReload() -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/reload")
@@ -110,6 +111,7 @@ extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#enable-maintenance-mode
+    @discardableResult
     public func agentMaintenance(enable: Bool,
                                  reason: String) -> QuackVoid {
         return respondVoid(method: .put,
@@ -156,6 +158,7 @@ extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#join-agent
     ///
+    @discardableResult
     public func agentJoin(address: String,
                           wan: Bool = false) -> QuackVoid {
         return respondVoid(path: "/v1/agent/join/\(address)",
@@ -204,6 +207,7 @@ extension Consul {
     /// [apidocGraceful]: https://www.consul.io/api/agent.html#graceful-leave-and-shutdown
     /// [apidocForce]: https://www.consul.io/api/agent.html#force-leave-and-shutdown
     ///
+    @discardableResult
     public func agentLeave(force: Bool = false) -> QuackVoid {
         return respondVoid(method: .put,
                            path: agentLeavePath(force: force))

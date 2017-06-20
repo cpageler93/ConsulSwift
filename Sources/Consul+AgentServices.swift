@@ -59,6 +59,7 @@ extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/service.html#register-service
     ///
+    @discardableResult
     public func agentRegisterService(_ service: ConsulAgentServiceInput) -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/register",
@@ -114,6 +115,7 @@ extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/service.html#deregister-service
     ///
+    @discardableResult
     public func agentDeregisterService(_ id: String) -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/deregister/\(id)")
@@ -147,6 +149,7 @@ extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/service.html#enable-maintenance-mode
     ///
+    @discardableResult
     public func agentServiceMaintenance(_ id: String,
                                         enable: Bool,
                                         reason: String) -> QuackVoid {

@@ -14,6 +14,11 @@ You can change the default behaviour by calling an other initializer.
 let consul = Consul(url: otherBaseURL)
 ```
 
+## Completeness of Content
+
+I'm sure I haven't implemented all API Endpoints Consul provides. Feel free to create a pull request or create an issue.
+
+
 ## Examples
 
 ### Synchronous Example

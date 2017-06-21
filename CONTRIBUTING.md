@@ -7,4 +7,4 @@ At this moment I think you can just create an issue or get in contact with me.
 
 ## License
 
-This project is licensed under the terms of the MIT license. See the [LICENSE][license] file.
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.

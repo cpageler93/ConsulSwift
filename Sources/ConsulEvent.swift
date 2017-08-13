@@ -12,14 +12,14 @@ import SwiftyJSON
 
 public class ConsulEvent: QuackModel {
     
-    var id: String
-    var name: String
-    var payload: String?
-    var nodeFilter: String
-    var serviceFilter: String
-    var tagFilter: String
-    var version: Int
-    var lTime: Int
+    public var id: String
+    public var name: String
+    public var payload: String?
+    public var nodeFilter: String
+    public var serviceFilter: String
+    public var tagFilter: String
+    public var version: Int
+    public var lTime: Int
     
     public required init?(json: JSON) {
         guard

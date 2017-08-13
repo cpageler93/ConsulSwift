@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 // https://www.consul.io/api/kv.html
-extension Consul {
+public extension Consul {
 
     // MARK: - KV Store
     

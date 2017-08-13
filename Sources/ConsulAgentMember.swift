@@ -11,10 +11,11 @@ import Quack
 import SwiftyJSON
 
 public class ConsulAgentMember: QuackModel {
-    var name: String
-    var address: String
-    var port: Int
-    var tags: [String: String]
+    
+    public var name: String
+    public var address: String
+    public var port: Int
+    public var tags: [String: String]
     
     required public init?(json: JSON) {
         guard
@@ -39,4 +40,5 @@ public class ConsulAgentMember: QuackModel {
     public func id() -> String? {
         return self.tags["id"]
     }
+    
 }

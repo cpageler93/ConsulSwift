@@ -12,7 +12,7 @@ import SwiftyJSON
 
 public class ConsulCatalogDatacenter: QuackModel {
     
-    var name: String
+    public var name: String
     
     public required init?(json: JSON) {
         guard let name = json.string else { return nil }

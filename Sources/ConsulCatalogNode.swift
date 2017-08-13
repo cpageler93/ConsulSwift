@@ -12,11 +12,11 @@ import SwiftyJSON
 
 public class ConsulCatalogNode: QuackModel {
     
-    var id: String
-    var node: String
-    var address: String
-    var datacenter: String
-    var taggedAddresses: [String: String]
+    public var id: String
+    public var node: String
+    public var address: String
+    public var datacenter: String
+    public var taggedAddresses: [String: String]
     
     public required init?(json: JSON) {
         guard
@@ -41,13 +41,14 @@ public class ConsulCatalogNode: QuackModel {
         }
         self.taggedAddresses = taggedAddresses
     }
+
 }
 
 public class ConsulCatalogNodeWithService: ConsulCatalogNode {
     
-    var serviceID: String?
-    var serviceName: String?
-    var servicePort: Int?
+    public var serviceID: String?
+    public var serviceName: String?
+    public var servicePort: Int?
     
     public required init?(json: JSON) {
         self.serviceID = json["ServiceID"].string
@@ -56,11 +57,12 @@ public class ConsulCatalogNodeWithService: ConsulCatalogNode {
         
         super.init(json: json)
     }
+    
 }
 
 public class ConsulCatalogNodeWithServices: ConsulCatalogNode {
     
-    var services: [ConsulAgentServiceOutput]
+    public var services: [ConsulAgentServiceOutput]
     
     public required init?(json: JSON) {
         let nodeJson = json["Node"]
@@ -78,13 +80,14 @@ public class ConsulCatalogNodeWithServices: ConsulCatalogNode {
         
         super.init(json: nodeJson)
     }
+
 }
 
 
 public class ConsulCatalogNodeWithServiceAndChecks: ConsulCatalogNode {
     
-    var service: ConsulAgentServiceOutput
-    var checks: [ConsulAgentCheckOutput] = []
+    public var service: ConsulAgentServiceOutput
+    public var checks: [ConsulAgentCheckOutput] = []
     
     public required init?(json: JSON) {
         guard let service = ConsulAgentServiceOutput(json: json["Service"]) else { return nil }

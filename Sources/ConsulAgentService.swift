@@ -39,9 +39,11 @@ public class ConsulAgentServiceOutput: QuackModel {
         self.address = address
         self.port = port
     }
+
 }
 
 public class ConsulAgentServiceInput {
+    
     public var id: String?
     public var name: String
     public var tags: [String]
@@ -59,4 +61,5 @@ public class ConsulAgentServiceInput {
         self.address = address
         self.port = port
     }
+    
 }

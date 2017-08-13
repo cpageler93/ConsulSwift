@@ -11,8 +11,8 @@ import SwiftyJSON
 
 public class ConsulKeyValuePair: QuackModel {
     
-    var key: String
-    var value: String
+    public var key: String
+    public var value: String
     
     public required init?(json: JSON) {
         guard
@@ -30,4 +30,5 @@ public class ConsulKeyValuePair: QuackModel {
         guard let decodedData = NSData(base64Encoded: value) as Data? else { return nil }
         return NSString(data: decodedData, encoding: String.Encoding.utf8.rawValue) as String?
     }
+
 }

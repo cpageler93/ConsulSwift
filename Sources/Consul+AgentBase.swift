@@ -11,7 +11,7 @@ import Quack
 import Alamofire
 
 // https://www.consul.io/api/agent.html
-extension Consul {
+public extension Consul {
     
     // MARK: - Members
     

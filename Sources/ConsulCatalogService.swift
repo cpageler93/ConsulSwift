@@ -12,8 +12,8 @@ import SwiftyJSON
 
 public class ConsulCatalogService: QuackModel {
     
-    var name: String
-    var tags: [String]
+    public var name: String
+    public var tags: [String]
     
     public required init?(json: JSON) {
         fatalError("please use init with name")

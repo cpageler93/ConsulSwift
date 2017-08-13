@@ -11,12 +11,13 @@ import Quack
 import SwiftyJSON
 
 public class ConsulAgentConfiguration: QuackModel {
-    var devMode: Bool
-    var bootstrap: Bool
-    var server: Bool
-    var datacenter: String
-    var nodeID: String
-    var nodeName: String
+    
+    public var devMode: Bool
+    public var bootstrap: Bool
+    public var server: Bool
+    public var datacenter: String
+    public var nodeID: String
+    public var nodeName: String
     
     required public init?(json: JSON) {
         guard

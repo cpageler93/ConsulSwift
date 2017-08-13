@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 // https://www.consul.io/api/event.html
-extension Consul {
+public extension Consul {
 
     // MARK: - Events
     

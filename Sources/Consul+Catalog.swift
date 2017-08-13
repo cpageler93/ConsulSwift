@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 // https://www.consul.io/api/catalog.html
-extension Consul {
+public extension Consul {
     
     // MARK: - Datacenters
     

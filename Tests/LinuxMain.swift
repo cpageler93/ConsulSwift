@@ -1,11 +1,6 @@
 import XCTest
 
 @testable import ConsulSwiftTests
-@testable import ConsulAgentTests
-@testable import ConsulCatalogTests
-@testable import ConsulEventTests
-@testable import ConsulHealthTests
-@testable import ConsulKeyValueTests
 
 XCTMain([
     testCase(ConsulSwiftTests.allTests),

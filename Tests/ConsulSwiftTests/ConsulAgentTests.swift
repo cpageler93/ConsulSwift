@@ -20,45 +20,6 @@ class ConsulAgentTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    static var allTests = [
-        ("testAgentMembers", testAgentMembers),
-        ("testAgentMembersAsync", testAgentMembersAsync),
-        ("testAgentReadConfiguration", testAgentReadConfiguration),
-        ("testAgentReadConfigurationAsync", testAgentReadConfigurationAsync),
-        ("testAgentReload", testAgentReload),
-        ("testAgentReloadAsync", testAgentReloadAsync),
-        ("testAgentMaintenanceEnable", testAgentMaintenanceEnable),
-        ("testAgentMaintenanceEnableAsync", testAgentMaintenanceEnableAsync),
-        ("testAgentMaintenanceDisable", testAgentMaintenanceDisable),
-        ("testAgentMaintenanceDisableAsync", testAgentMaintenanceDisableAsync),
-        ("testAgentLeave", testAgentLeave),
-        ("testAgentLeaveAsync", testAgentLeaveAsync),
-        ("test3AgentChecks", test3AgentChecks),
-        ("test3AgentChecksAsync", test3AgentChecksAsync),
-        ("test1AgentRegisterCheckMinimal", test1AgentRegisterCheckMinimal),
-        ("test1AgentRegisterCheckAsync", test1AgentRegisterCheckAsync),
-        ("test1AgentRegisterCheckMaximal", test1AgentRegisterCheckMaximal),
-        ("test4AgentDeregisterCheck", test4AgentDeregisterCheck),
-        ("test4AgentDeregisterCheckAsync", test4AgentDeregisterCheckAsync),
-        ("test2AgentCheckPass", test2AgentCheckPass),
-        ("test2AgentCheckPassAsync", test2AgentCheckPassAsync),
-        ("test2AgentCheckWarn", test2AgentCheckWarn),
-        ("test2AgentCheckWarnAsync", test2AgentCheckWarnAsync),
-        ("test2AgentCheckFail", test2AgentCheckFail),
-        ("test2AgentCheckFailAsync", test2AgentCheckFailAsync),
-        ("test2AgentCheckUpdate", test2AgentCheckUpdate),
-        ("test2AgentCheckUpdateAsync", test2AgentCheckUpdateAsync),
-        ("test3AgentServices", test3AgentServices),
-        ("test3AgentServicesAsync", test3AgentServicesAsync),
-        ("test1AgentRegisterService", test1AgentRegisterService),
-        ("test1AgentRegisterServiceAsync", test1AgentRegisterServiceAsync),
-        ("test2AgentDeregisterService", test2AgentDeregisterService),
-        ("test2AgentDeregisterServiceAsync", test2AgentDeregisterServiceAsync),
-        ("test1AgentServiceMaintenance", test1AgentServiceMaintenance),
-        ("test1AgentServiceMaintenanceWithWrongServiceID", test1AgentServiceMaintenanceWithWrongServiceID),
-        ("test1AgentServiceMaintenanceAsync", test1AgentServiceMaintenanceAsync)
-    ]
     
     // MARK: - Members
     
@@ -579,5 +540,44 @@ class ConsulAgentTests: XCTestCase {
         
         self.waitForExpectations(timeout: 15, handler: nil)
     }
+
+    static var allTests = [
+        ("testAgentMembers", testAgentMembers),
+        ("testAgentMembersAsync", testAgentMembersAsync),
+        ("testAgentReadConfiguration", testAgentReadConfiguration),
+        ("testAgentReadConfigurationAsync", testAgentReadConfigurationAsync),
+        ("testAgentReload", testAgentReload),
+        ("testAgentReloadAsync", testAgentReloadAsync),
+        ("testAgentMaintenanceEnable", testAgentMaintenanceEnable),
+        ("testAgentMaintenanceEnableAsync", testAgentMaintenanceEnableAsync),
+        ("testAgentMaintenanceDisable", testAgentMaintenanceDisable),
+        ("testAgentMaintenanceDisableAsync", testAgentMaintenanceDisableAsync),
+        ("testAgentLeave", testAgentLeave),
+        ("testAgentLeaveAsync", testAgentLeaveAsync),
+        ("test3AgentChecks", test3AgentChecks),
+        ("test3AgentChecksAsync", test3AgentChecksAsync),
+        ("test1AgentRegisterCheckMinimal", test1AgentRegisterCheckMinimal),
+        ("test1AgentRegisterCheckAsync", test1AgentRegisterCheckAsync),
+        ("test1AgentRegisterCheckMaximal", test1AgentRegisterCheckMaximal),
+        ("test4AgentDeregisterCheck", test4AgentDeregisterCheck),
+        ("test4AgentDeregisterCheckAsync", test4AgentDeregisterCheckAsync),
+        ("test2AgentCheckPass", test2AgentCheckPass),
+        ("test2AgentCheckPassAsync", test2AgentCheckPassAsync),
+        ("test2AgentCheckWarn", test2AgentCheckWarn),
+        ("test2AgentCheckWarnAsync", test2AgentCheckWarnAsync),
+        ("test2AgentCheckFail", test2AgentCheckFail),
+        ("test2AgentCheckFailAsync", test2AgentCheckFailAsync),
+        ("test2AgentCheckUpdate", test2AgentCheckUpdate),
+        ("test2AgentCheckUpdateAsync", test2AgentCheckUpdateAsync),
+        ("test3AgentServices", test3AgentServices),
+        ("test3AgentServicesAsync", test3AgentServicesAsync),
+        ("test1AgentRegisterService", test1AgentRegisterService),
+        ("test1AgentRegisterServiceAsync", test1AgentRegisterServiceAsync),
+        ("test2AgentDeregisterService", test2AgentDeregisterService),
+        ("test2AgentDeregisterServiceAsync", test2AgentDeregisterServiceAsync),
+        ("test1AgentServiceMaintenance", test1AgentServiceMaintenance),
+        ("test1AgentServiceMaintenanceWithWrongServiceID", test1AgentServiceMaintenanceWithWrongServiceID),
+        ("test1AgentServiceMaintenanceAsync", test1AgentServiceMaintenanceAsync)
+    ]
     
 }

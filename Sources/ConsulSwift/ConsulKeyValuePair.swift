@@ -27,8 +27,8 @@ public class ConsulKeyValuePair: QuackModel {
     }
     
     public func decodedValue() -> String? {
-        guard let decodedData = NSData(base64Encoded: value) as Data? else { return nil }
-        return NSString(data: decodedData, encoding: String.Encoding.utf8.rawValue) as String?
+        guard let decodedData = Data(base64Encoded: value) else { return nil }
+        return String(data: decodedData, encoding: String.Encoding.utf8)
     }
 
 }

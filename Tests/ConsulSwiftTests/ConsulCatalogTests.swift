@@ -20,6 +20,19 @@ class ConsulCatalogTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    static var allTests = [
+        ("testCatalogDatacenters", testCatalogDatacenters),
+        ("testCatalogDatacentersAsync", testCatalogDatacentersAsync),
+        ("testCatalogNodesInDatacenter", testCatalogNodesInDatacenter),
+        ("testCatalogNodesInDatacenterAsync", testCatalogNodesInDatacenterAsync),
+        ("testCatalogServicesInDatacenter", testCatalogServicesInDatacenter),
+        ("testCatalogServicesInDatacenterAsync", testCatalogServicesInDatacenterAsync),
+        ("testCatalogNodesWithService", testCatalogNodesWithService),
+        ("testCatalogNodesWithServiceAsync", testCatalogNodesWithServiceAsync),
+        ("testCatalogServicesForNode", testCatalogServicesForNode),
+        ("testCatalogServicesForNodeAsync", testCatalogServicesForNodeAsync)
+    ]
     
     func testCatalogDatacenters() {
         let consul = Consul()

@@ -19,6 +19,15 @@ class ConsulHealthTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    static var allTests = [
+        ("test2HealthChecksForNode", test2HealthChecksForNode),
+        ("test2HealthChecksForNodeAsync", test2HealthChecksForNodeAsync),
+        ("test2HealthNodesForService", test2HealthNodesForService),
+        ("test2HealthNodesForServiceAsync", test2HealthNodesForServiceAsync),
+        ("testHealthListChecksInState", testHealthListChecksInState),
+        ("testHealthListChecksInStateAync", testHealthListChecksInStateAync)
+    ]
     
     func test2HealthChecksForNode() {
         let consul = Consul()

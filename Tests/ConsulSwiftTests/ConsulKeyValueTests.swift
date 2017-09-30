@@ -19,6 +19,15 @@ class ConsulKeyValueTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    static var allTests = [
+        ("test1WriteKeyAndReadKey", test1WriteKeyAndReadKey),
+        ("test1WriteKeyAndReadKeyAsync", test1WriteKeyAndReadKeyAsync),
+        ("test2ListKeys", test2ListKeys),
+        ("test2ListKeysAsync", test2ListKeysAsync),
+        ("test3DeleteKey", test3DeleteKey),
+        ("test3DeleteKeyAsync", test3DeleteKeyAsync)
+    ]
     
     func test1WriteKeyAndReadKey() {
         let consul = Consul()

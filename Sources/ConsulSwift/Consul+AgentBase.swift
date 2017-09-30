@@ -8,7 +8,6 @@
 
 import Foundation
 import Quack
-import Alamofire
 
 // https://www.consul.io/api/agent.html
 public extension Consul {
@@ -114,13 +113,12 @@ public extension Consul {
     @discardableResult
     public func agentMaintenance(enable: Bool,
                                  reason: String) -> QuackVoid {
+        let queryParams = [
+            "enable": String(enable),
+            "reason": reason
+        ]
         return respondVoid(method: .put,
-                           path: "/v1/agent/maintenance",
-                           params: [
-                            "enable": String(enable),
-                            "reason": reason
-                           ],
-                           encoding: URLEncoding.queryString)
+                           path: buildPath("/v1/agent/maintenance", withParams: queryParams))
     }
     
     /// Async version of `Consul.agentMaintenance(enable: Bool, reason: String)`
@@ -130,13 +128,12 @@ public extension Consul {
     public func agentMaintenance(enable: Bool,
                                  reason: String,
                                  completion: @escaping (QuackVoid) -> (Void)) {
+        let queryParams = [
+            "enable": String(enable),
+            "reason": reason
+        ]
         respondVoidAsync(method: .put,
-                         path: "/v1/agent/maintenance",
-                         params: [
-                            "enable": String(enable),
-                            "reason": reason
-                         ],
-                         encoding: URLEncoding.queryString,
+                         path: buildPath("/v1/agent/maintenance", withParams: queryParams),
                          completion: completion)
     }
     
@@ -162,7 +159,7 @@ public extension Consul {
     public func agentJoin(address: String,
                           wan: Bool = false) -> QuackVoid {
         return respondVoid(path: "/v1/agent/join/\(address)",
-                           params: ["wan": String(wan)])
+                           body: ["wan": String(wan)])
     }
     
     // TODO: add tests
@@ -176,7 +173,7 @@ public extension Consul {
                           wan: Bool = false,
                           completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/join/\(address)",
-                         params: ["wan": String(wan)],
+                         body: ["wan": String(wan)],
                          completion: completion)
     }
     

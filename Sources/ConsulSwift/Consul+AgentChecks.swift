@@ -7,7 +7,6 @@
 
 import Foundation
 import Quack
-import Alamofire
 
 // https://www.consul.io/api/agent.html
 public extension Consul {
@@ -62,8 +61,7 @@ public extension Consul {
         let params = agentRegisterCheckParams(check)
         return respondVoid(method: .put,
                            path: "/v1/agent/check/register",
-                           params: params,
-                           encoding: JSONEncoding.default)
+                           body: params)
     }
     
     /// Async version of `Consul.agentRegisterCheck(_ check: ConsulAgentCheckInput)`
@@ -75,8 +73,7 @@ public extension Consul {
         let params = agentRegisterCheckParams(check)
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/register",
-                         params: params,
-                         encoding: JSONEncoding.default,
+                         body: params,
                          completion: completion)
     }
     
@@ -134,7 +131,7 @@ public extension Consul {
                                      completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/deregister/\(id)",
-            completion: completion)
+                         completion: completion)
     }
     
     // MARK: Check Status
@@ -161,7 +158,7 @@ public extension Consul {
     public func agentCheckPass(id: String,
                                completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/check/pass/\(id)",
-            completion: completion)
+                         completion: completion)
     }
     
     /// This endpoint is used with a TTL type check to set the status of the check to warning and
@@ -179,7 +176,7 @@ public extension Consul {
     public func agentCheckWarn(id: String,
                                note: String = "") -> QuackVoid {
         return respondVoid(path: "/v1/agent/check/warn/\(id)",
-            params: ["note": note])
+                           body: ["note": note])
     }
     
     /// Async version of `Consul.agentCheckWarn(id: String, note: String)`
@@ -190,8 +187,8 @@ public extension Consul {
                                note: String = "",
                                completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/check/warn/\(id)",
-            params: ["note": note],
-            completion: completion)
+                         body: ["note": note],
+                         completion: completion)
     }
     
     /// This endpoint is used with a TTL type check to set the status of the check to critical and
@@ -209,7 +206,7 @@ public extension Consul {
     public func agentCheckFail(id: String,
                                note: String = "") -> QuackVoid {
         return respondVoid(path: "/v1/agent/check/fail/\(id)",
-            params: ["note": note])
+                           body: ["note": note])
     }
     
     /// Async version of `Consul.agentCheckFail(id: String, note: String)`
@@ -220,8 +217,8 @@ public extension Consul {
                                note: String = "",
                                completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/check/fail/\(id)",
-            params: ["note": note],
-            completion: completion)
+                         body: ["note": note],
+                         completion: completion)
     }
     
     /// This endpoint is used with a TTL type check to set the status of the check and to reset the TTL clock.
@@ -241,11 +238,10 @@ public extension Consul {
                                  output: String = "") -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/check/update/\(id)",
-            params: [
-                "Status": status.rawValue,
-                "Output": output
-            ],
-            encoding: JSONEncoding.default)
+                           body: [
+                            "Status": status.rawValue,
+                            "Output": output
+                           ])
     }
     
     /// Async version of `Consul.agentCheckUpdate(id: String, status: ConsulAgentCheckStatus, output: String)`
@@ -258,11 +254,10 @@ public extension Consul {
                                  completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/fail/\(id)",
-            params: [
-                "Status": status.rawValue,
-                "Output": output
-            ],
-            encoding: JSONEncoding.default,
-            completion: completion)
+                         body: [
+                            "Status": status.rawValue,
+                            "Output": output
+                         ],
+                         completion: completion)
     }
 }

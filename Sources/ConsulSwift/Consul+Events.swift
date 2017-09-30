@@ -7,7 +7,6 @@
 
 import Foundation
 import Quack
-import Alamofire
 import SwiftyJSON
 
 // https://www.consul.io/api/event.html
@@ -43,9 +42,7 @@ public extension Consul {
         if let tag = tag { params["tag"] = tag }
         
         return respond(method: .put,
-                       path: "/v1/event/fire/\(name)",
-                       params: params,
-                       encoding: URLEncoding.queryString,
+                       path: buildPath("/v1/event/fire/\(name)", withParams: params),
                        model: ConsulEvent.self)
     }
     
@@ -66,9 +63,7 @@ public extension Consul {
         if let tag = tag { params["tag"] = tag }
         
         return respondAsync(method: .put,
-                            path: "/v1/event/fire/\(name)",
-                            params: params,
-                            encoding: URLEncoding.queryString,
+                            path: buildPath("/v1/event/fire/\(name)", withParams: params),
                             model: ConsulEvent.self,
                             completion: completion)
     }

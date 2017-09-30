@@ -7,7 +7,6 @@
 
 import Foundation
 import Quack
-import Alamofire
 import SwiftyJSON
 
 // https://www.consul.io/api/health.html
@@ -33,7 +32,7 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respondWithArray(path: "/v1/health/node/\(node)",
-                                params: params,
+                                body: params,
                                 model: ConsulAgentCheckOutput.self)
     }
     
@@ -48,7 +47,7 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondWithArrayAsync(path: "/v1/health/node/\(node)",
-                              params: params,
+                              body: params,
                               model: ConsulAgentCheckOutput.self,
                               completion: completion)
     }
@@ -80,7 +79,7 @@ public extension Consul {
         if let near = near { params["near"] = near }
         
         return respondWithArray(path: "/v1/health/service/\(service)",
-                                params: params,
+                                body: params,
                                 model: ConsulCatalogNodeWithServiceAndChecks.self)
     }
     
@@ -101,7 +100,7 @@ public extension Consul {
         if let near = near { params["near"] = near }
         
         return respondWithArrayAsync(path: "/v1/health/service/\(service)",
-                                     params: params,
+                                     body: params,
                                      model: ConsulCatalogNodeWithServiceAndChecks.self,
                                      completion: completion)
     }

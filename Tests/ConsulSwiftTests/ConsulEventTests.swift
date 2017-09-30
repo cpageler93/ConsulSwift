@@ -19,6 +19,13 @@ class ConsulEventTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    static var allTests = [
+        ("test1EventFire", test1EventFire),
+        ("test1EventFireAsync", test1EventFireAsync),
+        ("test2EventList", test2EventList),
+        ("test2EventListAsync", test2EventListAsync)
+    ]
     
     func test1EventFire() {
         let consul = Consul()

@@ -6,409 +6,1071 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"CCurl::CCurl::ProductTarget" /* CCurl */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_347 /* Build configuration list for PBXAggregateTarget "CCurl" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = CCurl;
+			productName = CCurl;
+		};
+		"ConsulSwift::ConsulSwiftPackageTests::ProductTarget" /* ConsulSwiftPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_342 /* Build configuration list for PBXAggregateTarget "ConsulSwiftPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_345 /* PBXTargetDependency */,
+			);
+			name = ConsulSwiftPackageTests;
+			productName = ConsulSwiftPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		590A219D1EF1D791000EECAE /* Consul+AgentChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */; };
-		590A219F1EF1D7F3000EECAE /* Consul+AgentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */; };
-		590A21A11EF1D86D000EECAE /* ConsulAgentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */; };
-		59BC3D071EF2B3CA00AE33EF /* Consul+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC3D061EF2B3CA00AE33EF /* Consul+Catalog.swift */; };
-		59BC3D091EF2B41E00AE33EF /* ConsulCatalogDatacenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC3D081EF2B41E00AE33EF /* ConsulCatalogDatacenter.swift */; };
-		59BC3D0B1EF2B4B000AE33EF /* ConsulCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC3D0A1EF2B4B000AE33EF /* ConsulCatalogTests.swift */; };
-		59BC3D0D1EF2C29F00AE33EF /* ConsulCatalogNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC3D0C1EF2C29F00AE33EF /* ConsulCatalogNode.swift */; };
-		59BC3D0F1EF2CAB500AE33EF /* ConsulCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC3D0E1EF2CAB500AE33EF /* ConsulCatalogService.swift */; };
-		59FDEFC31EF7CFD400D46228 /* Consul+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFC21EF7CFD400D46228 /* Consul+Events.swift */; };
-		59FDEFC51EF7D1A100D46228 /* ConsulEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFC41EF7D1A100D46228 /* ConsulEvent.swift */; };
-		59FDEFC71EF7DE9A00D46228 /* ConsulEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFC61EF7DE9A00D46228 /* ConsulEventTests.swift */; };
-		59FDEFC91EF7E3E300D46228 /* Consul+KVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */; };
-		59FDEFCB1EF7E5EB00D46228 /* ConsulKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCA1EF7E5EB00D46228 /* ConsulKeyValuePair.swift */; };
-		59FDEFCD1EF7E7A200D46228 /* ConsulKeyValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */; };
-		59FDEFCF1EF99F3A00D46228 /* Consul+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */; };
-		59FDEFD31EF9A0A400D46228 /* ConsulHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */; };
-		OBJ_102 /* Consul+AgentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Consul+AgentBase.swift */; };
-		OBJ_103 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Consul.swift */; };
-		OBJ_104 /* ConsulAgentCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConsulAgentCheck.swift */; };
-		OBJ_105 /* ConsulAgentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ConsulAgentConfiguration.swift */; };
-		OBJ_106 /* ConsulAgentMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ConsulAgentMember.swift */; };
-		OBJ_108 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Alamofire.framework */; };
-		OBJ_109 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SwiftyJSON.framework */; };
-		OBJ_110 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Quack.framework */; };
-		OBJ_119 /* ConsulAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ConsulAgentTests.swift */; };
-		OBJ_120 /* ConsulSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ConsulSwiftTests.swift */; };
-		OBJ_122 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Alamofire.framework */; };
-		OBJ_123 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SwiftyJSON.framework */; };
-		OBJ_124 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Quack.framework */; };
-		OBJ_125 /* ConsulSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ConsulSwift.framework */; };
-		OBJ_56 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* AFError.swift */; };
-		OBJ_57 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Alamofire.swift */; };
-		OBJ_58 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* DispatchQueue+Alamofire.swift */; };
-		OBJ_59 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* MultipartFormData.swift */; };
-		OBJ_60 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* NetworkReachabilityManager.swift */; };
-		OBJ_61 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Notifications.swift */; };
-		OBJ_62 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* ParameterEncoding.swift */; };
-		OBJ_63 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Request.swift */; };
-		OBJ_64 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Response.swift */; };
-		OBJ_65 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ResponseSerialization.swift */; };
-		OBJ_66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Result.swift */; };
-		OBJ_67 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ServerTrustPolicy.swift */; };
-		OBJ_68 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* SessionDelegate.swift */; };
-		OBJ_69 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* SessionManager.swift */; };
-		OBJ_70 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* TaskDelegate.swift */; };
-		OBJ_71 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Timeline.swift */; };
-		OBJ_72 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Validation.swift */; };
-		OBJ_79 /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* LclJSONSerialization.swift */; };
-		OBJ_80 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* SwiftyJSON.swift */; };
-		OBJ_87 /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Alamofire+Synchronous.swift */; };
-		OBJ_88 /* Quack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Quack.swift */; };
-		OBJ_89 /* QuackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* QuackClient.swift */; };
-		OBJ_90 /* QuackCustomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* QuackCustomParser.swift */; };
-		OBJ_91 /* QuackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* QuackModel.swift */; };
-		OBJ_93 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Alamofire.framework */; };
-		OBJ_94 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SwiftyJSON.framework */; };
+		OBJ_126 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_132 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Package.swift */; };
+		OBJ_138 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Package.swift */; };
+		OBJ_144 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* Package.swift */; };
+		OBJ_150 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* Package.swift */; };
+		OBJ_156 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Package.swift */; };
+		OBJ_162 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Package.swift */; };
+		OBJ_168 /* ConsulAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ConsulAgentTests.swift */; };
+		OBJ_169 /* ConsulCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ConsulCatalogTests.swift */; };
+		OBJ_170 /* ConsulEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ConsulEventTests.swift */; };
+		OBJ_171 /* ConsulHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* ConsulHealthTests.swift */; };
+		OBJ_172 /* ConsulKeyValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ConsulKeyValueTests.swift */; };
+		OBJ_173 /* ConsulSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ConsulSwiftTests.swift */; };
+		OBJ_175 /* ConsulSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ConsulSwift::ConsulSwift::Product" /* ConsulSwift.framework */; };
+		OBJ_176 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Quack::Quack::Product" /* Quack.framework */; };
+		OBJ_177 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
+		OBJ_178 /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::KituraNet::Product" /* KituraNet.framework */; };
+		OBJ_179 /* SSLService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SSLService::SSLService::Product" /* SSLService.framework */; };
+		OBJ_180 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
+		OBJ_181 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_182 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
+		OBJ_203 /* Consul+AgentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Consul+AgentBase.swift */; };
+		OBJ_204 /* Consul+AgentChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Consul+AgentChecks.swift */; };
+		OBJ_205 /* Consul+AgentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Consul+AgentServices.swift */; };
+		OBJ_206 /* Consul+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Consul+Catalog.swift */; };
+		OBJ_207 /* Consul+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Consul+Events.swift */; };
+		OBJ_208 /* Consul+Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Consul+Health.swift */; };
+		OBJ_209 /* Consul+KVStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Consul+KVStore.swift */; };
+		OBJ_210 /* Consul.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Consul.swift */; };
+		OBJ_211 /* ConsulAgentCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ConsulAgentCheck.swift */; };
+		OBJ_212 /* ConsulAgentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ConsulAgentConfiguration.swift */; };
+		OBJ_213 /* ConsulAgentMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ConsulAgentMember.swift */; };
+		OBJ_214 /* ConsulAgentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ConsulAgentService.swift */; };
+		OBJ_215 /* ConsulCatalogDatacenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ConsulCatalogDatacenter.swift */; };
+		OBJ_216 /* ConsulCatalogNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ConsulCatalogNode.swift */; };
+		OBJ_217 /* ConsulCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ConsulCatalogService.swift */; };
+		OBJ_218 /* ConsulEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ConsulEvent.swift */; };
+		OBJ_219 /* ConsulKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ConsulKeyValuePair.swift */; };
+		OBJ_221 /* Quack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Quack::Quack::Product" /* Quack.framework */; };
+		OBJ_222 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
+		OBJ_223 /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::KituraNet::Product" /* KituraNet.framework */; };
+		OBJ_224 /* SSLService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SSLService::SSLService::Product" /* SSLService.framework */; };
+		OBJ_225 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
+		OBJ_226 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_227 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
+		OBJ_239 /* Quack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Quack.swift */; };
+		OBJ_240 /* QuackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* QuackClient.swift */; };
+		OBJ_241 /* QuackCustomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* QuackCustomParser.swift */; };
+		OBJ_242 /* QuackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* QuackModel.swift */; };
+		OBJ_244 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
+		OBJ_245 /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::KituraNet::Product" /* KituraNet.framework */; };
+		OBJ_246 /* SSLService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SSLService::SSLService::Product" /* SSLService.framework */; };
+		OBJ_247 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
+		OBJ_248 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_249 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
+		OBJ_260 /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* LclJSONSerialization.swift */; };
+		OBJ_261 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* SwiftyJSON.swift */; };
+		OBJ_267 /* BufferList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* BufferList.swift */; };
+		OBJ_268 /* ClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ClientRequest.swift */; };
+		OBJ_269 /* ClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ClientResponse.swift */; };
+		OBJ_270 /* ConnectionUpgradeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ConnectionUpgradeFactory.swift */; };
+		OBJ_271 /* ConnectionUpgrader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* ConnectionUpgrader.swift */; };
+		OBJ_272 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Error.swift */; };
+		OBJ_273 /* FastCGI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* FastCGI.swift */; };
+		OBJ_274 /* FastCGIRecordCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* FastCGIRecordCreate.swift */; };
+		OBJ_275 /* FastCGIRecordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* FastCGIRecordParser.swift */; };
+		OBJ_276 /* FastCGIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* FastCGIServer.swift */; };
+		OBJ_277 /* FastCGIServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* FastCGIServerRequest.swift */; };
+		OBJ_278 /* FastCGIServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* FastCGIServerResponse.swift */; };
+		OBJ_279 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* HTTP.swift */; };
+		OBJ_280 /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* HTTPServer.swift */; };
+		OBJ_281 /* HTTPServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* HTTPServerRequest.swift */; };
+		OBJ_282 /* HTTPServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* HTTPServerResponse.swift */; };
+		OBJ_283 /* IncomingHTTPSocketProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* IncomingHTTPSocketProcessor.swift */; };
+		OBJ_284 /* KeepAliveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* KeepAliveState.swift */; };
+		OBJ_285 /* HTTPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* HTTPParser.swift */; };
+		OBJ_286 /* HTTPParserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* HTTPParserStatus.swift */; };
+		OBJ_287 /* ParseResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* ParseResults.swift */; };
+		OBJ_288 /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* URLParser.swift */; };
+		OBJ_289 /* HeadersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* HeadersContainer.swift */; };
+		OBJ_290 /* IncomingSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* IncomingSocketHandler.swift */; };
+		OBJ_291 /* IncomingSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* IncomingSocketManager.swift */; };
+		OBJ_292 /* IncomingSocketProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* IncomingSocketProcessor.swift */; };
+		OBJ_293 /* IncomingSocketProcessorCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* IncomingSocketProcessorCreator.swift */; };
+		OBJ_294 /* ListenerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* ListenerGroup.swift */; };
+		OBJ_295 /* SPIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* SPIUtils.swift */; };
+		OBJ_296 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Server.swift */; };
+		OBJ_297 /* ServerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* ServerDelegate.swift */; };
+		OBJ_298 /* ServerLifecycleListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* ServerLifecycleListener.swift */; };
+		OBJ_299 /* ServerMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* ServerMonitor.swift */; };
+		OBJ_300 /* ServerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* ServerState.swift */; };
+		OBJ_301 /* ServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* ServerRequest.swift */; };
+		OBJ_302 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* ServerResponse.swift */; };
+		OBJ_304 /* SSLService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SSLService::SSLService::Product" /* SSLService.framework */; };
+		OBJ_305 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
+		OBJ_306 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
+		OBJ_307 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
+		OBJ_316 /* SSLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* SSLService.swift */; };
+		OBJ_318 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
+		OBJ_324 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* Socket.swift */; };
+		OBJ_325 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* SocketProtocols.swift */; };
+		OBJ_326 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* SocketUtils.swift */; };
+		OBJ_332 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* Logger.swift */; };
+		OBJ_338 /* http_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* http_parser.c */; };
+		OBJ_339 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* utils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5950616F1ED861540082D646 /* PBXContainerItemProxy */ = {
+		59A579281F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_51;
-			remoteInfo = Alamofire;
-		};
-		595061701ED861540082D646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_74;
-			remoteInfo = SwiftyJSON;
-		};
-		595061711ED861540082D646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_51;
-			remoteInfo = Alamofire;
-		};
-		595061721ED861540082D646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_74;
-			remoteInfo = SwiftyJSON;
-		};
-		595061731ED861540082D646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_82;
+			remoteGlobalIDString = "Quack::Quack";
 			remoteInfo = Quack;
 		};
-		595061741ED861540082D646 /* PBXContainerItemProxy */ = {
+		59A579291F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_51;
-			remoteInfo = Alamofire;
-		};
-		595061751ED861540082D646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_74;
+			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
 			remoteInfo = SwiftyJSON;
 		};
-		595061761ED861540082D646 /* PBXContainerItemProxy */ = {
+		59A5792A1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_82;
-			remoteInfo = Quack;
+			remoteGlobalIDString = "Kitura-net::KituraNet";
+			remoteInfo = KituraNet;
 		};
-		595061771ED861540082D646 /* PBXContainerItemProxy */ = {
+		59A5792B1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_97;
+			remoteGlobalIDString = "SSLService::SSLService";
+			remoteInfo = SSLService;
+		};
+		59A5792C1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Socket::Socket";
+			remoteInfo = Socket;
+		};
+		59A5792D1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Socket::Socket";
+			remoteInfo = Socket;
+		};
+		59A5792E1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		59A5792F1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::CHTTPParser";
+			remoteInfo = CHTTPParser;
+		};
+		59A579301F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SSLService::SSLService";
+			remoteInfo = SSLService;
+		};
+		59A579311F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Socket::Socket";
+			remoteInfo = Socket;
+		};
+		59A579321F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		59A579331F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::CHTTPParser";
+			remoteInfo = CHTTPParser;
+		};
+		59A579341F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
+			remoteInfo = SwiftyJSON;
+		};
+		59A579351F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::KituraNet";
+			remoteInfo = KituraNet;
+		};
+		59A579361F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SSLService::SSLService";
+			remoteInfo = SSLService;
+		};
+		59A579371F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Socket::Socket";
+			remoteInfo = Socket;
+		};
+		59A579381F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		59A579391F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::CHTTPParser";
+			remoteInfo = CHTTPParser;
+		};
+		59A5793A1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ConsulSwift::ConsulSwift";
 			remoteInfo = ConsulSwift;
+		};
+		59A5793B1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Quack::Quack";
+			remoteInfo = Quack;
+		};
+		59A5793C1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftyJSON::SwiftyJSON";
+			remoteInfo = SwiftyJSON;
+		};
+		59A5793D1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::KituraNet";
+			remoteInfo = KituraNet;
+		};
+		59A5793E1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SSLService::SSLService";
+			remoteInfo = SSLService;
+		};
+		59A5793F1F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Socket::Socket";
+			remoteInfo = Socket;
+		};
+		59A579401F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "LoggerAPI::LoggerAPI";
+			remoteInfo = LoggerAPI;
+		};
+		59A579411F7F9E53003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Kitura-net::CHTTPParser";
+			remoteInfo = CHTTPParser;
+		};
+		59A579421F7F9E55003A36E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ConsulSwift::ConsulSwiftTests";
+			remoteInfo = ConsulSwiftTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentChecks.swift"; sourceTree = "<group>"; };
-		590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentServices.swift"; sourceTree = "<group>"; };
-		590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentService.swift; sourceTree = "<group>"; };
-		599693FF1EEB4524008B6FCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		59BC3D061EF2B3CA00AE33EF /* Consul+Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Consul+Catalog.swift"; sourceTree = "<group>"; };
-		59BC3D081EF2B41E00AE33EF /* ConsulCatalogDatacenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsulCatalogDatacenter.swift; sourceTree = "<group>"; };
-		59BC3D0A1EF2B4B000AE33EF /* ConsulCatalogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsulCatalogTests.swift; sourceTree = "<group>"; };
-		59BC3D0C1EF2C29F00AE33EF /* ConsulCatalogNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsulCatalogNode.swift; sourceTree = "<group>"; };
-		59BC3D0E1EF2CAB500AE33EF /* ConsulCatalogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsulCatalogService.swift; sourceTree = "<group>"; };
-		59FDEFC21EF7CFD400D46228 /* Consul+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Events.swift"; sourceTree = "<group>"; };
-		59FDEFC41EF7D1A100D46228 /* ConsulEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulEvent.swift; sourceTree = "<group>"; };
-		59FDEFC61EF7DE9A00D46228 /* ConsulEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulEventTests.swift; sourceTree = "<group>"; };
-		59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+KVStore.swift"; sourceTree = "<group>"; };
-		59FDEFCA1EF7E5EB00D46228 /* ConsulKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValuePair.swift; sourceTree = "<group>"; };
-		59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValueTests.swift; sourceTree = "<group>"; };
-		59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Health.swift"; sourceTree = "<group>"; };
-		59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulHealthTests.swift; sourceTree = "<group>"; };
-		OBJ_10 /* ConsulAgentCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentCheck.swift; sourceTree = "<group>"; };
-		OBJ_11 /* ConsulAgentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentConfiguration.swift; sourceTree = "<group>"; };
-		OBJ_12 /* ConsulAgentMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentMember.swift; sourceTree = "<group>"; };
-		OBJ_15 /* ConsulAgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentTests.swift; sourceTree = "<group>"; };
-		OBJ_16 /* ConsulSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulSwiftTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
-		OBJ_20 /* Quack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quack.swift; sourceTree = "<group>"; };
-		OBJ_21 /* QuackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackClient.swift; sourceTree = "<group>"; };
-		OBJ_22 /* QuackCustomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackCustomParser.swift; sourceTree = "<group>"; };
-		OBJ_23 /* QuackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackModel.swift; sourceTree = "<group>"; };
-		OBJ_25 /* LclJSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LclJSONSerialization.swift; sourceTree = "<group>"; };
-		OBJ_26 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		OBJ_28 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		OBJ_30 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		OBJ_31 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		OBJ_32 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		OBJ_33 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		OBJ_34 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		OBJ_37 /* ResponseSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_39 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		OBJ_40 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
-		OBJ_41 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		OBJ_42 /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_47 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_48 /* Quack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_49 /* ConsulSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsulSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_50 /* ConsulSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConsulSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ConsulSwift::ConsulSwift::Product" /* ConsulSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConsulSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ConsulSwift::ConsulSwiftTests::Product" /* ConsulSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConsulSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CHTTPParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Kitura-net::KituraNet::Product" /* KituraNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KituraNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Consul+AgentChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentChecks.swift"; sourceTree = "<group>"; };
+		OBJ_100 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/BlueSSLService.git--6577639804771281610/Package.swift"; sourceTree = "<group>"; };
+		OBJ_103 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		OBJ_104 /* SocketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		OBJ_105 /* SocketUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
+		OBJ_106 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/BlueSocket.git-3162807777605905816/Package.swift"; sourceTree = "<group>"; };
+		OBJ_109 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		OBJ_11 /* Consul+AgentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentServices.swift"; sourceTree = "<group>"; };
+		OBJ_110 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/LoggerAPI.git--6449715459278086880/Package.swift"; sourceTree = "<group>"; };
+		OBJ_12 /* Consul+Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Catalog.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* Consul+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Events.swift"; sourceTree = "<group>"; };
+		OBJ_14 /* Consul+Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+Health.swift"; sourceTree = "<group>"; };
+		OBJ_15 /* Consul+KVStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+KVStore.swift"; sourceTree = "<group>"; };
+		OBJ_16 /* Consul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consul.swift; sourceTree = "<group>"; };
+		OBJ_17 /* ConsulAgentCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentCheck.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ConsulAgentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentConfiguration.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ConsulAgentMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentMember.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ConsulAgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentService.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ConsulCatalogDatacenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulCatalogDatacenter.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ConsulCatalogNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulCatalogNode.swift; sourceTree = "<group>"; };
+		OBJ_23 /* ConsulCatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulCatalogService.swift; sourceTree = "<group>"; };
+		OBJ_24 /* ConsulEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulEvent.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ConsulKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValuePair.swift; sourceTree = "<group>"; };
+		OBJ_28 /* ConsulAgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulAgentTests.swift; sourceTree = "<group>"; };
+		OBJ_29 /* ConsulCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulCatalogTests.swift; sourceTree = "<group>"; };
+		OBJ_30 /* ConsulEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulEventTests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* ConsulHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulHealthTests.swift; sourceTree = "<group>"; };
+		OBJ_32 /* ConsulKeyValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulKeyValueTests.swift; sourceTree = "<group>"; };
+		OBJ_33 /* ConsulSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulSwiftTests.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/Quack.git--5271367057703676553/Package.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* Quack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quack.swift; sourceTree = "<group>"; };
+		OBJ_38 /* QuackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackClient.swift; sourceTree = "<group>"; };
+		OBJ_39 /* QuackCustomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackCustomParser.swift; sourceTree = "<group>"; };
+		OBJ_40 /* QuackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackModel.swift; sourceTree = "<group>"; };
+		OBJ_43 /* LclJSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LclJSONSerialization.swift; sourceTree = "<group>"; };
+		OBJ_44 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/SwiftyJSON.git--6955445084174387031/Package.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* http_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = http_parser.c; sourceTree = "<group>"; };
+		OBJ_49 /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		OBJ_51 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		OBJ_52 /* http_parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_parser.h; sourceTree = "<group>"; };
+		OBJ_53 /* CHTTPParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTTPParser.h; sourceTree = "<group>"; };
+		OBJ_54 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/christoph/Development/ConsulSwift/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap; sourceTree = "<group>"; };
+		OBJ_56 /* BufferList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferList.swift; sourceTree = "<group>"; };
+		OBJ_57 /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
+		OBJ_58 /* ClientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientResponse.swift; sourceTree = "<group>"; };
+		OBJ_59 /* ConnectionUpgradeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionUpgradeFactory.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Consul+AgentBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentBase.swift"; sourceTree = "<group>"; };
-		OBJ_9 /* Consul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consul.swift; sourceTree = "<group>"; };
+		OBJ_60 /* ConnectionUpgrader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionUpgrader.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_63 /* FastCGI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGI.swift; sourceTree = "<group>"; };
+		OBJ_64 /* FastCGIRecordCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGIRecordCreate.swift; sourceTree = "<group>"; };
+		OBJ_65 /* FastCGIRecordParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGIRecordParser.swift; sourceTree = "<group>"; };
+		OBJ_66 /* FastCGIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGIServer.swift; sourceTree = "<group>"; };
+		OBJ_67 /* FastCGIServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGIServerRequest.swift; sourceTree = "<group>"; };
+		OBJ_68 /* FastCGIServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCGIServerResponse.swift; sourceTree = "<group>"; };
+		OBJ_70 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		OBJ_71 /* HTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
+		OBJ_72 /* HTTPServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerRequest.swift; sourceTree = "<group>"; };
+		OBJ_73 /* HTTPServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerResponse.swift; sourceTree = "<group>"; };
+		OBJ_74 /* IncomingHTTPSocketProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingHTTPSocketProcessor.swift; sourceTree = "<group>"; };
+		OBJ_75 /* KeepAliveState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAliveState.swift; sourceTree = "<group>"; };
+		OBJ_77 /* HTTPParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParser.swift; sourceTree = "<group>"; };
+		OBJ_78 /* HTTPParserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParserStatus.swift; sourceTree = "<group>"; };
+		OBJ_79 /* ParseResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResults.swift; sourceTree = "<group>"; };
+		OBJ_80 /* URLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
+		OBJ_81 /* HeadersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersContainer.swift; sourceTree = "<group>"; };
+		OBJ_82 /* IncomingSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingSocketHandler.swift; sourceTree = "<group>"; };
+		OBJ_83 /* IncomingSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingSocketManager.swift; sourceTree = "<group>"; };
+		OBJ_84 /* IncomingSocketProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingSocketProcessor.swift; sourceTree = "<group>"; };
+		OBJ_85 /* IncomingSocketProcessorCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingSocketProcessorCreator.swift; sourceTree = "<group>"; };
+		OBJ_86 /* ListenerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerGroup.swift; sourceTree = "<group>"; };
+		OBJ_87 /* SPIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIUtils.swift; sourceTree = "<group>"; };
+		OBJ_89 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Consul+AgentBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consul+AgentBase.swift"; sourceTree = "<group>"; };
+		OBJ_90 /* ServerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDelegate.swift; sourceTree = "<group>"; };
+		OBJ_91 /* ServerLifecycleListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLifecycleListener.swift; sourceTree = "<group>"; };
+		OBJ_92 /* ServerMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMonitor.swift; sourceTree = "<group>"; };
+		OBJ_93 /* ServerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerState.swift; sourceTree = "<group>"; };
+		OBJ_94 /* ServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRequest.swift; sourceTree = "<group>"; };
+		OBJ_95 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		OBJ_96 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/christoph/Development/ConsulSwift/.build/checkouts/Kitura-net.git--7410958935072501107/Package.swift"; sourceTree = "<group>"; };
+		OBJ_99 /* SSLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLService.swift; sourceTree = "<group>"; };
+		"Quack::Quack::Product" /* Quack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SSLService::SSLService::Product" /* SSLService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SSLService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Socket::Socket::Product" /* Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_107 /* Frameworks */ = {
+		OBJ_174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_108 /* Alamofire.framework in Frameworks */,
-				OBJ_109 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_110 /* Quack.framework in Frameworks */,
+				OBJ_175 /* ConsulSwift.framework in Frameworks */,
+				OBJ_176 /* Quack.framework in Frameworks */,
+				OBJ_177 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_178 /* KituraNet.framework in Frameworks */,
+				OBJ_179 /* SSLService.framework in Frameworks */,
+				OBJ_180 /* Socket.framework in Frameworks */,
+				OBJ_181 /* LoggerAPI.framework in Frameworks */,
+				OBJ_182 /* CHTTPParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_121 /* Frameworks */ = {
+		OBJ_220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_122 /* Alamofire.framework in Frameworks */,
-				OBJ_123 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_124 /* Quack.framework in Frameworks */,
-				OBJ_125 /* ConsulSwift.framework in Frameworks */,
+				OBJ_221 /* Quack.framework in Frameworks */,
+				OBJ_222 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_223 /* KituraNet.framework in Frameworks */,
+				OBJ_224 /* SSLService.framework in Frameworks */,
+				OBJ_225 /* Socket.framework in Frameworks */,
+				OBJ_226 /* LoggerAPI.framework in Frameworks */,
+				OBJ_227 /* CHTTPParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_73 /* Frameworks */ = {
+		OBJ_243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_244 /* SwiftyJSON.framework in Frameworks */,
+				OBJ_245 /* KituraNet.framework in Frameworks */,
+				OBJ_246 /* SSLService.framework in Frameworks */,
+				OBJ_247 /* Socket.framework in Frameworks */,
+				OBJ_248 /* LoggerAPI.framework in Frameworks */,
+				OBJ_249 /* CHTTPParser.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_262 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_81 /* Frameworks */ = {
+		OBJ_303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_304 /* SSLService.framework in Frameworks */,
+				OBJ_305 /* Socket.framework in Frameworks */,
+				OBJ_306 /* LoggerAPI.framework in Frameworks */,
+				OBJ_307 /* CHTTPParser.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_318 /* Socket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_327 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_92 /* Frameworks */ = {
+		OBJ_333 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_93 /* Alamofire.framework in Frameworks */,
-				OBJ_94 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_13 /* Tests */ = {
+		OBJ_101 /* Socket 0.12.70 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* ConsulSwiftTests */,
+				OBJ_102 /* Socket */,
+				OBJ_106 /* Package.swift */,
+			);
+			name = "Socket 0.12.70";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_102 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_103 /* Socket.swift */,
+				OBJ_104 /* SocketProtocols.swift */,
+				OBJ_105 /* SocketUtils.swift */,
+			);
+			name = Socket;
+			path = ".build/checkouts/BlueSocket.git-3162807777605905816/Sources/Socket";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_107 /* LoggerAPI 1.7.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_108 /* LoggerAPI */,
+				OBJ_110 /* Package.swift */,
+			);
+			name = "LoggerAPI 1.7.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_108 /* LoggerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_109 /* Logger.swift */,
+			);
+			name = LoggerAPI;
+			path = ".build/checkouts/LoggerAPI.git--6449715459278086880/Sources/LoggerAPI";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ConsulSwift::ConsulSwiftTests::Product" /* ConsulSwiftTests.xctest */,
+				"ConsulSwift::ConsulSwift::Product" /* ConsulSwift.framework */,
+				"Quack::Quack::Product" /* Quack.framework */,
+				"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */,
+				"Kitura-net::KituraNet::Product" /* KituraNet.framework */,
+				"SSLService::SSLService::Product" /* SSLService.framework */,
+				"Socket::Socket::Product" /* Socket.framework */,
+				"LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */,
+				"Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_26 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* ConsulSwiftTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* ConsulSwiftTests */ = {
+		OBJ_27 /* ConsulSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* ConsulAgentTests.swift */,
-				59BC3D0A1EF2B4B000AE33EF /* ConsulCatalogTests.swift */,
-				59FDEFC61EF7DE9A00D46228 /* ConsulEventTests.swift */,
-				59FDEFCC1EF7E7A200D46228 /* ConsulKeyValueTests.swift */,
-				59FDEFD21EF9A0A400D46228 /* ConsulHealthTests.swift */,
-				OBJ_16 /* ConsulSwiftTests.swift */,
+				OBJ_28 /* ConsulAgentTests.swift */,
+				OBJ_29 /* ConsulCatalogTests.swift */,
+				OBJ_30 /* ConsulEventTests.swift */,
+				OBJ_31 /* ConsulHealthTests.swift */,
+				OBJ_32 /* ConsulKeyValueTests.swift */,
+				OBJ_33 /* ConsulSwiftTests.swift */,
 			);
 			name = ConsulSwiftTests;
 			path = Tests/ConsulSwiftTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* Dependencies */ = {
+		OBJ_34 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* Quack 0.4.0 */,
-				OBJ_24 /* SwiftyJSON 16.0.0 */,
-				OBJ_27 /* Alamofire 4.4.0 */,
+				OBJ_35 /* Quack */,
+				OBJ_41 /* SwiftyJSON 17.0.0 */,
+				OBJ_46 /* Kitura-net 1.7.16 */,
+				OBJ_97 /* SSLService 0.12.57 */,
+				OBJ_101 /* Socket 0.12.70 */,
+				OBJ_107 /* LoggerAPI 1.7.1 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_18 /* Quack 0.4.0 */ = {
+		OBJ_35 /* Quack */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* Alamofire+Synchronous.swift */,
-				OBJ_20 /* Quack.swift */,
-				OBJ_21 /* QuackClient.swift */,
-				OBJ_22 /* QuackCustomParser.swift */,
-				OBJ_23 /* QuackModel.swift */,
+				OBJ_36 /* Package.swift */,
+				OBJ_37 /* Quack.swift */,
+				OBJ_38 /* QuackClient.swift */,
+				OBJ_39 /* QuackCustomParser.swift */,
+				OBJ_40 /* QuackModel.swift */,
 			);
-			name = "Quack 0.4.0";
+			name = Quack;
 			path = ".build/checkouts/Quack.git--5271367057703676553/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* SwiftyJSON 16.0.0 */ = {
+		OBJ_41 /* SwiftyJSON 17.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* LclJSONSerialization.swift */,
-				OBJ_26 /* SwiftyJSON.swift */,
+				OBJ_42 /* SwiftyJSON */,
+				OBJ_45 /* Package.swift */,
 			);
-			name = "SwiftyJSON 16.0.0";
-			path = ".build/checkouts/SwiftyJSON.git--6955445084174387031/Source";
+			name = "SwiftyJSON 17.0.0";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_27 /* Alamofire 4.4.0 */ = {
+		OBJ_42 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* AFError.swift */,
-				OBJ_29 /* Alamofire.swift */,
-				OBJ_30 /* DispatchQueue+Alamofire.swift */,
-				OBJ_31 /* MultipartFormData.swift */,
-				OBJ_32 /* NetworkReachabilityManager.swift */,
-				OBJ_33 /* Notifications.swift */,
-				OBJ_34 /* ParameterEncoding.swift */,
-				OBJ_35 /* Request.swift */,
-				OBJ_36 /* Response.swift */,
-				OBJ_37 /* ResponseSerialization.swift */,
-				OBJ_38 /* Result.swift */,
-				OBJ_39 /* ServerTrustPolicy.swift */,
-				OBJ_40 /* SessionDelegate.swift */,
-				OBJ_41 /* SessionManager.swift */,
-				OBJ_42 /* TaskDelegate.swift */,
-				OBJ_43 /* Timeline.swift */,
-				OBJ_44 /* Validation.swift */,
+				OBJ_43 /* LclJSONSerialization.swift */,
+				OBJ_44 /* SwiftyJSON.swift */,
 			);
-			name = "Alamofire 4.4.0";
-			path = ".build/checkouts/Alamofire.git-6801331143877184500/Source";
+			name = SwiftyJSON;
+			path = ".build/checkouts/SwiftyJSON.git--6955445084174387031/Sources/SwiftyJSON";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_45 /* Products */ = {
+		OBJ_46 /* Kitura-net 1.7.16 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_46 /* Alamofire.framework */,
-				OBJ_47 /* SwiftyJSON.framework */,
-				OBJ_48 /* Quack.framework */,
-				OBJ_49 /* ConsulSwift.framework */,
-				OBJ_50 /* ConsulSwiftTests.xctest */,
+				OBJ_47 /* CHTTPParser */,
+				OBJ_55 /* KituraNet */,
+				OBJ_96 /* Package.swift */,
 			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
+			name = "Kitura-net 1.7.16";
+			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 = {
+		OBJ_47 /* CHTTPParser */ = {
 			isa = PBXGroup;
 			children = (
-				599693FF1EEB4524008B6FCB /* README.md */,
+				OBJ_48 /* http_parser.c */,
+				OBJ_49 /* utils.c */,
+				OBJ_50 /* include */,
+			);
+			name = CHTTPParser;
+			path = ".build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_13 /* Tests */,
-				OBJ_17 /* Dependencies */,
-				OBJ_45 /* Products */,
+				OBJ_26 /* Tests */,
+				OBJ_34 /* Dependencies */,
+				OBJ_111 /* Products */,
 			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* utils.h */,
+				OBJ_52 /* http_parser.h */,
+				OBJ_53 /* CHTTPParser.h */,
+				OBJ_54 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_55 /* KituraNet */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_56 /* BufferList.swift */,
+				OBJ_57 /* ClientRequest.swift */,
+				OBJ_58 /* ClientResponse.swift */,
+				OBJ_59 /* ConnectionUpgradeFactory.swift */,
+				OBJ_60 /* ConnectionUpgrader.swift */,
+				OBJ_61 /* Error.swift */,
+				OBJ_62 /* FastCGI */,
+				OBJ_69 /* HTTP */,
+				OBJ_76 /* HTTPParser */,
+				OBJ_81 /* HeadersContainer.swift */,
+				OBJ_82 /* IncomingSocketHandler.swift */,
+				OBJ_83 /* IncomingSocketManager.swift */,
+				OBJ_84 /* IncomingSocketProcessor.swift */,
+				OBJ_85 /* IncomingSocketProcessorCreator.swift */,
+				OBJ_86 /* ListenerGroup.swift */,
+				OBJ_87 /* SPIUtils.swift */,
+				OBJ_88 /* Server */,
+				OBJ_94 /* ServerRequest.swift */,
+				OBJ_95 /* ServerResponse.swift */,
+			);
+			name = KituraNet;
+			path = ".build/checkouts/Kitura-net.git--7410958935072501107/Sources/KituraNet";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_62 /* FastCGI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_63 /* FastCGI.swift */,
+				OBJ_64 /* FastCGIRecordCreate.swift */,
+				OBJ_65 /* FastCGIRecordParser.swift */,
+				OBJ_66 /* FastCGIServer.swift */,
+				OBJ_67 /* FastCGIServerRequest.swift */,
+				OBJ_68 /* FastCGIServerResponse.swift */,
+			);
+			path = FastCGI;
+			sourceTree = "<group>";
+		};
+		OBJ_69 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_70 /* HTTP.swift */,
+				OBJ_71 /* HTTPServer.swift */,
+				OBJ_72 /* HTTPServerRequest.swift */,
+				OBJ_73 /* HTTPServerResponse.swift */,
+				OBJ_74 /* IncomingHTTPSocketProcessor.swift */,
+				OBJ_75 /* KeepAliveState.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Consul+AgentBase.swift */,
-				590A219C1EF1D791000EECAE /* Consul+AgentChecks.swift */,
-				590A219E1EF1D7F3000EECAE /* Consul+AgentServices.swift */,
-				59BC3D061EF2B3CA00AE33EF /* Consul+Catalog.swift */,
-				59FDEFC21EF7CFD400D46228 /* Consul+Events.swift */,
-				59FDEFC81EF7E3E300D46228 /* Consul+KVStore.swift */,
-				59FDEFCE1EF99F3A00D46228 /* Consul+Health.swift */,
-				OBJ_9 /* Consul.swift */,
-				OBJ_10 /* ConsulAgentCheck.swift */,
-				OBJ_11 /* ConsulAgentConfiguration.swift */,
-				OBJ_12 /* ConsulAgentMember.swift */,
-				590A21A01EF1D86D000EECAE /* ConsulAgentService.swift */,
-				59BC3D081EF2B41E00AE33EF /* ConsulCatalogDatacenter.swift */,
-				59BC3D0C1EF2C29F00AE33EF /* ConsulCatalogNode.swift */,
-				59BC3D0E1EF2CAB500AE33EF /* ConsulCatalogService.swift */,
-				59FDEFC41EF7D1A100D46228 /* ConsulEvent.swift */,
-				59FDEFCA1EF7E5EB00D46228 /* ConsulKeyValuePair.swift */,
+				OBJ_8 /* ConsulSwift */,
 			);
-			path = Sources;
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_76 /* HTTPParser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_77 /* HTTPParser.swift */,
+				OBJ_78 /* HTTPParserStatus.swift */,
+				OBJ_79 /* ParseResults.swift */,
+				OBJ_80 /* URLParser.swift */,
+			);
+			path = HTTPParser;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* ConsulSwift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Consul+AgentBase.swift */,
+				OBJ_10 /* Consul+AgentChecks.swift */,
+				OBJ_11 /* Consul+AgentServices.swift */,
+				OBJ_12 /* Consul+Catalog.swift */,
+				OBJ_13 /* Consul+Events.swift */,
+				OBJ_14 /* Consul+Health.swift */,
+				OBJ_15 /* Consul+KVStore.swift */,
+				OBJ_16 /* Consul.swift */,
+				OBJ_17 /* ConsulAgentCheck.swift */,
+				OBJ_18 /* ConsulAgentConfiguration.swift */,
+				OBJ_19 /* ConsulAgentMember.swift */,
+				OBJ_20 /* ConsulAgentService.swift */,
+				OBJ_21 /* ConsulCatalogDatacenter.swift */,
+				OBJ_22 /* ConsulCatalogNode.swift */,
+				OBJ_23 /* ConsulCatalogService.swift */,
+				OBJ_24 /* ConsulEvent.swift */,
+				OBJ_25 /* ConsulKeyValuePair.swift */,
+			);
+			name = ConsulSwift;
+			path = Sources/ConsulSwift;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_88 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_89 /* Server.swift */,
+				OBJ_90 /* ServerDelegate.swift */,
+				OBJ_91 /* ServerLifecycleListener.swift */,
+				OBJ_92 /* ServerMonitor.swift */,
+				OBJ_93 /* ServerState.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		OBJ_97 /* SSLService 0.12.57 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_98 /* SSLService */,
+				OBJ_100 /* Package.swift */,
+			);
+			name = "SSLService 0.12.57";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_98 /* SSLService */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_99 /* SSLService.swift */,
+			);
+			name = SSLService;
+			path = ".build/checkouts/BlueSSLService.git--6577639804771281610/Sources/SSLService";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_114 /* ConsulSwiftTests */ = {
+		"ConsulSwift::ConsulSwift" /* ConsulSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_115 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */;
+			buildConfigurationList = OBJ_199 /* Build configuration list for PBXNativeTarget "ConsulSwift" */;
 			buildPhases = (
-				OBJ_118 /* Sources */,
-				OBJ_121 /* Frameworks */,
+				OBJ_202 /* Sources */,
+				OBJ_220 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_126 /* PBXTargetDependency */,
-				OBJ_127 /* PBXTargetDependency */,
-				OBJ_128 /* PBXTargetDependency */,
-				OBJ_129 /* PBXTargetDependency */,
+				OBJ_228 /* PBXTargetDependency */,
+				OBJ_229 /* PBXTargetDependency */,
+				OBJ_230 /* PBXTargetDependency */,
+				OBJ_231 /* PBXTargetDependency */,
+				OBJ_232 /* PBXTargetDependency */,
+				OBJ_233 /* PBXTargetDependency */,
+				OBJ_234 /* PBXTargetDependency */,
+			);
+			name = ConsulSwift;
+			productName = ConsulSwift;
+			productReference = "ConsulSwift::ConsulSwift::Product" /* ConsulSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"ConsulSwift::ConsulSwiftTests" /* ConsulSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_164 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */;
+			buildPhases = (
+				OBJ_167 /* Sources */,
+				OBJ_174 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_183 /* PBXTargetDependency */,
+				OBJ_185 /* PBXTargetDependency */,
+				OBJ_187 /* PBXTargetDependency */,
+				OBJ_189 /* PBXTargetDependency */,
+				OBJ_191 /* PBXTargetDependency */,
+				OBJ_193 /* PBXTargetDependency */,
+				OBJ_195 /* PBXTargetDependency */,
+				OBJ_197 /* PBXTargetDependency */,
 			);
 			name = ConsulSwiftTests;
 			productName = ConsulSwiftTests;
-			productReference = OBJ_50 /* ConsulSwiftTests.xctest */;
+			productReference = "ConsulSwift::ConsulSwiftTests::Product" /* ConsulSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		OBJ_51 /* Alamofire */ = {
+		"ConsulSwift::SwiftPMPackageDescription" /* ConsulSwiftPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildConfigurationList = OBJ_122 /* Build configuration list for PBXNativeTarget "ConsulSwiftPackageDescription" */;
 			buildPhases = (
-				OBJ_55 /* Sources */,
-				OBJ_73 /* Frameworks */,
+				OBJ_125 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = OBJ_46 /* Alamofire.framework */;
+			name = ConsulSwiftPackageDescription;
+			productName = ConsulSwiftPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_74 /* SwiftyJSON */ = {
+		"Kitura-net::CHTTPParser" /* CHTTPParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_75 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = OBJ_334 /* Build configuration list for PBXNativeTarget "CHTTPParser" */;
 			buildPhases = (
-				OBJ_78 /* Sources */,
-				OBJ_81 /* Frameworks */,
+				OBJ_337 /* Sources */,
+				OBJ_340 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHTTPParser;
+			productName = CHTTPParser;
+			productReference = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Kitura-net::KituraNet" /* KituraNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_263 /* Build configuration list for PBXNativeTarget "KituraNet" */;
+			buildPhases = (
+				OBJ_266 /* Sources */,
+				OBJ_303 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_308 /* PBXTargetDependency */,
+				OBJ_309 /* PBXTargetDependency */,
+				OBJ_310 /* PBXTargetDependency */,
+				OBJ_311 /* PBXTargetDependency */,
+			);
+			name = KituraNet;
+			productName = KituraNet;
+			productReference = "Kitura-net::KituraNet::Product" /* KituraNet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Kitura-net::SwiftPMPackageDescription" /* Kitura-netPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_140 /* Build configuration list for PBXNativeTarget "Kitura-netPackageDescription" */;
+			buildPhases = (
+				OBJ_143 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kitura-netPackageDescription";
+			productName = "Kitura-netPackageDescription";
+			productType = "com.apple.product-type.framework";
+		};
+		"LoggerAPI::LoggerAPI" /* LoggerAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_328 /* Build configuration list for PBXNativeTarget "LoggerAPI" */;
+			buildPhases = (
+				OBJ_331 /* Sources */,
+				OBJ_333 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoggerAPI;
+			productName = LoggerAPI;
+			productReference = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"LoggerAPI::SwiftPMPackageDescription" /* LoggerAPIPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_158 /* Build configuration list for PBXNativeTarget "LoggerAPIPackageDescription" */;
+			buildPhases = (
+				OBJ_161 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoggerAPIPackageDescription;
+			productName = LoggerAPIPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Quack::Quack" /* Quack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_235 /* Build configuration list for PBXNativeTarget "Quack" */;
+			buildPhases = (
+				OBJ_238 /* Sources */,
+				OBJ_243 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_250 /* PBXTargetDependency */,
+				OBJ_251 /* PBXTargetDependency */,
+				OBJ_252 /* PBXTargetDependency */,
+				OBJ_253 /* PBXTargetDependency */,
+				OBJ_254 /* PBXTargetDependency */,
+				OBJ_255 /* PBXTargetDependency */,
+			);
+			name = Quack;
+			productName = Quack;
+			productReference = "Quack::Quack::Product" /* Quack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Quack::SwiftPMPackageDescription" /* QuackPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_128 /* Build configuration list for PBXNativeTarget "QuackPackageDescription" */;
+			buildPhases = (
+				OBJ_131 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuackPackageDescription;
+			productName = QuackPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SSLService::SSLService" /* SSLService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_312 /* Build configuration list for PBXNativeTarget "SSLService" */;
+			buildPhases = (
+				OBJ_315 /* Sources */,
+				OBJ_317 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_319 /* PBXTargetDependency */,
+			);
+			name = SSLService;
+			productName = SSLService;
+			productReference = "SSLService::SSLService::Product" /* SSLService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SSLService::SwiftPMPackageDescription" /* SSLServicePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_146 /* Build configuration list for PBXNativeTarget "SSLServicePackageDescription" */;
+			buildPhases = (
+				OBJ_149 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSLServicePackageDescription;
+			productName = SSLServicePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Socket::Socket" /* Socket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_320 /* Build configuration list for PBXNativeTarget "Socket" */;
+			buildPhases = (
+				OBJ_323 /* Sources */,
+				OBJ_327 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Socket;
+			productName = Socket;
+			productReference = "Socket::Socket::Product" /* Socket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Socket::SwiftPMPackageDescription" /* SocketPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "SocketPackageDescription" */;
+			buildPhases = (
+				OBJ_155 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketPackageDescription;
+			productName = SocketPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftyJSON::SwiftPMPackageDescription" /* SwiftyJSONPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_134 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */;
+			buildPhases = (
+				OBJ_137 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSONPackageDescription;
+			productName = SwiftyJSONPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftyJSON::SwiftyJSON" /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_256 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				OBJ_259 /* Sources */,
+				OBJ_262 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,44 +1078,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = OBJ_47 /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		OBJ_82 /* Quack */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_83 /* Build configuration list for PBXNativeTarget "Quack" */;
-			buildPhases = (
-				OBJ_86 /* Sources */,
-				OBJ_92 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_95 /* PBXTargetDependency */,
-				OBJ_96 /* PBXTargetDependency */,
-			);
-			name = Quack;
-			productName = Quack;
-			productReference = OBJ_48 /* Quack.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		OBJ_97 /* ConsulSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_98 /* Build configuration list for PBXNativeTarget "ConsulSwift" */;
-			buildPhases = (
-				OBJ_101 /* Sources */,
-				OBJ_107 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_111 /* PBXTargetDependency */,
-				OBJ_112 /* PBXTargetDependency */,
-				OBJ_113 /* PBXTargetDependency */,
-			);
-			name = ConsulSwift;
-			productName = ConsulSwift;
-			productReference = OBJ_49 /* ConsulSwift.framework */;
+			productReference = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -471,155 +1096,647 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_45 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_111 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_51 /* Alamofire */,
-				OBJ_74 /* SwiftyJSON */,
-				OBJ_82 /* Quack */,
-				OBJ_97 /* ConsulSwift */,
-				OBJ_114 /* ConsulSwiftTests */,
+				"ConsulSwift::SwiftPMPackageDescription" /* ConsulSwiftPackageDescription */,
+				"Quack::SwiftPMPackageDescription" /* QuackPackageDescription */,
+				"SwiftyJSON::SwiftPMPackageDescription" /* SwiftyJSONPackageDescription */,
+				"Kitura-net::SwiftPMPackageDescription" /* Kitura-netPackageDescription */,
+				"SSLService::SwiftPMPackageDescription" /* SSLServicePackageDescription */,
+				"Socket::SwiftPMPackageDescription" /* SocketPackageDescription */,
+				"LoggerAPI::SwiftPMPackageDescription" /* LoggerAPIPackageDescription */,
+				"ConsulSwift::ConsulSwiftTests" /* ConsulSwiftTests */,
+				"ConsulSwift::ConsulSwift" /* ConsulSwift */,
+				"Quack::Quack" /* Quack */,
+				"SwiftyJSON::SwiftyJSON" /* SwiftyJSON */,
+				"Kitura-net::KituraNet" /* KituraNet */,
+				"SSLService::SSLService" /* SSLService */,
+				"Socket::Socket" /* Socket */,
+				"LoggerAPI::LoggerAPI" /* LoggerAPI */,
+				"Kitura-net::CHTTPParser" /* CHTTPParser */,
+				"ConsulSwift::ConsulSwiftPackageTests::ProductTarget" /* ConsulSwiftPackageTests */,
+				"CCurl::CCurl::ProductTarget" /* CCurl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_101 /* Sources */ = {
+		OBJ_125 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				59BC3D071EF2B3CA00AE33EF /* Consul+Catalog.swift in Sources */,
-				OBJ_102 /* Consul+AgentBase.swift in Sources */,
-				590A219F1EF1D7F3000EECAE /* Consul+AgentServices.swift in Sources */,
-				OBJ_103 /* Consul.swift in Sources */,
-				59FDEFC51EF7D1A100D46228 /* ConsulEvent.swift in Sources */,
-				59FDEFC31EF7CFD400D46228 /* Consul+Events.swift in Sources */,
-				59BC3D0D1EF2C29F00AE33EF /* ConsulCatalogNode.swift in Sources */,
-				59BC3D0F1EF2CAB500AE33EF /* ConsulCatalogService.swift in Sources */,
-				59FDEFCF1EF99F3A00D46228 /* Consul+Health.swift in Sources */,
-				OBJ_104 /* ConsulAgentCheck.swift in Sources */,
-				59FDEFCB1EF7E5EB00D46228 /* ConsulKeyValuePair.swift in Sources */,
-				OBJ_105 /* ConsulAgentConfiguration.swift in Sources */,
-				590A219D1EF1D791000EECAE /* Consul+AgentChecks.swift in Sources */,
-				OBJ_106 /* ConsulAgentMember.swift in Sources */,
-				59FDEFC91EF7E3E300D46228 /* Consul+KVStore.swift in Sources */,
-				59BC3D091EF2B41E00AE33EF /* ConsulCatalogDatacenter.swift in Sources */,
-				590A21A11EF1D86D000EECAE /* ConsulAgentService.swift in Sources */,
+				OBJ_126 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_118 /* Sources */ = {
+		OBJ_131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_119 /* ConsulAgentTests.swift in Sources */,
-				59FDEFD31EF9A0A400D46228 /* ConsulHealthTests.swift in Sources */,
-				59BC3D0B1EF2B4B000AE33EF /* ConsulCatalogTests.swift in Sources */,
-				59FDEFC71EF7DE9A00D46228 /* ConsulEventTests.swift in Sources */,
-				OBJ_120 /* ConsulSwiftTests.swift in Sources */,
-				59FDEFCD1EF7E7A200D46228 /* ConsulKeyValueTests.swift in Sources */,
+				OBJ_132 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_55 /* Sources */ = {
+		OBJ_137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_56 /* AFError.swift in Sources */,
-				OBJ_57 /* Alamofire.swift in Sources */,
-				OBJ_58 /* DispatchQueue+Alamofire.swift in Sources */,
-				OBJ_59 /* MultipartFormData.swift in Sources */,
-				OBJ_60 /* NetworkReachabilityManager.swift in Sources */,
-				OBJ_61 /* Notifications.swift in Sources */,
-				OBJ_62 /* ParameterEncoding.swift in Sources */,
-				OBJ_63 /* Request.swift in Sources */,
-				OBJ_64 /* Response.swift in Sources */,
-				OBJ_65 /* ResponseSerialization.swift in Sources */,
-				OBJ_66 /* Result.swift in Sources */,
-				OBJ_67 /* ServerTrustPolicy.swift in Sources */,
-				OBJ_68 /* SessionDelegate.swift in Sources */,
-				OBJ_69 /* SessionManager.swift in Sources */,
-				OBJ_70 /* TaskDelegate.swift in Sources */,
-				OBJ_71 /* Timeline.swift in Sources */,
-				OBJ_72 /* Validation.swift in Sources */,
+				OBJ_138 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_78 /* Sources */ = {
+		OBJ_143 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_79 /* LclJSONSerialization.swift in Sources */,
-				OBJ_80 /* SwiftyJSON.swift in Sources */,
+				OBJ_144 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_86 /* Sources */ = {
+		OBJ_149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_87 /* Alamofire+Synchronous.swift in Sources */,
-				OBJ_88 /* Quack.swift in Sources */,
-				OBJ_89 /* QuackClient.swift in Sources */,
-				OBJ_90 /* QuackCustomParser.swift in Sources */,
-				OBJ_91 /* QuackModel.swift in Sources */,
+				OBJ_150 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_156 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_162 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_168 /* ConsulAgentTests.swift in Sources */,
+				OBJ_169 /* ConsulCatalogTests.swift in Sources */,
+				OBJ_170 /* ConsulEventTests.swift in Sources */,
+				OBJ_171 /* ConsulHealthTests.swift in Sources */,
+				OBJ_172 /* ConsulKeyValueTests.swift in Sources */,
+				OBJ_173 /* ConsulSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_203 /* Consul+AgentBase.swift in Sources */,
+				OBJ_204 /* Consul+AgentChecks.swift in Sources */,
+				OBJ_205 /* Consul+AgentServices.swift in Sources */,
+				OBJ_206 /* Consul+Catalog.swift in Sources */,
+				OBJ_207 /* Consul+Events.swift in Sources */,
+				OBJ_208 /* Consul+Health.swift in Sources */,
+				OBJ_209 /* Consul+KVStore.swift in Sources */,
+				OBJ_210 /* Consul.swift in Sources */,
+				OBJ_211 /* ConsulAgentCheck.swift in Sources */,
+				OBJ_212 /* ConsulAgentConfiguration.swift in Sources */,
+				OBJ_213 /* ConsulAgentMember.swift in Sources */,
+				OBJ_214 /* ConsulAgentService.swift in Sources */,
+				OBJ_215 /* ConsulCatalogDatacenter.swift in Sources */,
+				OBJ_216 /* ConsulCatalogNode.swift in Sources */,
+				OBJ_217 /* ConsulCatalogService.swift in Sources */,
+				OBJ_218 /* ConsulEvent.swift in Sources */,
+				OBJ_219 /* ConsulKeyValuePair.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_239 /* Quack.swift in Sources */,
+				OBJ_240 /* QuackClient.swift in Sources */,
+				OBJ_241 /* QuackCustomParser.swift in Sources */,
+				OBJ_242 /* QuackModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_260 /* LclJSONSerialization.swift in Sources */,
+				OBJ_261 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_267 /* BufferList.swift in Sources */,
+				OBJ_268 /* ClientRequest.swift in Sources */,
+				OBJ_269 /* ClientResponse.swift in Sources */,
+				OBJ_270 /* ConnectionUpgradeFactory.swift in Sources */,
+				OBJ_271 /* ConnectionUpgrader.swift in Sources */,
+				OBJ_272 /* Error.swift in Sources */,
+				OBJ_273 /* FastCGI.swift in Sources */,
+				OBJ_274 /* FastCGIRecordCreate.swift in Sources */,
+				OBJ_275 /* FastCGIRecordParser.swift in Sources */,
+				OBJ_276 /* FastCGIServer.swift in Sources */,
+				OBJ_277 /* FastCGIServerRequest.swift in Sources */,
+				OBJ_278 /* FastCGIServerResponse.swift in Sources */,
+				OBJ_279 /* HTTP.swift in Sources */,
+				OBJ_280 /* HTTPServer.swift in Sources */,
+				OBJ_281 /* HTTPServerRequest.swift in Sources */,
+				OBJ_282 /* HTTPServerResponse.swift in Sources */,
+				OBJ_283 /* IncomingHTTPSocketProcessor.swift in Sources */,
+				OBJ_284 /* KeepAliveState.swift in Sources */,
+				OBJ_285 /* HTTPParser.swift in Sources */,
+				OBJ_286 /* HTTPParserStatus.swift in Sources */,
+				OBJ_287 /* ParseResults.swift in Sources */,
+				OBJ_288 /* URLParser.swift in Sources */,
+				OBJ_289 /* HeadersContainer.swift in Sources */,
+				OBJ_290 /* IncomingSocketHandler.swift in Sources */,
+				OBJ_291 /* IncomingSocketManager.swift in Sources */,
+				OBJ_292 /* IncomingSocketProcessor.swift in Sources */,
+				OBJ_293 /* IncomingSocketProcessorCreator.swift in Sources */,
+				OBJ_294 /* ListenerGroup.swift in Sources */,
+				OBJ_295 /* SPIUtils.swift in Sources */,
+				OBJ_296 /* Server.swift in Sources */,
+				OBJ_297 /* ServerDelegate.swift in Sources */,
+				OBJ_298 /* ServerLifecycleListener.swift in Sources */,
+				OBJ_299 /* ServerMonitor.swift in Sources */,
+				OBJ_300 /* ServerState.swift in Sources */,
+				OBJ_301 /* ServerRequest.swift in Sources */,
+				OBJ_302 /* ServerResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_316 /* SSLService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_324 /* Socket.swift in Sources */,
+				OBJ_325 /* SocketProtocols.swift in Sources */,
+				OBJ_326 /* SocketUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_332 /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_338 /* http_parser.c in Sources */,
+				OBJ_339 /* utils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_111 /* PBXTargetDependency */ = {
+		OBJ_183 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_51 /* Alamofire */;
-			targetProxy = 595061711ED861540082D646 /* PBXContainerItemProxy */;
+			target = "ConsulSwift::ConsulSwift" /* ConsulSwift */;
+			targetProxy = 59A5793A1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_112 /* PBXTargetDependency */ = {
+		OBJ_185 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_74 /* SwiftyJSON */;
-			targetProxy = 595061721ED861540082D646 /* PBXContainerItemProxy */;
+			target = "Quack::Quack" /* Quack */;
+			targetProxy = 59A5793B1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_113 /* PBXTargetDependency */ = {
+		OBJ_187 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_82 /* Quack */;
-			targetProxy = 595061731ED861540082D646 /* PBXContainerItemProxy */;
+			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
+			targetProxy = 59A5793C1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_126 /* PBXTargetDependency */ = {
+		OBJ_189 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_51 /* Alamofire */;
-			targetProxy = 595061741ED861540082D646 /* PBXContainerItemProxy */;
+			target = "Kitura-net::KituraNet" /* KituraNet */;
+			targetProxy = 59A5793D1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_127 /* PBXTargetDependency */ = {
+		OBJ_191 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_74 /* SwiftyJSON */;
-			targetProxy = 595061751ED861540082D646 /* PBXContainerItemProxy */;
+			target = "SSLService::SSLService" /* SSLService */;
+			targetProxy = 59A5793E1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_128 /* PBXTargetDependency */ = {
+		OBJ_193 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_82 /* Quack */;
-			targetProxy = 595061761ED861540082D646 /* PBXContainerItemProxy */;
+			target = "Socket::Socket" /* Socket */;
+			targetProxy = 59A5793F1F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_129 /* PBXTargetDependency */ = {
+		OBJ_195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_97 /* ConsulSwift */;
-			targetProxy = 595061771ED861540082D646 /* PBXContainerItemProxy */;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 59A579401F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_95 /* PBXTargetDependency */ = {
+		OBJ_197 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_51 /* Alamofire */;
-			targetProxy = 5950616F1ED861540082D646 /* PBXContainerItemProxy */;
+			target = "Kitura-net::CHTTPParser" /* CHTTPParser */;
+			targetProxy = 59A579411F7F9E53003A36E2 /* PBXContainerItemProxy */;
 		};
-		OBJ_96 /* PBXTargetDependency */ = {
+		OBJ_228 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_74 /* SwiftyJSON */;
-			targetProxy = 595061701ED861540082D646 /* PBXContainerItemProxy */;
+			target = "Quack::Quack" /* Quack */;
+			targetProxy = 59A579281F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_229 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
+			targetProxy = 59A579341F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Kitura-net::KituraNet" /* KituraNet */;
+			targetProxy = 59A579351F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SSLService::SSLService" /* SSLService */;
+			targetProxy = 59A579361F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Socket::Socket" /* Socket */;
+			targetProxy = 59A579371F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_233 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 59A579381F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_234 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Kitura-net::CHTTPParser" /* CHTTPParser */;
+			targetProxy = 59A579391F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
+			targetProxy = 59A579291F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_251 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Kitura-net::KituraNet" /* KituraNet */;
+			targetProxy = 59A5792A1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SSLService::SSLService" /* SSLService */;
+			targetProxy = 59A579301F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Socket::Socket" /* Socket */;
+			targetProxy = 59A579311F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 59A579321F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Kitura-net::CHTTPParser" /* CHTTPParser */;
+			targetProxy = 59A579331F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SSLService::SSLService" /* SSLService */;
+			targetProxy = 59A5792B1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Socket::Socket" /* Socket */;
+			targetProxy = 59A5792D1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "LoggerAPI::LoggerAPI" /* LoggerAPI */;
+			targetProxy = 59A5792E1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Kitura-net::CHTTPParser" /* CHTTPParser */;
+			targetProxy = 59A5792F1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Socket::Socket" /* Socket */;
+			targetProxy = 59A5792C1F7F9E53003A36E2 /* PBXContainerItemProxy */;
+		};
+		OBJ_345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ConsulSwift::ConsulSwiftTests" /* ConsulSwiftTests */;
+			targetProxy = 59A579421F7F9E55003A36E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_100 /* Release */ = {
+		OBJ_123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ConsulSwiftTests;
+			};
+			name = Debug;
+		};
+		OBJ_166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ConsulSwiftTests;
+			};
+			name = Release;
+		};
+		OBJ_200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ConsulSwift;
+			};
+			name = Debug;
+		};
+		OBJ_201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = ConsulSwift;
+			};
+			name = Release;
+		};
+		OBJ_236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/Quack_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Quack;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Quack;
+			};
+			name = Debug;
+		};
+		OBJ_237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/Quack_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Quack;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Quack;
+			};
+			name = Release;
+		};
+		OBJ_257 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -628,49 +1745,92 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/SwiftyJSON_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGET_NAME = ConsulSwift;
-			};
-			name = Release;
-		};
-		OBJ_116 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwiftTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = ConsulSwiftTests;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftyJSON;
 			};
 			name = Debug;
 		};
-		OBJ_117 /* Release */ = {
+		OBJ_258 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwiftTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/SwiftyJSON_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = ConsulSwiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftyJSON;
+			};
+			name = Release;
+		};
+		OBJ_264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/KituraNet_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = KituraNet;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = KituraNet;
+			};
+			name = Debug;
+		};
+		OBJ_265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+					"$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/KituraNet_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/ConsulSwift.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = KituraNet;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = KituraNet;
 			};
 			name = Release;
 		};
@@ -692,10 +1852,217 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
+		};
+		OBJ_313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/SSLService_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SSLService;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SSLService;
+			};
+			name = Debug;
+		};
+		OBJ_314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/SSLService_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SSLService;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SSLService;
+			};
+			name = Release;
+		};
+		OBJ_321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/Socket_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Socket;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Socket;
+			};
+			name = Debug;
+		};
+		OBJ_322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/Socket_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Socket;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Socket;
+			};
+			name = Release;
+		};
+		OBJ_329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/LoggerAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = LoggerAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = LoggerAPI;
+			};
+			name = Debug;
+		};
+		OBJ_330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/LoggerAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = LoggerAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = LoggerAPI;
+			};
+			name = Release;
+		};
+		OBJ_335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/CHTTPParser_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CHTTPParser;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CHTTPParser;
+			};
+			name = Debug;
+		};
+		OBJ_336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/Kitura-net.git--7410958935072501107/Sources/CHTTPParser/include",
+					"$(SRCROOT)/.build/checkouts/CCurl.git-8026296523752779197",
+				);
+				INFOPLIST_FILE = ConsulSwift.xcodeproj/CHTTPParser_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CHTTPParser;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = CHTTPParser;
+			};
+			name = Release;
+		};
+		OBJ_343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -713,166 +2080,90 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		OBJ_53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Alamofire_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Alamofire;
-			};
-			name = Debug;
-		};
-		OBJ_54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Alamofire_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Alamofire;
-			};
-			name = Release;
-		};
-		OBJ_76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/SwiftyJSON_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SwiftyJSON;
-			};
-			name = Debug;
-		};
-		OBJ_77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/SwiftyJSON_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SwiftyJSON;
-			};
-			name = Release;
-		};
-		OBJ_84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Quack_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Quack;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Quack;
-			};
-			name = Debug;
-		};
-		OBJ_85 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/Quack_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Quack;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = Quack;
-			};
-			name = Release;
-		};
-		OBJ_99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConsulSwift.xcodeproj/ConsulSwift_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ConsulSwift;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = ConsulSwift;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_115 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */ = {
+		OBJ_122 /* Build configuration list for PBXNativeTarget "ConsulSwiftPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_116 /* Debug */,
-				OBJ_117 /* Release */,
+				OBJ_123 /* Debug */,
+				OBJ_124 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_128 /* Build configuration list for PBXNativeTarget "QuackPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_129 /* Debug */,
+				OBJ_130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_134 /* Build configuration list for PBXNativeTarget "SwiftyJSONPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_135 /* Debug */,
+				OBJ_136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_140 /* Build configuration list for PBXNativeTarget "Kitura-netPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_141 /* Debug */,
+				OBJ_142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_146 /* Build configuration list for PBXNativeTarget "SSLServicePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_147 /* Debug */,
+				OBJ_148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_152 /* Build configuration list for PBXNativeTarget "SocketPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_153 /* Debug */,
+				OBJ_154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_158 /* Build configuration list for PBXNativeTarget "LoggerAPIPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_159 /* Debug */,
+				OBJ_160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_164 /* Build configuration list for PBXNativeTarget "ConsulSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_165 /* Debug */,
+				OBJ_166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_199 /* Build configuration list for PBXNativeTarget "ConsulSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_200 /* Debug */,
+				OBJ_201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -886,38 +2177,83 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_52 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+		OBJ_235 /* Build configuration list for PBXNativeTarget "Quack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_53 /* Debug */,
-				OBJ_54 /* Release */,
+				OBJ_236 /* Debug */,
+				OBJ_237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_75 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		OBJ_256 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_76 /* Debug */,
-				OBJ_77 /* Release */,
+				OBJ_257 /* Debug */,
+				OBJ_258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_83 /* Build configuration list for PBXNativeTarget "Quack" */ = {
+		OBJ_263 /* Build configuration list for PBXNativeTarget "KituraNet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_84 /* Debug */,
-				OBJ_85 /* Release */,
+				OBJ_264 /* Debug */,
+				OBJ_265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_98 /* Build configuration list for PBXNativeTarget "ConsulSwift" */ = {
+		OBJ_312 /* Build configuration list for PBXNativeTarget "SSLService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_99 /* Debug */,
-				OBJ_100 /* Release */,
+				OBJ_313 /* Debug */,
+				OBJ_314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_320 /* Build configuration list for PBXNativeTarget "Socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_321 /* Debug */,
+				OBJ_322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_328 /* Build configuration list for PBXNativeTarget "LoggerAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_329 /* Debug */,
+				OBJ_330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_334 /* Build configuration list for PBXNativeTarget "CHTTPParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_335 /* Debug */,
+				OBJ_336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_342 /* Build configuration list for PBXAggregateTarget "ConsulSwiftPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_343 /* Debug */,
+				OBJ_344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_347 /* Build configuration list for PBXAggregateTarget "CCurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_348 /* Debug */,
+				OBJ_349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

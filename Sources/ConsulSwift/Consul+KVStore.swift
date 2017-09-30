@@ -7,7 +7,7 @@
 
 import Foundation
 import Quack
-import Alamofire
+import KituraNet
 import SwiftyJSON
 
 // https://www.consul.io/api/kv.html
@@ -29,8 +29,7 @@ public extension Consul {
         var params: [String: String] = ["keys": "true"]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
-        return respondWithArray(path: "/v1/kv/",
-                                params: params,
+        return respondWithArray(path: buildPath("/v1/kv/", withParams: params),
                                 model: String.self)
     }
     
@@ -43,8 +42,7 @@ public extension Consul {
         var params: [String: String] = ["keys": "true"]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
-        respondWithArrayAsync(path: "/v1/kv/",
-                              params: params,
+        respondWithArrayAsync(path: buildPath("/v1/kv/", withParams: params),
                               model: String.self,
                               completion: completion)
     }
@@ -67,7 +65,7 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respond(path: "/v1/kv/\(key)",
-                       params: params,
+                       body: params,
                        model: ConsulKeyValuePair.self)
     }
     
@@ -82,7 +80,7 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondAsync(path: "/v1/kv/\(key)",
-                     params: params,
+                     body: params,
                      model: ConsulKeyValuePair.self,
                      completion: completion)
     }
@@ -109,14 +107,11 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respond(method: .put,
-                       path: "/v1/kv/\(key)",
-                       params: params,
-                       encoding: URLEncoding.queryString,
+                       path: buildPath("/v1/kv/\(key)", withParams: params),
                        model: Bool.self,
-                       urlRequestModification: { (request) -> (URLRequest) in
-                        var newRequest = request
-                        newRequest.httpBody = value.data(using: String.Encoding.utf8)
-                        return newRequest
+                       requestModification: { (request) -> (ClientRequest) in
+                        request.write(from: value)
+                        return request
         })
     }
     
@@ -132,13 +127,11 @@ public extension Consul {
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondAsync(method: .put,
-                     path: "/v1/kv/\(key)",
-                     params: params,
-                     encoding: URLEncoding.queryString,model: Bool.self,
-                     urlRequestModification: { (request) -> (URLRequest) in
-                        var newRequest = request
-                        newRequest.httpBody = value.data(using: String.Encoding.utf8)
-                        return newRequest
+                     path: buildPath("/v1/kv/\(key)", withParams: params),
+                     model: Bool.self,
+                     requestModification: { (request) -> (ClientRequest) in
+                        request.write(from: value)
+                        return request
                      },
                      completion: completion)
     }
@@ -156,7 +149,7 @@ public extension Consul {
     public func deleteKey(_ key: String) -> QuackResult<Bool> {
         return respond(method: .delete,
                        path: "/v1/kv/\(key)",
-                    model: Bool.self)
+                       model: Bool.self)
     }
     
     /// Async version of `Consul.deleteKey(_ key: string)`

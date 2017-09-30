@@ -7,7 +7,6 @@
 
 import Foundation
 import Quack
-import Alamofire
 
 // https://www.consul.io/api/agent.html
 public extension Consul {
@@ -63,8 +62,7 @@ public extension Consul {
     public func agentRegisterService(_ service: ConsulAgentServiceInput) -> QuackVoid {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/register",
-                           params: agentRegisterServiceParams(service),
-                           encoding: JSONEncoding.default)
+                           body: agentRegisterServiceParams(service))
     }
     
     /// Async version of `Consul.agentRegisterService(_ service: ConsulAgentServiceInput)`
@@ -75,8 +73,7 @@ public extension Consul {
                                      completion: @escaping (QuackVoid) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/service/register",
-                         params: agentRegisterServiceParams(service),
-                         encoding: JSONEncoding.default,
+                         body: agentRegisterServiceParams(service),
                          completion: completion)
     }
     
@@ -153,13 +150,12 @@ public extension Consul {
     public func agentServiceMaintenance(_ id: String,
                                         enable: Bool,
                                         reason: String) -> QuackVoid {
+        let queryParams = [
+            "enable": String(enable),
+            "reason": reason
+        ]
         return respondVoid(method: .put,
-                           path: "/v1/agent/service/maintenance/\(id)",
-                           params: [
-                                "enable": String(enable),
-                                "reason": reason
-                           ],
-                           encoding: URLEncoding.queryString)
+                           path: buildPath("/v1/agent/service/maintenance/\(id)", withParams: queryParams))
     }
     
     /// Async version of `Consul.agentServiceMaintenance(_ id: String, enable: Bool, reason: String)`
@@ -170,13 +166,12 @@ public extension Consul {
                                         enable: Bool,
                                         reason: String,
                                         completion: @escaping (QuackVoid) -> (Void)) {
+        let queryParams = [
+            "enable": String(enable),
+            "reason": reason
+        ]
         respondVoidAsync(method: .put,
-                         path: "/v1/agent/service/maintenance/\(id)",
-                         params: [
-                            "enable": String(enable),
-                            "reason": reason
-                         ],
-                         encoding: URLEncoding.queryString,
+                         path: buildPath("/v1/agent/service/maintenance/\(id)", withParams: queryParams),
                          completion: completion)
     }
     

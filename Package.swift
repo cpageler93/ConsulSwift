@@ -3,7 +3,7 @@
 import PackageDescription
 
 var dependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/cpageler93/Quack.git", .branch("feature/linux"))
+    .package(url: "https://github.com/cpageler93/Quack.git", from: "1.0.1")
 ]
 
 var consulSwiftDependencies: [Target.Dependency] = [

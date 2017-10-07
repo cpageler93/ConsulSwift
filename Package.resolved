@@ -59,9 +59,9 @@
         "package": "Quack",
         "repositoryURL": "https://github.com/cpageler93/Quack.git",
         "state": {
-          "branch": "feature/linux",
+          "branch": null,
           "revision": "481667045b0f174cb29821afa66125722dd6f427",
-          "version": null
+          "version": "1.0.1"
         }
       },
       {

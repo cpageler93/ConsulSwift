@@ -335,7 +335,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test2AgentCheckPass() {
         let consul = Consul()
-        let checkPass = consul.agentCheckPass(id: "MemTest")
+        let checkPass = consul.agentCheckPass(id: "MemTestUnitTests")
         switch checkPass {
         case .success:
             print("check pass success")
@@ -348,7 +348,7 @@ class ConsulAgentTests: XCTestCase {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentCheckPass")
-        consul.agentCheckPass(id: "MemTest") { checkPass in
+        consul.agentCheckPass(id: "MemTestUnitTests") { checkPass in
             switch checkPass {
             case .success:
                 print("check pass success")
@@ -362,7 +362,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test2AgentCheckWarn() {
         let consul = Consul()
-        let checkPass = consul.agentCheckWarn(id: "MemTest", note: "Hello this is Test")
+        let checkPass = consul.agentCheckWarn(id: "MemTestUnitTests", note: "Hello this is Test")
         switch checkPass {
         case .success:
             print("check warn success")
@@ -375,7 +375,7 @@ class ConsulAgentTests: XCTestCase {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentCheckPass")
-        consul.agentCheckWarn(id: "MemTest", note: "Hello this is Test") { checkPass in
+        consul.agentCheckWarn(id: "MemTestUnitTests", note: "Hello this is Test") { checkPass in
             switch checkPass {
             case .success:
                 print("check warn success")
@@ -389,7 +389,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test2AgentCheckFail() {
         let consul = Consul()
-        let checkPass = consul.agentCheckFail(id: "MemTest", note: "Hello this is Test")
+        let checkPass = consul.agentCheckFail(id: "MemTestUnitTests", note: "Hello this is Test")
         switch checkPass {
         case .success:
             print("check fail success")
@@ -402,7 +402,7 @@ class ConsulAgentTests: XCTestCase {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentCheckPass")
-        consul.agentCheckFail(id: "MemTest", note: "Hello this is Test") { checkPass in
+        consul.agentCheckFail(id: "MemTestUnitTests", note: "Hello this is Test") { checkPass in
             switch checkPass {
             case .success:
                 print("check fail success")
@@ -416,7 +416,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test2AgentCheckUpdate() {
         let consul = Consul()
-        let checkPass = consul.agentCheckUpdate(id: "MemTest",
+        let checkPass = consul.agentCheckUpdate(id: "MemTestUnitTests",
                                                 status: .passing,
                                                 output: "Hello this is Test")
         switch checkPass {
@@ -431,7 +431,7 @@ class ConsulAgentTests: XCTestCase {
         let consul = Consul()
         
         let expectation = self.expectation(description: "agentCheckPass")
-        consul.agentCheckUpdate(id: "MemTest", status: .passing, output: "Hello this is Test") { checkPass in
+        consul.agentCheckUpdate(id: "MemTestUnitTests", status: .passing, output: "Hello this is Test") { checkPass in
             switch checkPass {
             case .success:
                 print("check update success")

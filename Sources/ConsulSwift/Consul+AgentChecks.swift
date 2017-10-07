@@ -87,6 +87,7 @@ public extension Consul {
         params["Name"] = check.name
         
         let optionalParams: [String: Any?] = [
+            "ID": check.id,
             "Notes": check.notes,
             "DeregisterCriticalServiceAfter": check.deregisterCriticalServiceAfter,
             "Script": check.script,

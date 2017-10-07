@@ -7,7 +7,7 @@
 
 import Foundation
 import Quack
-import KituraNet
+import HTTP
 import SwiftyJSON
 
 // https://www.consul.io/api/kv.html
@@ -109,8 +109,8 @@ public extension Consul {
         return respond(method: .put,
                        path: buildPath("/v1/kv/\(key)", withParams: params),
                        model: Bool.self,
-                       requestModification: { (request) -> (ClientRequest) in
-                        request.write(from: value)
+                       requestModification: { (request) -> (Request) in
+                        request.body = Body(value)
                         return request
         })
     }
@@ -129,8 +129,8 @@ public extension Consul {
         respondAsync(method: .put,
                      path: buildPath("/v1/kv/\(key)", withParams: params),
                      model: Bool.self,
-                     requestModification: { (request) -> (ClientRequest) in
-                        request.write(from: value)
+                     requestModification: { (request) -> (Request) in
+                        request.body = Body(value)
                         return request
                      },
                      completion: completion)

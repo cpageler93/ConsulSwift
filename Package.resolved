@@ -2,30 +2,57 @@
   "object": {
     "pins": [
       {
-        "package": "CCurl",
-        "repositoryURL": "https://github.com/IBM-Swift/CCurl.git",
+        "package": "Bits",
+        "repositoryURL": "https://github.com/vapor/bits.git",
         "state": {
           "branch": null,
-          "revision": "f481bd86e58787824cc1c1ec1786e03b67831f38",
-          "version": "0.4.1"
+          "revision": "c32f5e6ae2007dccd21a92b7e33eba842dd80d2f",
+          "version": "1.1.0"
         }
       },
       {
-        "package": "Kitura-net",
-        "repositoryURL": "https://github.com/IBM-Swift/Kitura-net.git",
+        "package": "CTLS",
+        "repositoryURL": "https://github.com/vapor/ctls.git",
         "state": {
           "branch": null,
-          "revision": "5b1b9b2463633f43f0e9fcee74c8360d6feb8d81",
-          "version": "1.7.16"
+          "revision": "fddec6a4643d6e85b6bb6dc54b1b5cdbabd395d2",
+          "version": "1.1.2"
         }
       },
       {
-        "package": "LoggerAPI",
-        "repositoryURL": "https://github.com/IBM-Swift/LoggerAPI.git",
+        "package": "Core",
+        "repositoryURL": "https://github.com/vapor/core.git",
         "state": {
           "branch": null,
-          "revision": "6b62fe66da9b8794d6581e5c341710eea3173cd4",
-          "version": "1.7.1"
+          "revision": "b8330808f4f6b69941961afe8ad6b015562f7b7c",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "Crypto",
+        "repositoryURL": "https://github.com/vapor/crypto.git",
+        "state": {
+          "branch": null,
+          "revision": "bf4470b9da79024aab79c85de80374f6c29e3864",
+          "version": "2.1.1"
+        }
+      },
+      {
+        "package": "Debugging",
+        "repositoryURL": "https://github.com/vapor/debugging.git",
+        "state": {
+          "branch": null,
+          "revision": "49c5e8f0a7cb5456a8f7c72c6cd9f1553e5885a8",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "Engine",
+        "repositoryURL": "https://github.com/vapor/engine.git",
+        "state": {
+          "branch": null,
+          "revision": "decf702d774ac630dfe0441ff76b4bb68257b77a",
+          "version": "2.2.1"
         }
       },
       {
@@ -33,26 +60,26 @@
         "repositoryURL": "https://github.com/cpageler93/Quack.git",
         "state": {
           "branch": null,
-          "revision": "a6783ca472096aa7af087ff67a4fc1cbd11771b2",
-          "version": "1.0.0"
+          "revision": "481667045b0f174cb29821afa66125722dd6f427",
+          "version": "1.0.1"
         }
       },
       {
-        "package": "SSLService",
-        "repositoryURL": "https://github.com/IBM-Swift/BlueSSLService.git",
+        "package": "Random",
+        "repositoryURL": "https://github.com/vapor/random.git",
         "state": {
           "branch": null,
-          "revision": "b4cac06a7860b7016ee968563812e9af3afe28e3",
-          "version": "0.12.57"
+          "revision": "d7c4397d125caba795d14d956efacfe2a27a63d0",
+          "version": "1.2.0"
         }
       },
       {
-        "package": "Socket",
-        "repositoryURL": "https://github.com/IBM-Swift/BlueSocket.git",
+        "package": "Sockets",
+        "repositoryURL": "https://github.com/vapor/sockets.git",
         "state": {
           "branch": null,
-          "revision": "d7d26f12e9614679423d4f7731de43597ae1e872",
-          "version": "0.12.70"
+          "revision": "f6b06982e94db71227e99c56fec5899a8526e8ad",
+          "version": "2.1.0"
         }
       },
       {
@@ -62,6 +89,15 @@
           "branch": null,
           "revision": "1190845cf7d25a5c8ea7653fe03dcdd39a082056",
           "version": "17.0.0"
+        }
+      },
+      {
+        "package": "TLS",
+        "repositoryURL": "https://github.com/vapor/tls.git",
+        "state": {
+          "branch": null,
+          "revision": "6c6eedb6761cddc6b6c87142a27eec13fa1701ec",
+          "version": "2.1.1"
         }
       }
     ]

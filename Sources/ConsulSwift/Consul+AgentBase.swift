@@ -9,12 +9,14 @@
 import Foundation
 import Quack
 
+// API Documentation:
 // https://www.consul.io/api/agent.html
+
 public extension Consul {
     
     // MARK: - Members
     
-    
+
     /// This endpoint returns the members the agent sees in the cluster gossip pool.
     /// Due to the nature of gossip, this is eventually consistent: the results may differ by agent.
     /// The strongly consistent view of nodes is instead provided by /v1/catalog/nodes.
@@ -24,18 +26,18 @@ public extension Consul {
     /// - Returns: Result with array of Members
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#list-members
-    public func agentMembers() -> QuackResult<[ConsulAgentMember]> {
+    public func agentMembers() -> Result<[AgentMember]> {
         return respondWithArray(path: "/v1/agent/members",
-                                model: ConsulAgentMember.self)
+                                model: AgentMember.self)
     }
     
     /// Async version of `Consul.agentMembers()`
     ///
     /// - SeeAlso: `Consul.agentMembers()`
     /// - Parameter completion: completion block
-    public func agentMembers(completion: @escaping (QuackResult<[ConsulAgentMember]>) -> (Void)) {
+    public func agentMembers(completion: @escaping (Result<[AgentMember]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/agent/members",
-                              model: ConsulAgentMember.self,
+                              model: AgentMember.self,
                               completion: completion)
     }
     
@@ -49,18 +51,18 @@ public extension Consul {
     /// - Returns: Result with Agent Configuration
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#read-configuration
-    public func agentReadConfiguration() -> QuackResult<ConsulAgentConfiguration> {
+    public func agentReadConfiguration() -> Result<AgentConfiguration> {
         return respond(path: "/v1/agent/self",
-                       model: ConsulAgentConfiguration.self)
+                       model: AgentConfiguration.self)
     }
     
     /// Async version of `Consul.agentReadConfiguration()`
     ///
     /// - SeeAlso: `Consul.agentReadConfiguration()`
     /// - Parameter completion: completion block
-    public func agentReadConfiguration(completion: @escaping (QuackResult<ConsulAgentConfiguration>) -> (Void)) {
+    public func agentReadConfiguration(completion: @escaping (Result<AgentConfiguration>) -> (Void)) {
         return respondAsync(path: "/v1/agent/self",
-                            model: ConsulAgentConfiguration.self,
+                            model: AgentConfiguration.self,
                             completion: completion)
     }
     
@@ -77,7 +79,7 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#reload-agent
     @discardableResult
-    public func agentReload() -> QuackVoid {
+    public func agentReload() -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/reload")
     }
@@ -86,7 +88,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentReload()`
     /// - Parameter completion: completion block
-    public func agentReload(completion: @escaping (QuackVoid) -> (Void)) {
+    public func agentReload(completion: @escaping (Quack.Void) -> (Void)) {
         return respondVoidAsync(method: .put,
                                 path: "/v1/agent/reload",
                                 completion: completion)
@@ -112,7 +114,7 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent.html#enable-maintenance-mode
     @discardableResult
     public func agentMaintenance(enable: Bool,
-                                 reason: String) -> QuackVoid {
+                                 reason: String) -> Quack.Void {
         let queryParams = [
             "enable": String(enable),
             "reason": reason
@@ -127,7 +129,7 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func agentMaintenance(enable: Bool,
                                  reason: String,
-                                 completion: @escaping (QuackVoid) -> (Void)) {
+                                 completion: @escaping (Quack.Void) -> (Void)) {
         let queryParams = [
             "enable": String(enable),
             "reason": reason
@@ -157,7 +159,7 @@ public extension Consul {
     ///
     @discardableResult
     public func agentJoin(address: String,
-                          wan: Bool = false) -> QuackVoid {
+                          wan: Bool = false) -> Quack.Void {
         return respondVoid(path: "/v1/agent/join/\(address)",
                            body: ["wan": String(wan)])
     }
@@ -171,7 +173,7 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func agentJoin(address: String,
                           wan: Bool = false,
-                          completion: @escaping (QuackVoid) -> (Void)) {
+                          completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/join/\(address)",
                          body: ["wan": String(wan)],
                          completion: completion)
@@ -205,7 +207,7 @@ public extension Consul {
     /// [apidocForce]: https://www.consul.io/api/agent.html#force-leave-and-shutdown
     ///
     @discardableResult
-    public func agentLeave(force: Bool = false) -> QuackVoid {
+    public func agentLeave(force: Bool = false) -> Quack.Void {
         return respondVoid(method: .put,
                            path: agentLeavePath(force: force))
     }
@@ -214,7 +216,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentLeave(force: Bool)`
     /// - Parameter completion: completion block
-    public func agentLeave(force: Bool = false, completion: @escaping (QuackVoid) -> (Void)) {
+    public func agentLeave(force: Bool = false, completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: agentLeavePath(force: force),
                          completion: completion)

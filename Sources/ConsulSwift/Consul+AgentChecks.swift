@@ -8,7 +8,9 @@
 import Foundation
 import Quack
 
+// API Documentation:
 // https://www.consul.io/api/agent.html
+
 public extension Consul {
     
     // MARK: - Checks
@@ -28,20 +30,20 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#list-checks
     ///
-    public func agentChecks() -> QuackResult<[ConsulAgentCheckOutput]> {
+    public func agentChecks() -> Result<[AgentCheckOutput]> {
         return respondWithArray(path: "/v1/agent/checks",
-                                parser: QuackArrayParserByIgnoringDictionaryKeys(),
-                                model: ConsulAgentCheckOutput.self)
+                                parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
+                                model: AgentCheckOutput.self)
     }
     
     /// Async version of `Consul.agentChecks()`
     ///
     /// - SeeAlso: `Consul.agentChecks()`
     /// - Parameter completion: completion block
-    public func agentChecks(completion: @escaping (QuackResult<[ConsulAgentCheckOutput]>) -> (Void)) {
+    public func agentChecks(completion: @escaping (Result<[AgentCheckOutput]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/agent/checks",
-                              parser: QuackArrayParserByIgnoringDictionaryKeys(),
-                              model: ConsulAgentCheckOutput.self,
+                              parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
+                              model: AgentCheckOutput.self,
                               completion: completion)
     }
     
@@ -57,23 +59,33 @@ public extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#register-check
-    public func agentRegisterCheck(_ check: ConsulAgentCheckInput) -> QuackVoid {
+    public func agentRegisterCheck(_ check: AgentCheckInput) -> Quack.Void {
         let params = agentRegisterCheckParams(check)
         return respondVoid(method: .put,
                            path: "/v1/agent/check/register",
-                           body: params)
+                           body: params,
+                           requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                           })
     }
     
     /// Async version of `Consul.agentRegisterCheck(_ check: ConsulAgentCheckInput)`
     ///
     /// - SeeAlso: `Consul.agentRegisterCheck(_ check: ConsulAgentCheckInput)`
     /// - Parameter completion: completion block
-    public func agentRegisterCheck(_ check: ConsulAgentCheckInput,
-                                   completion: @escaping (QuackVoid) -> (Void)) {
+    public func agentRegisterCheck(_ check: AgentCheckInput,
+                                   completion: @escaping (Quack.Void) -> (Void)) {
         let params = agentRegisterCheckParams(check)
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/register",
                          body: params,
+                         requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                         },
                          completion: completion)
     }
     
@@ -81,7 +93,7 @@ public extension Consul {
     ///
     /// - Parameter check: check input
     /// - Returns: parameters
-    private func agentRegisterCheckParams(_ check: ConsulAgentCheckInput) -> [String: Any] {
+    private func agentRegisterCheckParams(_ check: AgentCheckInput) -> [String: Any] {
         var params: [String: Any] = [:]
         
         params["Name"] = check.name
@@ -120,7 +132,7 @@ public extension Consul {
     /// - Returns: Void Result
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#deregister-check
-    public func agentDeregisterCheck(id: String) -> QuackVoid {
+    public func agentDeregisterCheck(id: String) -> Quack.Void {
         return respondVoid(method: .put, path: "/v1/agent/check/deregister/\(id)")
     }
     
@@ -129,7 +141,7 @@ public extension Consul {
     /// - SeeAlso: `Consul.agentDeregisterCheck(id: String)`
     /// - Parameter completion: completion block
     public func agentDeregisterCheck(id: String,
-                                     completion: @escaping (QuackVoid) -> (Void)) {
+                                     completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/deregister/\(id)",
                          completion: completion)
@@ -148,8 +160,9 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-pass
     @discardableResult
-    public func agentCheckPass(id: String) -> QuackVoid {
-        return respondVoid(path: "/v1/agent/check/pass/\(id)")
+    public func agentCheckPass(id: String) -> Quack.Void {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/check/pass/\(id)")
     }
     
     /// Async version of `Consul.agentCheckPass(id: String)`
@@ -157,8 +170,9 @@ public extension Consul {
     /// - SeeAlso: `Consul.agentCheckPass(id: String)`
     /// - Parameter completion: completion block
     public func agentCheckPass(id: String,
-                               completion: @escaping (QuackVoid) -> (Void)) {
-        respondVoidAsync(path: "/v1/agent/check/pass/\(id)",
+                               completion: @escaping (Quack.Void) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/pass/\(id)",
                          completion: completion)
     }
     
@@ -175,8 +189,9 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-warn
     @discardableResult
     public func agentCheckWarn(id: String,
-                               note: String = "") -> QuackVoid {
-        return respondVoid(path: "/v1/agent/check/warn/\(id)",
+                               note: String = "") -> Quack.Void {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/check/warn/\(id)",
                            body: ["note": note])
     }
     
@@ -186,8 +201,9 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func agentCheckWarn(id: String,
                                note: String = "",
-                               completion: @escaping (QuackVoid) -> (Void)) {
-        respondVoidAsync(path: "/v1/agent/check/warn/\(id)",
+                               completion: @escaping (Quack.Void) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/warn/\(id)",
                          body: ["note": note],
                          completion: completion)
     }
@@ -205,8 +221,9 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-fail
     @discardableResult
     public func agentCheckFail(id: String,
-                               note: String = "") -> QuackVoid {
-        return respondVoid(path: "/v1/agent/check/fail/\(id)",
+                               note: String = "") -> Quack.Void {
+        return respondVoid(method: .put,
+                           path: "/v1/agent/check/fail/\(id)",
                            body: ["note": note])
     }
     
@@ -216,8 +233,9 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func agentCheckFail(id: String,
                                note: String = "",
-                               completion: @escaping (QuackVoid) -> (Void)) {
-        respondVoidAsync(path: "/v1/agent/check/fail/\(id)",
+                               completion: @escaping (Quack.Void) -> (Void)) {
+        respondVoidAsync(method: .put,
+                         path: "/v1/agent/check/fail/\(id)",
                          body: ["note": note],
                          completion: completion)
     }
@@ -235,14 +253,19 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent/check.html#ttl-check-update
     @discardableResult
     public func agentCheckUpdate(id: String,
-                                 status: ConsulAgentCheckStatus,
-                                 output: String = "") -> QuackVoid {
+                                 status: AgentCheckStatus,
+                                 output: String = "") -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/check/update/\(id)",
                            body: [
                             "Status": status.rawValue,
                             "Output": output
-                           ])
+                           ],
+                           requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                           })
     }
     
     /// Async version of `Consul.agentCheckUpdate(id: String, status: ConsulAgentCheckStatus, output: String)`
@@ -250,15 +273,20 @@ public extension Consul {
     /// - SeeAlso: `Consul.agentCheckUpdate(id: String, status: ConsulAgentCheckStatus, output: String)`
     /// - Parameter completion: completion block
     public func agentCheckUpdate(id: String,
-                                 status: ConsulAgentCheckStatus,
+                                 status: AgentCheckStatus,
                                  output: String = "",
-                                 completion: @escaping (QuackVoid) -> (Void)) {
+                                 completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
-                         path: "/v1/agent/check/fail/\(id)",
+                         path: "/v1/agent/check/update/\(id)",
                          body: [
                             "Status": status.rawValue,
                             "Output": output
                          ],
+                         requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                         },
                          completion: completion)
     }
 }

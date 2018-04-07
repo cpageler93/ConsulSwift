@@ -8,35 +8,40 @@
 
 import Foundation
 import Quack
-import SwiftyJSON
 
-public class ConsulEvent: QuackModel {
+
+public extension Consul {
     
-    public var id: String
-    public var name: String
-    public var payload: String?
-    public var nodeFilter: String
-    public var serviceFilter: String
-    public var tagFilter: String
-    public var version: Int
-    public var lTime: Int
-    
-    public required init?(json: JSON) {
-        guard
-            let id = json["ID"].string,
-            let name = json["Name"].string,
-            let version = json["Version"].int,
-            let lTime = json["LTime"].int
-        else { return nil }
+    public class Event: Quack.Model {
         
-        self.id = id
-        self.name = name
-        self.payload = json["Payload"].string
-        self.nodeFilter = json["NodeFilter"].string ?? ""
-        self.serviceFilter = json["ServiceFilter"].string ?? ""
-        self.tagFilter = json["TagFilter"].string ?? ""
-        self.version = version
-        self.lTime = lTime
+        public var id: String
+        public var name: String
+        public var payload: String?
+        public var nodeFilter: String
+        public var serviceFilter: String
+        public var tagFilter: String
+        public var version: Int
+        public var lTime: Int
+        
+        public required init?(json: JSON) {
+            guard let id = json["ID"].string,
+                let name = json["Name"].string,
+                let version = json["Version"].int,
+                let lTime = json["LTime"].int
+            else {
+                return nil
+            }
+            
+            self.id = id
+            self.name = name
+            self.payload = json["Payload"].string
+            self.nodeFilter = json["NodeFilter"].string ?? ""
+            self.serviceFilter = json["ServiceFilter"].string ?? ""
+            self.tagFilter = json["TagFilter"].string ?? ""
+            self.version = version
+            self.lTime = lTime
+        }
+        
     }
     
 }

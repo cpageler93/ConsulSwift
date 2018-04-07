@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import SwiftyJSON
 import Quack
 
-public class Consul: QuackClient {
+
+public class Consul: Quack.Client {
 
     public init() {
         super.init(url: URL(string: "http://localhost:8500")!)
@@ -20,18 +20,26 @@ public class Consul: QuackClient {
         super.init(url: url)
     }
     
+    public typealias Result = Quack.Result
+    
 }
 
-extension Bool: QuackModel {
+// MARK: - Consul Extensions for Standard Types
+
+extension Bool: Quack.Model {
+    
     public init?(json: JSON) {
         guard let bool = json.bool else { return nil }
         self.init(bool)
     }
+    
 }
 
-extension String: QuackModel {
+extension String: Quack.Model {
+    
     public init?(json: JSON) {
         guard let str = json.string else { return nil }
         self.init(str)
     }
+    
 }

@@ -8,7 +8,9 @@
 import Foundation
 import Quack
 
+// API Documentation:
 // https://www.consul.io/api/agent.html
+
 public extension Consul {
     
     // MARK: - Services
@@ -27,20 +29,20 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/service.html#list-services
     ///
-    public func agentServices() -> QuackResult<[ConsulAgentServiceOutput]> {
+    public func agentServices() -> Result<[AgentServiceOutput]> {
         return respondWithArray(path: "/v1/agent/services",
-                                parser: QuackArrayParserByIgnoringDictionaryKeys(),
-                                model: ConsulAgentServiceOutput.self)
+                                parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
+                                model: AgentServiceOutput.self)
     }
     
     /// Async version of `Consul.agentServices()`
     ///
     /// - SeeAlso: `Consul.agentServices()`
     /// - Parameter completion: completion block
-    public func agentServices(completion: @escaping (QuackResult<[ConsulAgentServiceOutput]>) -> (Void)) {
+    public func agentServices(completion: @escaping (Result<[AgentServiceOutput]>) -> (Void)) {
         return respondWithArrayAsync(path: "/v1/agent/services",
-                                     parser: QuackArrayParserByIgnoringDictionaryKeys(),
-                                     model: ConsulAgentServiceOutput.self,
+                                     parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
+                                     model: AgentServiceOutput.self,
                                      completion: completion)
     }
     
@@ -59,21 +61,31 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent/service.html#register-service
     ///
     @discardableResult
-    public func agentRegisterService(_ service: ConsulAgentServiceInput) -> QuackVoid {
+    public func agentRegisterService(_ service: AgentServiceInput) -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/register",
-                           body: agentRegisterServiceParams(service))
+                           body: agentRegisterServiceParams(service),
+                           requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                           })
     }
     
     /// Async version of `Consul.agentRegisterService(_ service: ConsulAgentServiceInput)`
     ///
     /// - SeeAlso: `Consul.agentRegisterService(_ service: ConsulAgentServiceInput)`
     /// - Parameter completion: completion block
-    public func agentRegisterService(_ service: ConsulAgentServiceInput,
-                                     completion: @escaping (QuackVoid) -> (Void)) {
+    public func agentRegisterService(_ service: AgentServiceInput,
+                                     completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/service/register",
                          body: agentRegisterServiceParams(service),
+                         requestModification: { (request) -> (Quack.Request) in
+                            var request = request
+                            request.encoding = .json
+                            return request
+                         },
                          completion: completion)
     }
     
@@ -81,7 +93,7 @@ public extension Consul {
     ///
     /// - Parameter service: service input
     /// - Returns: parameters
-    private func agentRegisterServiceParams(_ service: ConsulAgentServiceInput) -> [String: Any] {
+    private func agentRegisterServiceParams(_ service: AgentServiceInput) -> [String: Any] {
         var params: [String: Any] = [:]
         
         params["Name"] = service.name
@@ -113,7 +125,7 @@ public extension Consul {
     /// [apidoc]: https://www.consul.io/api/agent/service.html#deregister-service
     ///
     @discardableResult
-    public func agentDeregisterService(_ id: String) -> QuackVoid {
+    public func agentDeregisterService(_ id: String) -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/service/deregister/\(id)")
     }
@@ -123,7 +135,7 @@ public extension Consul {
     /// - SeeAlso: `Consul.agentDeregisterService(_ id: String)`
     /// - Parameter completion: completion block
     public func agentDeregisterService(_ id: String,
-                                       completion: @escaping (QuackVoid) -> (Void)) {
+                                       completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/service/deregister/\(id)",
                          completion: completion)
@@ -149,7 +161,7 @@ public extension Consul {
     @discardableResult
     public func agentServiceMaintenance(_ id: String,
                                         enable: Bool,
-                                        reason: String) -> QuackVoid {
+                                        reason: String) -> Quack.Void {
         let queryParams = [
             "enable": String(enable),
             "reason": reason
@@ -165,7 +177,7 @@ public extension Consul {
     public func agentServiceMaintenance(_ id: String,
                                         enable: Bool,
                                         reason: String,
-                                        completion: @escaping (QuackVoid) -> (Void)) {
+                                        completion: @escaping (Quack.Void) -> (Void)) {
         let queryParams = [
             "enable": String(enable),
             "reason": reason

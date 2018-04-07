@@ -8,29 +8,33 @@
 
 import Foundation
 import Quack
-import SwiftyJSON
 
-public class ConsulCatalogService: QuackModel {
+
+public extension Consul {
     
-    public var name: String
-    public var tags: [String]
-    
-    public required init?(json: JSON) {
-        fatalError("please use init with name")
-    }
-    
-    public init?(name: String, json: JSON) {
-        self.name = name
+    public class CatalogService: Quack.Model {
         
-        var tags: [String] = []
-        if let jsonTags = json.array {
-            for jsonTag in jsonTags {
-                if let jsonTagString = jsonTag.string {
-                    tags.append(jsonTagString)
+        public var name: String
+        public var tags: [String]
+        
+        public required init?(json: JSON) {
+            fatalError("please use init with name")
+        }
+        
+        public init?(name: String, json: JSON) {
+            self.name = name
+            
+            var tags: [String] = []
+            if let jsonTags = json.array {
+                for jsonTag in jsonTags {
+                    if let jsonTagString = jsonTag.string {
+                        tags.append(jsonTagString)
+                    }
                 }
             }
+            self.tags = tags
         }
-        self.tags = tags
+        
     }
     
 }

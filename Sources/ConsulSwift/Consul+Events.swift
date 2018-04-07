@@ -7,9 +7,10 @@
 
 import Foundation
 import Quack
-import SwiftyJSON
 
+// API Documentation:
 // https://www.consul.io/api/event.html
+
 public extension Consul {
 
     // MARK: - Events
@@ -34,7 +35,7 @@ public extension Consul {
                           datacenter: String? = nil,
                           node: String? = nil,
                           service: String? = nil,
-                          tag: String? = nil) -> QuackResult<ConsulEvent> {
+                          tag: String? = nil) -> Result<Event> {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         if let node = node { params["node"] = node }
@@ -43,7 +44,7 @@ public extension Consul {
         
         return respond(method: .put,
                        path: buildPath("/v1/event/fire/\(name)", withParams: params),
-                       model: ConsulEvent.self)
+                       model: Event.self)
     }
     
     /// Async version of `Consul.eventFire(name, ...)`
@@ -55,7 +56,7 @@ public extension Consul {
                           node: String? = nil,
                           service: String? = nil,
                           tag: String? = nil,
-                          completion: @escaping (QuackResult<ConsulEvent>) -> (Void)) {
+                          completion: @escaping (Result<Event>) -> (Void)) {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         if let node = node { params["node"] = node }
@@ -64,7 +65,7 @@ public extension Consul {
         
         return respondAsync(method: .put,
                             path: buildPath("/v1/event/fire/\(name)", withParams: params),
-                            model: ConsulEvent.self,
+                            model: Event.self,
                             completion: completion)
     }
     
@@ -85,9 +86,9 @@ public extension Consul {
     public func eventList(name: String? = nil,
                           node: String? = nil,
                           service: String? = nil,
-                          tag: String? = nil) -> QuackResult<[ConsulEvent]> {
+                          tag: String? = nil) -> Result<[Event]> {
         return respondWithArray(path: "/v1/event/list",
-                                model: ConsulEvent.self)
+                                model: Event.self)
     }
     
     /// Async version of `Consul.eventList(name, ...)`
@@ -98,9 +99,9 @@ public extension Consul {
                           node: String? = nil,
                           service: String? = nil,
                           tag: String? = nil,
-                          completion: @escaping (QuackResult<[ConsulEvent]>) -> (Void)) {
+                          completion: @escaping (Result<[Event]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/event/list",
-                              model: ConsulEvent.self,
+                              model: Event.self,
                               completion: completion)
     }
 

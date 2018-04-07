@@ -255,7 +255,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test1AgentRegisterCheckMinimal() {
         let consul = Consul()
-        let check = ConsulAgentCheckInput(name: "TestCheck", ttl: "60s")
+        let check = Consul.AgentCheckInput(name: "TestCheck", ttl: "60s")
         let result = consul.agentRegisterCheck(check)
         switch result {
         case .success:
@@ -267,7 +267,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test1AgentRegisterCheckAsync() {
         let consul = Consul()
-        let check = ConsulAgentCheckInput(name: "TestCheckAsync", ttl: "60s")
+        let check = Consul.AgentCheckInput(name: "TestCheckAsync", ttl: "60s")
         check.id = "TestCheckAsync"
         
         let expectation = self.expectation(description: "agentCheckRegister")
@@ -285,15 +285,11 @@ class ConsulAgentTests: XCTestCase {
     
     func test1AgentRegisterCheckMaximal() {
         let consul = Consul()
-        let check = ConsulAgentCheckInput(name: "MemTest", ttl: "15s")
+        let check = Consul.AgentCheckInput(name: "MemTest", ttl: "10s")
         check.id = "MemTestUnitTests"
         check.notes = "Hello these are some notes"
         check.deregisterCriticalServiceAfter = "90m"
-        check.script = "/usr/local/bin/check_mem.py"
         check.dockerContainerID = "f972c95ebf0e"
-        check.http = "http://example.com"
-        check.tcp = "example.com:22"
-        check.interval = "10s"
         check.tlsSkipVerify = true
         check.status = .passing
         
@@ -473,7 +469,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test1AgentRegisterService() {
         let consul = Consul()
-        let service = ConsulAgentServiceInput(name: "testService")
+        let service = Consul.AgentServiceInput(name: "testService")
         let register = consul.agentRegisterService(service)
         switch register {
         case .success:
@@ -485,7 +481,7 @@ class ConsulAgentTests: XCTestCase {
     
     func test1AgentRegisterServiceAsync() {
         let consul = Consul()
-        let service = ConsulAgentServiceInput(name: "testServiceAsync")
+        let service = Consul.AgentServiceInput(name: "testServiceAsync")
         
         let expectation = self.expectation(description: "agentServiceRegister")
         

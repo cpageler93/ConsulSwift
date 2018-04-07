@@ -3,6 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0b6383a3ae304868a9bc2ba0d58a635e)](https://www.codacy.com/app/cpageler93/ConsulSwift?utm_source=github.com&utm_medium=referral&utm_content=cpageler93/ConsulSwift&utm_campaign=badger)
 [![Twitter: @cpageler93](https://img.shields.io/badge/contact-@cpageler93-lightgrey.svg?style=flat)](https://twitter.com/cpageler93)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/cpageler93/ConsulSwift/blob/master/LICENSE)
+[![Consul](https://img.shields.io/badge/consul-1.0.6-C62A71.svg?style=flat)](https://www.consul.io)
 
 [Consul](https://www.consul.io) Client for Swift
 
@@ -108,12 +109,13 @@ consul.agentMembers { members in
 
 To test ConsulSwift on your local machine you need to start consul first
 
-    # start consul
-    consul agent -dev -dc=fra1
+```shell
+# start consul
+consul agent -dev -datacenter fra1
 
-    # test
-    swift test
-
+# test
+swift test
+```
 
 ## Need Help?
 

@@ -8,15 +8,19 @@
 
 import Foundation
 import Quack
-import SwiftyJSON
 
-public class ConsulCatalogDatacenter: QuackModel {
+
+public extension Consul {
     
-    public var name: String
-    
-    public required init?(json: JSON) {
-        guard let name = json.string else { return nil }
-        self.name = name
+    public class CatalogDatacenter: Quack.Model {
+        
+        public var name: String
+        
+        public required init?(json: JSON) {
+            guard let name = json.string else { return nil }
+            self.name = name
+        }
+        
     }
-    
+
 }

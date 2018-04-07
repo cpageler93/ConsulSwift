@@ -114,7 +114,7 @@ class ConsulCatalogTests: XCTestCase {
     
     func testCatalogNodesWithService() {
         let consul = Consul()
-        let service = ConsulAgentServiceInput(name: "testService1")
+        let service = Consul.AgentServiceInput(name: "testService1")
         consul.agentRegisterService(service)
         
         let nodes = consul.catalogNodesWith(service: "testService1")
@@ -128,7 +128,7 @@ class ConsulCatalogTests: XCTestCase {
     
     func testCatalogNodesWithServiceAsync() {
         let consul = Consul()
-        let service = ConsulAgentServiceInput(name: "testService1")
+        let service = Consul.AgentServiceInput(name: "testService1")
         consul.agentRegisterService(service)
         let expectation = self.expectation(description: "catalogServicesInDatacenter")
         consul.catalogNodesWith(service: "testService1") { nodes in

@@ -8,9 +8,10 @@
 
 import Foundation
 import Quack
-import SwiftyJSON
 
+// API Documentation:
 // https://www.consul.io/api/catalog.html
+
 public extension Consul {
     
     // MARK: - Datacenters
@@ -29,18 +30,18 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/catalog.html#list-datacenters
     ///
-    public func catalogDatacenters() -> QuackResult<[ConsulCatalogDatacenter]> {
+    public func catalogDatacenters() -> Result<[CatalogDatacenter]> {
         return respondWithArray(path: "/v1/catalog/datacenters",
-                                model: ConsulCatalogDatacenter.self)
+                                model: CatalogDatacenter.self)
     }
     
     /// Async version of `Consul.catalogDatacenters()`
     ///
     /// - SeeAlso: `Consul.catalogDatacenters()`
     /// - Parameter completion: completion block
-    public func catalogDatacenters(completion: @escaping (QuackResult<[ConsulCatalogDatacenter]>) -> (Void)) {
+    public func catalogDatacenters(completion: @escaping (Result<[CatalogDatacenter]>) -> (Void)) {
         return respondWithArrayAsync(path: "/v1/catalog/datacenters",
-                                     model: ConsulCatalogDatacenter.self,
+                                     model: CatalogDatacenter.self,
                                      completion: completion)
     }
     
@@ -56,12 +57,12 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/catalog.html#list-nodes
     ///
-    public func catalogNodesIn(datacenter: String) -> QuackResult<[ConsulCatalogNode]> {
+    public func catalogNodesIn(datacenter: String) -> Result<[CatalogNode]> {
         let queryParams = [
             "dc": datacenter
         ]
         return respondWithArray(path: buildPath("/v1/catalog/nodes", withParams: queryParams),
-                                model: ConsulCatalogNode.self)
+                                model: CatalogNode.self)
     }
     
     /// Async version of `Consul.catalogNodesIn(datacenter: String)`
@@ -69,12 +70,12 @@ public extension Consul {
     /// - SeeAlso: `Consul.catalogNodesIn(datacenter: String)`
     /// - Parameter completion: completion block
     public func catalogNodesIn(datacenter: String,
-                               completion: @escaping (QuackResult<[ConsulCatalogNode]>) -> (Void)) {
+                               completion: @escaping (Result<[CatalogNode]>) -> (Void)) {
         let queryParams = [
             "dc": datacenter
         ]
         respondWithArrayAsync(path: buildPath("/v1/catalog/nodes", withParams: queryParams),
-                              model: ConsulCatalogNode.self,
+                              model: CatalogNode.self,
                               completion: completion)
     }
     
@@ -87,13 +88,13 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/catalog.html#list-services
     ///
-    public func catalogServicesIn(datacenter: String) -> QuackResult<[ConsulCatalogService]> {
+    public func catalogServicesIn(datacenter: String) -> Result<[CatalogService]> {
         let queryParams = [
             "dc": datacenter
         ]
         return respondWithArray(path: buildPath("/v1/catalog/services", withParams: queryParams),
                                 parser: CatalogServicesParser(),
-                                model: ConsulCatalogService.self)
+                                model: CatalogService.self)
     }
     
     /// Async version of `Consul.catalogServicesIn(datacenter: String)`
@@ -101,13 +102,13 @@ public extension Consul {
     /// - SeeAlso: `Consul.catalogServicesIn(datacenter: String)`
     /// - Parameter completion: completion block
     public func catalogServicesIn(datacenter: String,
-                                  completion: @escaping (QuackResult<[ConsulCatalogService]>) -> (Void)) {
+                                  completion: @escaping (Result<[CatalogService]>) -> (Void)) {
         let queryParams = [
             "dc": datacenter
         ]
         respondWithArrayAsync(path: buildPath("/v1/catalog/services", withParams: queryParams),
                               parser: CatalogServicesParser(),
-                              model: ConsulCatalogService.self,
+                              model: CatalogService.self,
                               completion: completion)
     }
     
@@ -123,9 +124,9 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/catalog.html#list-nodes-for-service
     ///
-    public func catalogNodesWith(service: String) -> QuackResult<[ConsulCatalogNodeWithService]> {
+    public func catalogNodesWith(service: String) -> Result<[CatalogNodeWithService]> {
         return respondWithArray(path: "/v1/catalog/service/\(service)",
-                                model: ConsulCatalogNodeWithService.self)
+                                model: CatalogNodeWithService.self)
     }
     
     /// Async version of `Consul.catalogNodesWith(service: String)`
@@ -133,9 +134,9 @@ public extension Consul {
     /// - SeeAlso: `Consul.catalogNodesWith(service: String)`
     /// - Parameter completion: completion block
     public func catalogNodesWith(service: String,
-                                 completion: @escaping (QuackResult<[ConsulCatalogNodeWithService]>) -> (Void)) {
+                                 completion: @escaping (Result<[CatalogNodeWithService]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/catalog/service/\(service)",
-                              model: ConsulCatalogNodeWithService.self,
+                              model: CatalogNodeWithService.self,
                               completion: completion)
     }
     
@@ -148,9 +149,9 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/catalog.html#list-services-for-node
     ///
-    public func catalogServicesFor(node: String) -> QuackResult<ConsulCatalogNodeWithServices> {
+    public func catalogServicesFor(node: String) -> Result<CatalogNodeWithServices> {
         return respond(path: "/v1/catalog/node/\(node)",
-                       model: ConsulCatalogNodeWithServices.self)
+                       model: CatalogNodeWithServices.self)
     }
     
     /// Async version of `Consul.catalogServicesFor(node: String)`
@@ -158,27 +159,29 @@ public extension Consul {
     /// - SeeAlso: `Consul.catalogServicesFor(node: String)`
     /// - Parameter completion: completion block
     public func catalogServicesFor(node: String,
-                                   completion: @escaping (QuackResult<ConsulCatalogNodeWithServices>) -> (Void)) {
+                                   completion: @escaping (Result<CatalogNodeWithServices>) -> (Void)) {
         respondAsync(path: "/v1/catalog/node/\(node)",
-                     model: ConsulCatalogNodeWithServices.self,
+                     model: CatalogNodeWithServices.self,
                      completion: completion)
     }
 }
 
-public class CatalogServicesParser : QuackCustomArrayParser {
+internal class CatalogServicesParser : Quack.CustomArrayParser {
     
-    public func parseArray<Model>(json: JSON, model: Model.Type) -> QuackResult<[Model]> where Model : QuackModel {
+    func parseArray<Model>(data: Data, model: Model.Type) -> Quack.Result<[Model]> where Model : Quack.DataModel {
+        let json = JSON(data: data)
+        
         if let dictionary = json.dictionary {
             var result: [Model] = []
             for (key, value) in dictionary {
-                if let model = ConsulCatalogService(name: key, json: value) {
+                if let model = Consul.CatalogService(name: key, json: value) {
                     result.append(model as! Model)
                 }
             }
-            return QuackResult.success(result)
+            return .success(result)
         }
         
-        return QuackResult.failure(QuackError.jsonParsingError)
+        return .failure(.jsonParsingError)
     }
 
 }

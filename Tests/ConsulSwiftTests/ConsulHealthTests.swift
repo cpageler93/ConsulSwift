@@ -82,7 +82,7 @@ class ConsulHealthTests: XCTestCase {
     func test2HealthNodesForService() {
         let consul = Consul()
         
-        let service = ConsulAgentServiceInput(name: "myTestService")
+        let service = Consul.AgentServiceInput(name: "myTestService")
         service.tags = ["superImportant"]
         consul.agentRegisterService(service)
         
@@ -103,7 +103,7 @@ class ConsulHealthTests: XCTestCase {
         
         let expectation = self.expectation(description: "healthCkecksForNode")
         
-        let service = ConsulAgentServiceInput(name: "myTestService")
+        let service = Consul.AgentServiceInput(name: "myTestService")
         service.tags = ["superImportant"]
         consul.agentRegisterService(service)
         

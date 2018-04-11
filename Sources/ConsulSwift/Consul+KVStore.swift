@@ -25,7 +25,7 @@ public extension Consul {
     ///
     ///  [apidoc]: https://www.consul.io/api/kv.html#keys-response
     ///
-    public func listKeys(datacenter: String? = nil) -> Result<[String]> {
+    public func listKeys(datacenter: String? = nil) -> Quack.Result<[String]> {
         var params: [String: String] = ["keys": "true"]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
@@ -38,7 +38,7 @@ public extension Consul {
     /// - SeeAlso: `Consul.listKeys(datacenter: String)`
     /// - Parameter completion: completion block
     public func listKeys(datacenter: String? = nil,
-                         completion: @escaping (Result<[String]>) -> (Void) ) {
+                         completion: @escaping (Quack.Result<[String]>) -> (Void) ) {
         var params: [String: String] = ["keys": "true"]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
@@ -60,12 +60,12 @@ public extension Consul {
     ///  [apidoc]: https://www.consul.io/api/kv.html#read-key
     ///
     public func readKey(_ key: String,
-                        datacenter: String? = nil) -> Result<KeyValuePair> {
+                        datacenter: String? = nil) -> Quack.Result<KeyValuePair> {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respond(path: "/v1/kv/\(key)",
-                       body: params,
+                       body: Quack.JSONBody(params),
                        model: KeyValuePair.self)
     }
     
@@ -75,12 +75,12 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func readKey(_ key: String,
                         datacenter: String? = nil,
-                        completion: @escaping (Result<KeyValuePair>) -> (Void)) {
+                        completion: @escaping (Quack.Result<KeyValuePair>) -> (Void)) {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondAsync(path: "/v1/kv/\(key)",
-                     body: params,
+                     body: Quack.JSONBody(params),
                      model: KeyValuePair.self,
                      completion: completion)
     }
@@ -100,19 +100,15 @@ public extension Consul {
     ///
     @discardableResult
     public func writeKey(_ key: String,
-                         value: [String: Any],
-                         datacenter: String? = nil) -> Result<Bool> {
+                         value: String,
+                         datacenter: String? = nil) -> Quack.Result<Bool> {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respond(method: .put,
                        path: buildPath("/v1/kv/\(key)", withParams: params),
-                       model: Bool.self,
-                       requestModification: { (request) -> (Quack.Request) in
-                        var request = request
-                        request.body = value
-                        return request
-        })
+                       body: Quack.StringBody(value),
+                       model: Bool.self)
     }
     
     /// Async version of `Consul.writeKey(_ key: string, value: String, datacenter: String)`
@@ -120,20 +116,16 @@ public extension Consul {
     /// - SeeAlso: `Consul.writeKey(_ key: string, value: String, datacenter: String)`
     /// - Parameter completion: completion block
     public func writeKey(_ key: String,
-                         value: [String: Any],
+                         value: String,
                          datacenter: String? = nil,
-                         completion: @escaping (Result<Bool>) -> (Void)) {
+                         completion: @escaping (Quack.Result<Bool>) -> (Void)) {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondAsync(method: .put,
                      path: buildPath("/v1/kv/\(key)", withParams: params),
+                     body: Quack.StringBody(value),
                      model: Bool.self,
-                     requestModification: { (request) -> (Quack.Request) in
-                        var request = request
-                        request.body = value
-                        return request
-                     },
                      completion: completion)
     }
     
@@ -147,7 +139,7 @@ public extension Consul {
     ///  [apidoc]: https://www.consul.io/api/kv.html#delete-key
     ///
     @discardableResult
-    public func deleteKey(_ key: String) -> Result<Bool> {
+    public func deleteKey(_ key: String) -> Quack.Result<Bool> {
         return respond(method: .delete,
                        path: "/v1/kv/\(key)",
                        model: Bool.self)
@@ -158,7 +150,7 @@ public extension Consul {
     /// - SeeAlso: `Consul.deleteKey(_ key: string)`
     /// - Parameter completion: completion block
     public func deleteKey(_ key: String,
-                          completion: @escaping (Result<Bool>) -> (Void)) {
+                          completion: @escaping (Quack.Result<Bool>) -> (Void)) {
         return respondAsync(method: .delete,
                             path: "/v1/kv/\(key)",
                             model: Bool.self,

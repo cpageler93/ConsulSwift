@@ -30,7 +30,7 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/check.html#list-checks
     ///
-    public func agentChecks() -> Result<[AgentCheckOutput]> {
+    public func agentChecks() -> Quack.Result<[AgentCheckOutput]> {
         return respondWithArray(path: "/v1/agent/checks",
                                 parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
                                 model: AgentCheckOutput.self)
@@ -40,7 +40,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentChecks()`
     /// - Parameter completion: completion block
-    public func agentChecks(completion: @escaping (Result<[AgentCheckOutput]>) -> (Void)) {
+    public func agentChecks(completion: @escaping (Quack.Result<[AgentCheckOutput]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/agent/checks",
                               parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
                               model: AgentCheckOutput.self,
@@ -93,7 +93,7 @@ public extension Consul {
     ///
     /// - Parameter check: check input
     /// - Returns: parameters
-    private func agentRegisterCheckParams(_ check: AgentCheckInput) -> [String: Any] {
+    private func agentRegisterCheckParams(_ check: AgentCheckInput) -> Quack.JSONBody {
         var params: [String: Any] = [:]
         
         params["Name"] = check.name
@@ -119,7 +119,7 @@ public extension Consul {
             }
         }
         
-        return params
+        return Quack.JSONBody(params)
     }
     
     /// This endpoint remove a check from the local agent.
@@ -192,7 +192,7 @@ public extension Consul {
                                note: String = "") -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/check/warn/\(id)",
-                           body: ["note": note])
+                           body: Quack.JSONBody(["note": note]))
     }
     
     /// Async version of `Consul.agentCheckWarn(id: String, note: String)`
@@ -204,7 +204,7 @@ public extension Consul {
                                completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/warn/\(id)",
-                         body: ["note": note],
+                         body: Quack.JSONBody(["note": note]),
                          completion: completion)
     }
     
@@ -224,7 +224,7 @@ public extension Consul {
                                note: String = "") -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/check/fail/\(id)",
-                           body: ["note": note])
+                           body: Quack.JSONBody(["note": note]))
     }
     
     /// Async version of `Consul.agentCheckFail(id: String, note: String)`
@@ -236,7 +236,7 @@ public extension Consul {
                                completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/fail/\(id)",
-                         body: ["note": note],
+                         body: Quack.JSONBody(["note": note]),
                          completion: completion)
     }
     
@@ -257,10 +257,10 @@ public extension Consul {
                                  output: String = "") -> Quack.Void {
         return respondVoid(method: .put,
                            path: "/v1/agent/check/update/\(id)",
-                           body: [
+                           body: Quack.JSONBody([
                             "Status": status.rawValue,
                             "Output": output
-                           ],
+                           ]),
                            requestModification: { (request) -> (Quack.Request) in
                             var request = request
                             request.encoding = .json
@@ -278,10 +278,10 @@ public extension Consul {
                                  completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(method: .put,
                          path: "/v1/agent/check/update/\(id)",
-                         body: [
+                         body: Quack.JSONBody([
                             "Status": status.rawValue,
                             "Output": output
-                         ],
+                         ]),
                          requestModification: { (request) -> (Quack.Request) in
                             var request = request
                             request.encoding = .json

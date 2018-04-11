@@ -32,13 +32,16 @@ class ConsulAgentTests: XCTestCase {
         ("testAgentMaintenanceEnableAsync", testAgentMaintenanceEnableAsync),
         ("testAgentMaintenanceDisable", testAgentMaintenanceDisable),
         ("testAgentMaintenanceDisableAsync", testAgentMaintenanceDisableAsync),
-        ("test3AgentChecks", test3AgentChecks),
-        ("test3AgentChecksAsync", test3AgentChecksAsync),
         ("test1AgentRegisterCheckMinimal", test1AgentRegisterCheckMinimal),
         ("test1AgentRegisterCheckAsync", test1AgentRegisterCheckAsync),
         ("test1AgentRegisterCheckMaximal", test1AgentRegisterCheckMaximal),
-        ("test4AgentDeregisterCheck", test4AgentDeregisterCheck),
-        ("test4AgentDeregisterCheckAsync", test4AgentDeregisterCheckAsync),
+        ("test1AgentServiceMaintenanceAsync", test1AgentServiceMaintenanceAsync),
+        ("test1AgentServiceMaintenanceWithWrongServiceID", test1AgentServiceMaintenanceWithWrongServiceID),
+        ("test1AgentRegisterService", test1AgentRegisterService),
+        ("test1AgentRegisterServiceAsync", test1AgentRegisterServiceAsync),
+        ("test1AgentServiceMaintenance", test1AgentServiceMaintenance),
+        ("test2AgentDeregisterService", test2AgentDeregisterService),
+        ("test2AgentDeregisterServiceAsync", test2AgentDeregisterServiceAsync),
         ("test2AgentCheckPass", test2AgentCheckPass),
         ("test2AgentCheckPassAsync", test2AgentCheckPassAsync),
         ("test2AgentCheckWarn", test2AgentCheckWarn),
@@ -47,15 +50,12 @@ class ConsulAgentTests: XCTestCase {
         ("test2AgentCheckFailAsync", test2AgentCheckFailAsync),
         ("test2AgentCheckUpdate", test2AgentCheckUpdate),
         ("test2AgentCheckUpdateAsync", test2AgentCheckUpdateAsync),
+        ("test3AgentChecks", test3AgentChecks),
+        ("test3AgentChecksAsync", test3AgentChecksAsync),
         ("test3AgentServices", test3AgentServices),
         ("test3AgentServicesAsync", test3AgentServicesAsync),
-        ("test1AgentRegisterService", test1AgentRegisterService),
-        ("test1AgentRegisterServiceAsync", test1AgentRegisterServiceAsync),
-        ("test2AgentDeregisterService", test2AgentDeregisterService),
-        ("test2AgentDeregisterServiceAsync", test2AgentDeregisterServiceAsync),
-        ("test1AgentServiceMaintenance", test1AgentServiceMaintenance),
-        ("test1AgentServiceMaintenanceWithWrongServiceID", test1AgentServiceMaintenanceWithWrongServiceID),
-        ("test1AgentServiceMaintenanceAsync", test1AgentServiceMaintenanceAsync)
+        ("test4AgentDeregisterCheck", test4AgentDeregisterCheck),
+        ("test4AgentDeregisterCheckAsync", test4AgentDeregisterCheckAsync)
     ]
     
     // MARK: - Members
@@ -444,7 +444,7 @@ class ConsulAgentTests: XCTestCase {
         let services = consul.agentServices()
         switch services {
         case .success(let services):
-            XCTAssertGreaterThanOrEqual(services.count, 2)
+            XCTAssertGreaterThanOrEqual(services.count, 1)
         case .failure(let error):
             XCTAssertNil(error)
         }
@@ -457,7 +457,7 @@ class ConsulAgentTests: XCTestCase {
         consul.agentServices { services in
             switch services {
             case .success(let services):
-                XCTAssertGreaterThanOrEqual(services.count, 2)
+                XCTAssertGreaterThanOrEqual(services.count, 1)
             case .failure(let error):
                 XCTAssertNil(error)
             }
@@ -560,6 +560,7 @@ class ConsulAgentTests: XCTestCase {
         
         let expectation = self.expectation(description: "agentServiceMaintenance")
         
+        // test enable async
         consul.agentServiceMaintenance("testService", enable: true, reason: "Test") { maintenance in
             switch maintenance {
             case .success:

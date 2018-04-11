@@ -35,7 +35,7 @@ public extension Consul {
                           datacenter: String? = nil,
                           node: String? = nil,
                           service: String? = nil,
-                          tag: String? = nil) -> Result<Event> {
+                          tag: String? = nil) -> Quack.Result<Event> {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         if let node = node { params["node"] = node }
@@ -56,7 +56,7 @@ public extension Consul {
                           node: String? = nil,
                           service: String? = nil,
                           tag: String? = nil,
-                          completion: @escaping (Result<Event>) -> (Void)) {
+                          completion: @escaping (Quack.Result<Event>) -> (Void)) {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         if let node = node { params["node"] = node }
@@ -86,7 +86,7 @@ public extension Consul {
     public func eventList(name: String? = nil,
                           node: String? = nil,
                           service: String? = nil,
-                          tag: String? = nil) -> Result<[Event]> {
+                          tag: String? = nil) -> Quack.Result<[Event]> {
         return respondWithArray(path: "/v1/event/list",
                                 model: Event.self)
     }
@@ -99,7 +99,7 @@ public extension Consul {
                           node: String? = nil,
                           service: String? = nil,
                           tag: String? = nil,
-                          completion: @escaping (Result<[Event]>) -> (Void)) {
+                          completion: @escaping (Quack.Result<[Event]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/event/list",
                               model: Event.self,
                               completion: completion)

@@ -29,7 +29,7 @@ public extension Consul {
     ///
     /// [apidoc]: https://www.consul.io/api/agent/service.html#list-services
     ///
-    public func agentServices() -> Result<[AgentServiceOutput]> {
+    public func agentServices() -> Quack.Result<[AgentServiceOutput]> {
         return respondWithArray(path: "/v1/agent/services",
                                 parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
                                 model: AgentServiceOutput.self)
@@ -39,7 +39,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentServices()`
     /// - Parameter completion: completion block
-    public func agentServices(completion: @escaping (Result<[AgentServiceOutput]>) -> (Void)) {
+    public func agentServices(completion: @escaping (Quack.Result<[AgentServiceOutput]>) -> (Void)) {
         return respondWithArrayAsync(path: "/v1/agent/services",
                                      parser: Quack.ArrayParserByIgnoringDictionaryKeys(),
                                      model: AgentServiceOutput.self,
@@ -93,7 +93,7 @@ public extension Consul {
     ///
     /// - Parameter service: service input
     /// - Returns: parameters
-    private func agentRegisterServiceParams(_ service: AgentServiceInput) -> [String: Any] {
+    private func agentRegisterServiceParams(_ service: AgentServiceInput) -> Quack.JSONBody {
         var params: [String: Any] = [:]
         
         params["Name"] = service.name
@@ -111,7 +111,7 @@ public extension Consul {
             }
         }
         
-        return params
+        return Quack.JSONBody(params)
     }
     
     /// This endpoint removes a service from the local agent. If the service does not exist, no action is taken.

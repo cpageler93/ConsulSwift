@@ -26,7 +26,7 @@ public extension Consul {
     /// - Returns: Result with array of Members
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#list-members
-    public func agentMembers() -> Result<[AgentMember]> {
+    public func agentMembers() -> Quack.Result<[AgentMember]> {
         return respondWithArray(path: "/v1/agent/members",
                                 model: AgentMember.self)
     }
@@ -35,7 +35,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentMembers()`
     /// - Parameter completion: completion block
-    public func agentMembers(completion: @escaping (Result<[AgentMember]>) -> (Void)) {
+    public func agentMembers(completion: @escaping (Quack.Result<[AgentMember]>) -> (Void)) {
         respondWithArrayAsync(path: "/v1/agent/members",
                               model: AgentMember.self,
                               completion: completion)
@@ -51,7 +51,7 @@ public extension Consul {
     /// - Returns: Result with Agent Configuration
     ///
     /// [apidoc]: https://www.consul.io/api/agent.html#read-configuration
-    public func agentReadConfiguration() -> Result<AgentConfiguration> {
+    public func agentReadConfiguration() -> Quack.Result<AgentConfiguration> {
         return respond(path: "/v1/agent/self",
                        model: AgentConfiguration.self)
     }
@@ -60,7 +60,7 @@ public extension Consul {
     ///
     /// - SeeAlso: `Consul.agentReadConfiguration()`
     /// - Parameter completion: completion block
-    public func agentReadConfiguration(completion: @escaping (Result<AgentConfiguration>) -> (Void)) {
+    public func agentReadConfiguration(completion: @escaping (Quack.Result<AgentConfiguration>) -> (Void)) {
         return respondAsync(path: "/v1/agent/self",
                             model: AgentConfiguration.self,
                             completion: completion)
@@ -161,7 +161,7 @@ public extension Consul {
     public func agentJoin(address: String,
                           wan: Bool = false) -> Quack.Void {
         return respondVoid(path: "/v1/agent/join/\(address)",
-                           body: ["wan": String(wan)])
+                           body: Quack.JSONBody(["wan": String(wan)]))
     }
     
     // TODO: add tests
@@ -175,7 +175,7 @@ public extension Consul {
                           wan: Bool = false,
                           completion: @escaping (Quack.Void) -> (Void)) {
         respondVoidAsync(path: "/v1/agent/join/\(address)",
-                         body: ["wan": String(wan)],
+                         body: Quack.JSONBody(["wan": String(wan)]),
                          completion: completion)
     }
     

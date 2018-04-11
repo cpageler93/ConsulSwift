@@ -33,7 +33,7 @@ class ConsulKeyValueTests: XCTestCase {
         let consul = Consul()
         
         let writeKey = consul.writeKey("unitTest",
-                                       value: ["value": "unitTestValue"])
+                                       value: "unitTestValue")
         switch writeKey {
         case .success(let writeKey):
             XCTAssertTrue(writeKey)
@@ -44,7 +44,7 @@ class ConsulKeyValueTests: XCTestCase {
         let keyValuePair = consul.readKey("unitTest")
         switch keyValuePair {
         case .success(let keyValuePair):
-            XCTAssertEqual(keyValuePair.decodedValue(), "value=unitTestValue")
+            XCTAssertEqual(keyValuePair.decodedValue(), "unitTestValue")
         case .failure(let error):
             XCTAssertNil(error)
         }
@@ -56,7 +56,7 @@ class ConsulKeyValueTests: XCTestCase {
         let writeExpectation = self.expectation(description: "writeKeyExpectation")
         let readExpectation = self.expectation(description: "readKeyExpectation")
         
-        consul.writeKey("unitTestAsync", value: ["value": "unitTestValue"]) { writeKey in
+        consul.writeKey("unitTestAsync", value: "unitTestValue") { writeKey in
             switch writeKey {
             case .success(let writeKey):
                 XCTAssertTrue(writeKey)
@@ -68,7 +68,7 @@ class ConsulKeyValueTests: XCTestCase {
             consul.readKey("unitTestAsync", completion: { keyValuePair in
                 switch keyValuePair {
                 case .success(let keyValuePair):
-                    XCTAssertEqual(keyValuePair.decodedValue(), "value=unitTestValue")
+                    XCTAssertEqual(keyValuePair.decodedValue(), "unitTestValue")
                 case .failure(let error):
                     XCTAssertNil(error)
                 }

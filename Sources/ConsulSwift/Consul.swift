@@ -20,8 +20,6 @@ public class Consul: Quack.Client {
         super.init(url: url)
     }
     
-    public typealias Result = Quack.Result
-    
 }
 
 // MARK: - Consul Extensions for Standard Types

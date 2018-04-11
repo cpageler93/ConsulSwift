@@ -28,12 +28,12 @@ public extension Consul {
     ///  [apidoc]: https://www.consul.io/api/health.html#list-checks-for-node
     ///
     public func healthChecksFor(node: String,
-                                datacenter: String? = nil) -> Result<[AgentCheckOutput]> {
+                                datacenter: String? = nil) -> Quack.Result<[AgentCheckOutput]> {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         return respondWithArray(path: "/v1/health/node/\(node)",
-                                body: params,
+                                body: Quack.JSONBody(params),
                                 model: AgentCheckOutput.self)
     }
     
@@ -43,12 +43,12 @@ public extension Consul {
     /// - Parameter completion: completion block
     public func healthChecksFor(node: String,
                                 datacenter: String? = nil,
-                                completion: @escaping (Result<[AgentCheckOutput]>) -> (Void)) {
+                                completion: @escaping (Quack.Result<[AgentCheckOutput]>) -> (Void)) {
         var params: [String: String] = [:]
         if let datacenter = datacenter { params["dc"] = datacenter }
         
         respondWithArrayAsync(path: "/v1/health/node/\(node)",
-                              body: params,
+                              body: Quack.JSONBody(params),
                               model: AgentCheckOutput.self,
                               completion: completion)
     }
@@ -72,7 +72,7 @@ public extension Consul {
                                passing: Bool? = true,
                                tag: String? = nil,
                                datacenter: String? = nil,
-                               near: String? = "_agent") -> Result<[CatalogNodeWithServiceAndChecks]> {
+                               near: String? = "_agent") -> Quack.Result<[CatalogNodeWithServiceAndChecks]> {
         var params: [String: String] = [:]
         if let passing = passing { params["passing"] = String(passing) }
         if let tag = tag { params["tag"] = tag }
@@ -80,7 +80,7 @@ public extension Consul {
         if let near = near { params["near"] = near }
         
         return respondWithArray(path: "/v1/health/service/\(service)",
-                                body: params,
+                                body: Quack.JSONBody(params),
                                 model: CatalogNodeWithServiceAndChecks.self)
     }
     
@@ -93,7 +93,7 @@ public extension Consul {
                                tag: String? = nil,
                                datacenter: String? = nil,
                                near: String? = nil,
-                               completion: @escaping (Result<[CatalogNodeWithServiceAndChecks]>) -> (Void)) {
+                               completion: @escaping (Quack.Result<[CatalogNodeWithServiceAndChecks]>) -> (Void)) {
         var params: [String: String] = [:]
         if let passing = passing { params["passing"] = String(passing) }
         if let tag = tag { params["tag"] = tag }
@@ -101,7 +101,7 @@ public extension Consul {
         if let near = near { params["near"] = near }
         
         return respondWithArrayAsync(path: "/v1/health/service/\(service)",
-                                     body: params,
+                                     body: Quack.JSONBody(params),
                                      model: CatalogNodeWithServiceAndChecks.self,
                                      completion: completion)
     }
@@ -121,7 +121,7 @@ public extension Consul {
     ///
     public func healthListChecksInState(_ state: AgentCheckStatus,
                                         datacenter: String? = nil,
-                                        near: String? = "_agent") -> Result<[AgentCheckOutput]> {
+                                        near: String? = "_agent") -> Quack.Result<[AgentCheckOutput]> {
         return respondWithArray(path: "/v1/health/state/\(state.rawValue)",
                                 model: AgentCheckOutput.self)
     }
@@ -133,7 +133,7 @@ public extension Consul {
     public func healthListChecksInState(_ state: AgentCheckStatus,
                                         datacenter: String? = nil,
                                         near: String? = "_agent",
-                                        completion: @escaping (Result<[AgentCheckOutput]>) -> (Void)) {
+                                        completion: @escaping (Quack.Result<[AgentCheckOutput]>) -> (Void)) {
         return respondWithArrayAsync(path: "/v1/health/state/\(state.rawValue)",
                                      model: AgentCheckOutput.self,
                                      completion: completion)
